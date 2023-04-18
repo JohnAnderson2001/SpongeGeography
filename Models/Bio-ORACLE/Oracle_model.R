@@ -24,3 +24,25 @@ OU_data$Model <- "OUrandomRoot"
 completedata <- rbind(BM_data, OU_data)
 completedata$delta <- completedata$AICc - min(completedata$AICc)
 write.csv(completedata, "Oracle_results_summary.csv")
+
+#try old data
+framedat <- read.csv("CompleteSpongeData.csv")
+
+phdat <- aggregate(pH ~ species, FUN="mean", data=framedat)
+tempdat <- aggregate(temp ~ species, FUN="mean", data=framedat)
+sildat <- aggregate(silicate ~ species, FUN="mean", data=framedat)
+depthdat <- aggregate(depth ~ species, FUN="mean", data=framedat)
+spicdat <- aggregate(Type ~ species, FUN="mean", data=framedat)
+
+finalolddat <- merge(finalolddat, depthdat, by="species")
+#write.csv(finalolddat, "Occurrence_oracle_averages_binaryspicdata.csv")
+olddat <- read.csv("Occurrence_oracle_averages_binaryspicdata.csv")
+olddat$species <- sub(" ", "_", olddat$species)
+row.names(olddat) <- olddat$species
+
+phylomodel_binary <- phyloglm(Type ~ pH + temp + silicate + depth, data=olddat, phy=tree, method="logistic_IG10")
+summary(phylomodel_binary)
+
+#all_results_binary <- MuMIn::nobs(phylomodel_binary)
+
+
