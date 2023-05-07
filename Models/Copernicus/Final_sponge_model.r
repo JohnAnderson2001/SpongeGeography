@@ -3,9 +3,28 @@ library(tidync)
 library(tidyverse)
 library(magrittr)
 
+#cleaning GBIF data
+dat <- read.delim("C:\\Users\\jjera\\Documents\\RStuff\\0163120-230224095556074.csv")
+reldat <- dat[,c("gbifID", "class", "order", "family", "genus", "species", "decimalLatitude", "decimalLongitude", "depth", "eventDate", "day", "month", "year")]
+
+complexdat <- read.csv("C:\\Users\\jjera\\Documents\\RStuff\\Complexity.csv")
+colnames(complexdat)[1] ="species" #change first column so names match before merging
+
+prefinaltestdat <- merge(reldat, complexdat, by="species", all=T) #merge with occurrence data
+finaltestdat <- prefinaltestdat [complete.cases(prefinaltestdat), ] #68 species at this stage
+
+#clean the merged dataset; remove rows with no depth and no date
+finaltestdat2 <- finaltestdat[!is.na(as.numeric(finaltestdat$depth)), ] #removes all rows with depth value that is not a number
+finaltestdat2$depth <- as.numeric(finaltestdat2$depth) #62 species
+finaltestdat3 <- finaltestdat2[!is.na(as.numeric(finaltestdat2$decimalLatitude)), ] #60 species
+sponges <- finaltestdat3[!finaltestdat3$year < 1950, ] #52 species after date cleaning
+#write.csv(sponges, file="Occurrence_complexity_data_with_dates.csv")
+
+
+sponges <- read.csv("C:\\Users\\jjera\\Documents\\RStuff\\Sponges_after_1950.csv")
+
 #extracting pH
 tidyph <- tidync("C:\\Users\\jjera\\Documents\\RStuff\\Copernicus\\pH\\allpH.nc")
-sponges <- read.csv("C:\\Users\\jjera\\Documents\\RStuff\\Occurrence_complexity_data_with_dates.csv")
 sponges$ph <- NA
 
 for(sponge_index in sequence(nrow(sponges))) {
@@ -22,12 +41,8 @@ for(sponge_index in sequence(nrow(sponges))) {
 
 }
 
-#pH extraction successful
-#next step saved as spongestep1.csv
-
 #extracting silica
 tidysilica <- tidync("C:\\Users\\jjera\\Documents\\RStuff\\Copernicus\\Silica\\allsi.nc")
-sponges <- read.csv("C:\\Users\\jjera\\Documents\\RStuff\\spongestep1.csv")
 sponges$silica <- NA
 
 for(sponge_index in sequence(nrow(sponges))) {
@@ -61,25 +76,53 @@ for(sponge_index in sequence(nrow(sponges))) {
     cat("\r", sponge_index, " of ", nrow(sponges), " it found ", length(temps$bottomT), " values")
 
 }
-#write.csv(sponges, "spongeswithdata.csv")
+#write.csv(sponges, file="anthropocene_sponges_with_data.csv")
 
-#model creation
-#sponges <- read.csv("spongeswithdata.csv")
-cleandat <- sponges[,c("species", "SpiculeTypes", "ph", "temperature", "silica", "depth"), ]
-cleandat$species <- sub(" ", "_", cleandat$species)
-phdat <- aggregate(ph ~ species, FUN="mean", data=cleandat)
-tempdat <- aggregate(temperature ~ species, FUN="mean", data=cleandat)
-sildat <- aggregate(silica ~ species, FUN="mean", data=cleandat)
-depthdat <- aggregate(depth ~ species, FUN="mean", data=cleandat)
-spicdat <- aggregate(SpiculeTypes ~ species, FUN="mean", data=cleandat)
-finalsponges <- merge(finalsponges, spicdat, by="species") #42 species
-#write.csv(sponges, "spongeswithdata_averages.csv")
-#finalsponges <- read.csv("spongeswithdata_averages.csv")
-row.names(finalsponges) <- finalsponges$species
+
+#constructing models
+sponges <- read.csv("C:\\Users\\jjera\\Documents\\RStuff\\anthropocene_sponges_with_data.csv")
+cleandat <- sponges[,c("genus", "SpiculeTypes", "ph", "temperature", "silica", "depth"), ]
+phdat <- aggregate(ph ~ genus, FUN="mean", data=cleandat)
+tempdat <- aggregate(temperature ~ genus, FUN="mean", data=cleandat)
+sildat <- aggregate(silica ~ genus, FUN="mean", data=cleandat)
+depthdat <- aggregate(depth ~ genus, FUN="mean", data=cleandat)
+spicdat <- aggregate(SpiculeTypes ~ genus, FUN="mean", data=cleandat)
+finalsponges <- merge(phdat, tempdat, by="genus")
+finalsponges <- merge(finalsponges, sildat, by="genus")
+finalsponges <- merge(finalsponges, depthdat, by="genus")
+finalsponges <- merge(finalsponges, spicdat, by="genus")
+row.names(finalsponges) <- finalsponges$genus
 
 library(phylolm)
-tree <- read.tree("C:\\Users\\jjera\\Documents\\RStuff\\Partition.txt.treefile")
-phylomodelbm <- phylolm(SpiculeTypes ~ ph + temperature + silica + depth, data=finalsponges, phy=tree, model="BM")
-summary(phylomodelbm)
-phylomodelrandomroot <- phylolm(SpiculeTypes ~ ph + temperature + silica + depth, data=finalsponges, phy=tree, model="OUrandomRoot")
-summary(phylomodelrandomroot)
+phy <- read.tree("C:\\Users\\jjera\\Documents\\RStuff\\intree.dated.final.tre")
+phy$tip.label <- sub("_[^_]+$", "", phy$tip.label)
+
+RemoveDuplicateNames <- function(phy) {
+    if(any(duplicated(phy$tip.label))) {
+		phy$tip.label <- make.unique(phy$tip.label, sep = ".")
+		cat("Duplicate names were found and have been renamed.\n")
+	} else {
+		cat("No duplicate names were found.\n")
+	}
+	return(phy)
+}
+
+library(geiger)
+prunedtree <- treedata(phy=RemoveDuplicateNames(phy), data=finalsponges) #42 tips
+
+prunedtree$data <- as.data.frame(prunedtree$data)
+for (i in sequence(ncol(prunedtree$data))) {
+    prunedtree$data[,i] <- as.numeric(prunedtree$data[,i])
+}
+
+phylomodelbmgenus <- phylolm(SpiculeTypes ~ ph + temperature + silica + depth, data=prunedtree$data, phy=prunedtree$phy, model="BM")
+summary(phylomodelbmgenus)
+phylomodelrandomrootgenus <- phylolm(SpiculeTypes ~ ph + temperature + silica + depth, data=prunedtree$data, phy=prunedtree$phy, model="OUrandomRoot")
+summary(phylomodelrandomrootgenus)
+
+library(MuMIn)
+bestmodelbmgenus <- dredge(phylomodelbmgenus)
+bestmodelrandomrootgenus <- dredge(phylomodelrandomrootgenus)
+
+averagemodel <- model.avg(bestmodelrandomrootgenus, full=TRUE)
+MuMIn::sw(bestmodelrandomrootgenus)
