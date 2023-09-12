@@ -80,7 +80,7 @@ extracts_depths_around_sponges <- function(reduced_data, tidydepth, bound=0.0041
 	return(sponges_data_for_idw)
 }
 
-infer_depths <- function(sponges_data_for_idw) {
+infer_depths <- function(sponges_data_for_idw, reduced_data) {
 
 	sponges_data_for_idw <- dplyr::distinct(sponges_data_for_idw)
 	sponges_data_for_idw$gbif <- FALSE
@@ -124,6 +124,7 @@ infer_depths <- function(sponges_data_for_idw) {
 	
 }
 
+
 extract_ph <- function(sponges, tidyph) {
 
 	#extracting pH
@@ -148,7 +149,87 @@ extract_ph <- function(sponges, tidyph) {
 }
 
 
+extract_silica <- function(sponges, tidysilica) {
 
+	sponges$silica <- NA
+
+	for(sponge_index in sequence(nrow(sponges))) {
+   	    #target_latitude <- tidyph$transforms$latitude$latitude[(which.min(abs(tidyph$transforms$latitude$latitude - sponges$decimalLatitude[sponge_index])))]
+    	#target_longitude <- tidyph$transforms$longitude$longitude[(which.min(abs(tidyph$transforms$longitude$longitude - sponges$decimalLongitude[sponge_index])))]
+    	target_depth <- tidysilica$transforms$depth$depth[(which.min(abs(tidysilica$transforms$depth$depth - sponges$idw_depths[sponge_index])))]
+    	bound <- 0.25
+    	sils <- tidysilica %>% hyper_filter(
+        	latitude = between(latitude, sponges$decimalLatitude[sponge_index]-bound, sponges$decimalLatitude[sponge_index]+bound),
+        	longitude = between(longitude, sponges$decimalLongitude[sponge_index]-bound, sponges$decimalLongitude[sponge_index]+bound),
+        	depth = between(depth, target_depth-10, target_depth+10)
+        	) %>% hyper_array()
+   	    sponges$silica[sponge_index] <- median(sils$si, na.rm=TRUE)
+    	cat("\r", sponge_index, " of ", nrow(sponges), " it found ", length(sils$si), " values")
+
+	}
+	return(sponges)
+}
+
+
+extract_temp <- function(sponges, tidytemp) {
+
+	sponges$temperature <- NA
+
+	for(sponge_index in sequence(nrow(sponges))) {
+    	#target_latitude <- tidyph$transforms$latitude$latitude[(which.min(abs(tidyph$transforms$latitude$latitude - sponges$decimalLatitude[sponge_index])))]
+    	#target_longitude <- tidyph$transforms$longitude$longitude[(which.min(abs(tidyph$transforms$longitude$longitude - sponges$decimalLongitude[sponge_index])))]
+    	#target_depth <- tidysilica$transforms$depth$depth[(which.min(abs(tidysilica$transforms$depth$depth - sponges$depth[sponge_index])))]
+    	bound <- 0.083
+    	temps <- tidytemp %>% hyper_filter(
+        	latitude = between(latitude, sponges$decimalLatitude[sponge_index]-bound, sponges$decimalLatitude[sponge_index]+bound),
+        	longitude = between(longitude, sponges$decimalLongitude[sponge_index]-bound, sponges$decimalLongitude[sponge_index]+bound),
+        	#depth = between(depth, target_depth-10, target_depth+10)
+         	) %>% hyper_array()
+    	sponges$temperature[sponge_index] <- median(temps$bottomT, na.rm=TRUE)
+    	cat("\r", sponge_index, " of ", nrow(sponges), " it found ", length(temps$bottomT), " values")
+
+	}
+	return(sponges)
+}
+
+#constructing models
+
+
+datatree <- function(sponges, phy) {
+
+	#prepare occurrence and environmental data; aggregate by genus
+	cleandat <- sponges[,c("genus", "spicules", "ph", "temperature", "silica", "idw_depths"), ]
+	phdat <- aggregate(ph ~ genus, FUN="mean", data=cleandat)
+	tempdat <- aggregate(temperature ~ genus, FUN="mean", data=cleandat)
+	sildat <- aggregate(silica ~ genus, FUN="mean", data=cleandat)
+	depthdat <- aggregate(idw_depths ~ genus, FUN="mean", data=cleandat)
+	depthdat$idw_depths <- abs(depthdat$idw_depths)
+	spicdat <- aggregate(spicules ~ genus, FUN="mean", data=cleandat)
+	finalsponges <- merge(phdat, tempdat, by="genus")
+	finalsponges <- merge(finalsponges, sildat, by="genus")
+	finalsponges <- merge(finalsponges, depthdat, by="genus")
+	finalsponges <- merge(finalsponges, spicdat, by="genus")
+	row.names(finalsponges) <- finalsponges$genus
+
+	#prepare phylogenetic tree to merge with occurrence/environmental data
+	phy$tip.label <- sub("_[^_]+$", "", phy$tip.label)
+	RemoveDuplicateNames <- function(phy) {
+		if(any(duplicated(phy$tip.label))) {
+			phy$tip.label <- make.unique(phy$tip.label, sep = ".")
+			cat("Duplicate names were found and have been renamed.\n")
+		} else {
+			cat("No duplicate names were found.\n")
+		}
+		return(phy)
+	}
+
+	prunedtree <- treedata(phy=RemoveDuplicateNames(phy), data=finalsponges)
+	prunedtree$data <- as.data.frame(prunedtree$data)
+	for (i in sequence(ncol(prunedtree$data))) {
+		prunedtree$data[,i] <- as.numeric(prunedtree$data[,i])
+	}
+	return(prunedtree)
+}
 
 
 #use the original loops from Final_sponge_model_new_depth_data to extract all the environmental variables
