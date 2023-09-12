@@ -3,7 +3,7 @@ library(tarchetypes)
 
 
 tar_option_set(
-	packages = c("ncdf4", "tidync", "tidyverse", "magrittr", "lubridate", "gstat", "sp", "phylolm", "geiger")
+	packages = c("ncdf4", "tidync", "tidyverse", "magrittr", "lubridate", "gstat", "sp", "phylolm", "geiger", "phylolm")
 )
 
 source("_functions.R")
@@ -20,6 +20,7 @@ list(
   tar_target(depths_and_ph, extract_ph(inferred_depths, tidyph)),
   tar_target(depths_pH_and_silica, extract_silica(depths_and_ph, tidysilica)),
   tar_target(depths_pH_silica_and_temp, extract_temp(depths_pH_and_silica, tidytemp)),
-  tar_target(pruned_tree, datatree(depths_pH_silica_and_temp, phy))
+  tar_target(pruned_tree, datatree(depths_pH_silica_and_temp, phy)),
+  tar_target(model_output, phyloglm(spicules ~ idw_depths + ph + silica + temperature, data=pruned_tree$data, phy=pruned_tree$phy, method="logistic_IG10"))
 
 )
