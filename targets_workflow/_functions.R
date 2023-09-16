@@ -114,7 +114,7 @@ infer_depths <- function(sponges_data_for_idw, reduced_data) {
 
 	m <- gstat(formula=elevation~1, locations=~lon+lat, data=subset(sponges_data_for_idw, !is.na(elevation) & gbif==FALSE), nmax=opt$par[1], set=list(idp=opt$par[2]))
 	new_depths <- predict(m, newdata=subset(sponges_data_for_idw, gbif==TRUE))$var1.pred
-	#start here
+	
 	reduced_data$idw_depths <- new_depths
 	#plot(log1p(abs(sponges$depth)), log1p(abs(sponges$idw_depths)))
 	#write.csv(sponges, "all_sponges_with_depths.csv")
@@ -134,7 +134,7 @@ extract_ph <- function(sponges, tidyph) {
 	for(sponge_index in sequence(nrow(sponges))) {
 		#target_latitude <- tidyph$transforms$latitude$latitude[(which.min(abs(tidyph$transforms$latitude$latitude - sponges$decimalLatitude[sponge_index])))]
 		#target_longitude <- tidyph$transforms$longitude$longitude[(which.min(abs(tidyph$transforms$longitude$longitude - sponges$decimalLongitude[sponge_index])))]
-		target_depth <- tidyph$transforms$depth$depth[(which.min(abs(tidyph$transforms$depth$depth - sponges$idw_depths[sponge_index])))]
+		target_depth <- tidyph$transforms$depth$depth[(which.min(abs(tidyph$transforms$depth$depth - abs(sponges$idw_depths[sponge_index]))))]
 		bound <- 0.25
 		phs <- tidyph %>% hyper_filter(
 			latitude = between(latitude, sponges$decimalLatitude[sponge_index]-bound, sponges$decimalLatitude[sponge_index]+bound),
@@ -156,7 +156,7 @@ extract_silica <- function(sponges, tidysilica) {
 	for(sponge_index in sequence(nrow(sponges))) {
    	    #target_latitude <- tidyph$transforms$latitude$latitude[(which.min(abs(tidyph$transforms$latitude$latitude - sponges$decimalLatitude[sponge_index])))]
     	#target_longitude <- tidyph$transforms$longitude$longitude[(which.min(abs(tidyph$transforms$longitude$longitude - sponges$decimalLongitude[sponge_index])))]
-    	target_depth <- tidysilica$transforms$depth$depth[(which.min(abs(tidysilica$transforms$depth$depth - sponges$idw_depths[sponge_index])))]
+    	target_depth <- tidysilica$transforms$depth$depth[(which.min(abs(tidysilica$transforms$depth$depth - abs(sponges$idw_depths[sponge_index]))))]
     	bound <- 0.25
     	sils <- tidysilica %>% hyper_filter(
         	latitude = between(latitude, sponges$decimalLatitude[sponge_index]-bound, sponges$decimalLatitude[sponge_index]+bound),
@@ -239,3 +239,172 @@ datatree <- function(sponges, phy) {
 #consider what it will mean if presence or absence does not appear influenced by any of the variables
 #also make a map of where the spiculose and aspiculose sponges are located (should be similar to map from previous project)
 #would boxplots be useful to show where most sponges fall on different environmental scales?
+
+nobs.phyloglm <- function(object, ...) {
+	return(object$n)
+}
+
+#binary data functions complete
+#functions for building models with numeric complexity data:
+
+create_complexity_data <- function(GBIF, complexity_dat) {
+	reldat <- GBIF[,c("gbifID", "class", "order", "family", "genus", "species", "decimalLatitude", "decimalLongitude", "depth", "eventDate", "day", "month", "year")]
+	colnames(complexity_dat)[1] = "species"
+	prefinaldat <- merge(reldat, complexity_dat, by="species", all=T)
+	finaldat <- prefinaldat[complete.cases(prefinaldat), ]
+	finaldat$depth <- as.numeric(finaldat$depth)
+	finaldat2 <- finaldat[!is.na(as.numeric(finaldat$decimalLatitude)), ]
+	sponges <- finaldat2[!finaldat2$year < 1950, ]
+	return(sponges)
+}
+
+complex_depth_extraction <- function(sponges, tidydepth) {
+	sponges$newdepth <- NA
+	sponges$decimalLatitude <- as.numeric(sponges$decimalLatitude)
+	sponges$decimalLongitude <- as.numeric(sponges$decimalLongitude)
+
+	sponges_data_for_idw <- data.frame()
+	for(sponge_index in sequence(nrow(sponges))) {
+		bound <- 0.00416667*10
+			elevations <- tidydepth %>% hyper_filter(
+				lat = between(lat, sponges$decimalLatitude[sponge_index]-bound, sponges$decimalLatitude[sponge_index]+bound),
+				lon = between(lon, sponges$decimalLongitude[sponge_index]-bound, sponges$decimalLongitude[sponge_index]+bound),
+				) %>% hyper_tibble()
+				elevations$elevation[elevations$elevation>0] <- 0 # We need points on land so we can get shallow depths correct, but also don't want an island nearby to give a positive depth. So flatten the land.
+
+				elevations_spatial <- as.data.frame(SpatialPointsDataFrame(elevations[,c('lon', 'lat')], elevations[,c('elevation')]))
+				sponges_data_for_idw <- plyr::rbind.fill(sponges_data_for_idw, elevations_spatial)
+				elevations_focal <- as.data.frame(SpatialPointsDataFrame(data.frame(lon=sponges$decimalLongitude[sponge_index], lat=sponges$decimalLatitude[sponge_index]), data=data.frame(elevation=NA)))
+				sponges_data_for_idw <- plyr::rbind.fill(sponges_data_for_idw, elevations_focal)
+				cat("\r", sponge_index, " of ", nrow(sponges), nrow(sponges_data_for_idw))
+			
+	}
+
+	sponges_data_for_idw <- dplyr::distinct(sponges_data_for_idw)
+	sponges_data_for_idw$gbif <- FALSE
+	sponges_data_to_include <- sponges
+	sponges_data_to_include$lon <- sponges_data_to_include$decimalLongitude
+	sponges_data_to_include$lat <- sponges_data_to_include$decimalLatitude
+	sponges_data_to_include$elevation <- sponges_data_to_include$depth
+	sponges_data_to_include$gbif <- TRUE
+	sponges_data_for_idw <- plyr::rbind.fill(sponges_data_for_idw, sponges_data_to_include)
+
+	training_data <- subset(sponges_data_for_idw, gbif==FALSE & !is.na(elevation))
+	test_data <- subset(sponges_data_for_idw, gbif==TRUE & !is.na(elevation))
+
+	f1 <- function(x, test, train) {
+		nmx <- x[1]
+		idp <- x[2]
+		if(nmx<1 | idp < 0.001) {return(Inf)}
+		m <- gstat(formula=elevation~1, locations=~lon+lat, data=train, nmax=nmx, set=list(idp=idp))
+		p <- predict(m, newdata=test, depug.level=0)$var1.pred
+		return(Metrics::rmse(test$elevation, p))
+	} 
+
+	opt <- optim(c(8, 0.5), f1, test=test_data, train=training_data)
+
+	m <- gstat(formula=elevation~1, locations=~lon+lat, data=subset(sponges_data_for_idw, !is.na(elevation) & gbif==FALSE), nmax=opt$par[1], set=list(idp=opt$par[2]))
+	new_depths <- predict(m, newdata=subset(sponges_data_for_idw, gbif==TRUE))$var1.pred
+	sponges$idw_depths <- new_depths
+	sponges$idw_depths <- abs(sponges$idw_depths)
+	return(sponges)
+}
+
+complex_ph_extraction <- function(sponges, tidyph) {
+	sponges$ph <- NA
+
+	for(sponge_index in sequence(nrow(sponges))) {
+		target_depth <- tidyph$transforms$depth$depth[(which.min(abs(tidyph$transforms$depth$depth - sponges$idw_depths[sponge_index])))]
+		bound <- 0.25
+		phs <- tidyph %>% hyper_filter(
+			latitude = between(latitude, sponges$decimalLatitude[sponge_index]-bound, sponges$decimalLatitude[sponge_index]+bound),
+			longitude = between(longitude, sponges$decimalLongitude[sponge_index]-bound, sponges$decimalLongitude[sponge_index]+bound),
+			depth = between(depth, target_depth-10, target_depth+10)
+			) %>% hyper_array()
+		sponges$ph[sponge_index] <- median(phs$ph, na.rm=TRUE)
+		cat("\r", sponge_index, " of ", nrow(sponges), " it found ", length(phs$ph), " values")
+}
+	return(sponges)
+
+}
+
+complex_silica_extraction <- function(sponges, tidysilica) {
+	sponges$silica <- NA
+
+	for(sponge_index in sequence(nrow(sponges))) {
+		target_depth <- tidysilica$transforms$depth$depth[(which.min(abs(tidysilica$transforms$depth$depth - sponges$idw_depths[sponge_index])))]
+		bound <- 0.25
+		sils <- tidysilica %>% hyper_filter(
+			latitude = between(latitude, sponges$decimalLatitude[sponge_index]-bound, sponges$decimalLatitude[sponge_index]+bound),
+			longitude = between(longitude, sponges$decimalLongitude[sponge_index]-bound, sponges$decimalLongitude[sponge_index]+bound),
+			depth = between(depth, target_depth-10, target_depth+10)
+			) %>% hyper_array()
+		sponges$silica[sponge_index] <- median(sils$si, na.rm=TRUE)
+		cat("\r", sponge_index, " of ", nrow(sponges), " it found ", length(sils$si), " values")
+	}
+	return(sponges)
+}
+
+complex_temperature_extraction <- function(sponges, tidytemp) {
+	sponges$temperature <- NA
+
+	for(sponge_index in sequence(nrow(sponges))) {
+		bound <- 0.083
+		temps <- tidytemp %>% hyper_filter(
+			latitude = between(latitude, sponges$decimalLatitude[sponge_index]-bound, sponges$decimalLatitude[sponge_index]+bound),
+			longitude = between(longitude, sponges$decimalLongitude[sponge_index]-bound, sponges$decimalLongitude[sponge_index]+bound),
+			) %>% hyper_array()
+		sponges$temperature[sponge_index] <- median(temps$bottomT, na.rm=TRUE)
+		cat("\r", sponge_index, " of ", nrow(sponges), " it found ", length(temps$bottomT), " values")
+	}
+	return(sponges)
+}
+
+complex_datatree <- function(sponges, phy) {
+	cleandat <- sponges[,c("genus", "SpiculeTypes", "ph", "temperature", "silica", "idw_depths"), ]
+	phdat <- aggregate(ph ~ genus, FUN="mean", data=cleandat)
+	tempdat <- aggregate(temperature ~ genus, FUN="mean", data=cleandat)
+	sildat <- aggregate(silica ~ genus, FUN="mean", data=cleandat)
+	depthdat <- aggregate(idw_depths ~ genus, FUN="mean", data=cleandat)
+	depthdat$idw_depths <- abs(depthdat$idw_depths)
+	spicdat <- aggregate(SpiculeTypes ~ genus, FUN="mean", data=cleandat)
+	finalsponges <- merge(phdat, tempdat, by="genus")
+	finalsponges <- merge(finalsponges, sildat, by="genus")
+	finalsponges <- merge(finalsponges, depthdat, by="genus")
+	finalsponges <- merge(finalsponges, spicdat, by="genus")
+	row.names(finalsponges) <- finalsponges$genus
+
+	phy$tip.label <- sub("_[^_]+$", "", phy$tip.label)
+
+	RemoveDuplicateNames <- function(phy) {
+		if(any(duplicated(phy$tip.label))) {
+			phy$tip.label <- make.unique(phy$tip.label, sep = ".")
+			cat("Duplicate names were found and have been renamed.\n")
+		} else {
+			cat("No duplicate names were found.\n")
+		}
+		return(phy)
+	}
+
+	prunedtree <- treedata(phy=RemoveDuplicateNames(phy), data=finalsponges)
+
+	prunedtree$data <- as.data.frame(prunedtree$data)
+	for (i in sequence(ncol(prunedtree$data))) {
+		prunedtree$data[,i] <- as.numeric(prunedtree$data[,i])
+	}
+	prunedtree$data$LogSpiculeTypes <- log(prunedtree$data$SpiculeTypes)
+
+	return(prunedtree)
+}
+
+complex_bm_model <- function(prunedtree) {
+	phylomodelbmgenus <- phylolm(LogSpiculeTypes ~ ph + temperature + silica + idw_depths, data=prunedtree$data, phy=prunedtree$phy, model="BM")
+	bestmodelbmgenus <- dredge(phylomodelbmgenus)
+	return(bestmodelbmgenus)
+}
+
+complex_randomroot_model <- function(prunedtree) {
+	phylomodelrandomrootgenus <- phylolm(LogSpiculeTypes ~ ph + temperature + silica + idw_depths, data=prunedtree$data, phy=prunedtree$phy, model="OUrandomRoot")
+	bestmodelrandomrootgenus <- dredge(phylomodelrandomrootgenus)
+	return(bestmodelrandomrootgenus)
+}
