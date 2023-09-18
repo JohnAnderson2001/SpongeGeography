@@ -30,6 +30,18 @@ list(
   tar_target(model_output_silica_only, phyloglm(spicules ~ silica, data=pruned_tree$data, phy=pruned_tree$phy, method="logistic_IG10")),
   tar_target(model_output_temperature_only, phyloglm(spicules ~ temperature, data=pruned_tree$data, phy=pruned_tree$phy, method="logistic_IG10")),
   tar_target(model_output_only_intercept, phyloglm(spicules ~ 1, data=pruned_tree$data, phy=pruned_tree$phy, method="logistic_IG10")),
+  tar_target(model_output_depth_ph, phyloglm(spicules ~ idw_depths + ph, data=pruned_tree$data, phy=pruned_tree$phy, method="logistic_IG10")),
+  tar_target(model_output_depth_silica, phyloglm(spicules ~ idw_depths + silica, data=pruned_tree$data, phy=pruned_tree$phy, method="logistic_IG10")),
+  tar_target(model_output_depth_temperature, phyloglm(spicules ~ idw_depths + temperature, data=pruned_tree$data, phy=pruned_tree$phy, method="logistic_IG10")),
+  tar_target(model_output_ph_silica, phyloglm(spicules ~ ph + silica, data=pruned_tree$data, phy=pruned_tree$phy, method="logistic_IG10")),
+  tar_target(model_output_ph_temperature, phyloglm(spicules ~ ph + temperature, data=pruned_tree$data, phy=pruned_tree$phy, method="logistic_IG10")),
+  tar_target(model_output_silica_temperature, phyloglm(spicules ~ silica + temperature, data=pruned_tree$data, phy=pruned_tree$phy, method="logistic_IG10")),
+  tar_target(model_output_depth_ph_silica, phyloglm(spicules ~ idw_depths + ph + silica, data=pruned_tree$data, phy=pruned_tree$phy, method="logistic_IG10")),
+  tar_target(model_output_depth_ph_temperature, phyloglm(spicules ~ idw_depths + ph + temperature, data=pruned_tree$data, phy=pruned_tree$phy, method="logistic_IG10")),
+  tar_target(model_output_depth_silica_temperature, phyloglm(spicules ~ idw_depths + silica + temperature, data=pruned_tree$data, phy=pruned_tree$phy, method="logistic_IG10")),
+  tar_target(model_output_ph_silica_temperature, phyloglm(spicules ~ ph + silica + temperature, data=pruned_tree$data, phy=pruned_tree$phy, method="logistic_IG10")),
+  #model comparison visualization
+  tar_target(model_comparison, rbind(model_output_full$aic, model_output_depths_only$aic, model_output_ph_only$aic, model_output_silica_only$aic, model_output_temperature_only$aic, model_output_only_intercept$aic, model_output_depth_ph$aic, model_output_depth_silica$aic, model_output_depth_temperature$aic, model_output_ph_silica$aic, model_output_ph_temperature$aic, model_output_silica_temperature$aic, model_output_depth_ph_silica$aic, model_output_depth_ph_temperature$aic, model_output_depth_silica_temperature$aic, model_output_ph_silica_temperature$aic)),
   #visualizations for binary data analysis
   tar_target(spicule_presence_summaries, pruned_tree$data |> group_by(spicules) |> summarize(
     n=n(),
@@ -56,8 +68,3 @@ list(
   tar_target(complex_rr_model_output, complex_randomroot_model(complex_pruned_tree))
 
 )
-
-#ACCOUNT FOR ABSOLUTE VALUE IN BINARY DATA ANALYSIS:
-#do not need to run depths again: add absolute value function to ph and silica extraction
-#temperature does not use depth so it does not need to be run again
-#then redo the models

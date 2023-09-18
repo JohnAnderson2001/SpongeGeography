@@ -244,6 +244,14 @@ nobs.phyloglm <- function(object, ...) {
 	return(object$n)
 }
 
+#possible function to compare models?
+#compare_models <- function(m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16) {
+#	compare_1 <- rbind(ml$aic, m2$aic, m3$aic, m4$aic, m5$aic, m6$aic, m7$aic, m8$aic, m9$aic, m10$aic, m11$aic, m12$aic, m13$aic, m14$aic, m15$aic, m16$aic)
+#	row.names(compare_1) <- c(m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16)
+#	col.names(compare_!) <- "aic"
+#	compare_1 %>% arrange(desc(aic))
+#}
+
 #binary data functions complete
 #functions for building models with numeric complexity data:
 
