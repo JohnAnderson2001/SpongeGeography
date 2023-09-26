@@ -65,6 +65,18 @@ list(
   tar_target(complex_pruned_tree, complex_datatree(complexity_depths_ph_silica_and_temp, phy)),
   #models for complexity data
   tar_target(complex_bm_model_output, complex_bm_model(complex_pruned_tree)),
-  tar_target(complex_rr_model_output, complex_randomroot_model(complex_pruned_tree))
+  tar_target(complex_rr_model_output, complex_randomroot_model(complex_pruned_tree)),
+  #try models with adjusted predictors
+  tar_target(complex_adjusted_data, complex_data_adjustments(complexity_depths_ph_silica_and_temp)),
+  tar_target(complex_adjusted_tree, complex_tree_adjustments(complex_adjusted_data, phy)),
+  tar_target(adjusted_bm_model, complex_bm_model_adjustment(complex_adjusted_tree)),
+  tar_target(adjusted_randomroot_model, complex_rr_model_adjustment(complex_adjusted_tree)),
+  #try presence/absence models with adjusted predictors
+  tar_target(adjusted_binary_data, binary_data_adjustments(depths_pH_silica_and_temp))
 
 )
+#log mean depth, log max depth, log min depth, photic yes/no, nonphotic yes/no
+#add interaction term for Calcarea (convert to calcite spicule yes/no)
+#consider modeling distance from optimal pH and temp
+#silica is fine untransformed
+#look at regional sponge predation

@@ -416,3 +416,132 @@ complex_randomroot_model <- function(prunedtree) {
 	bestmodelrandomrootgenus <- dredge(phylomodelrandomrootgenus)
 	return(bestmodelrandomrootgenus)
 }
+
+#make adjusted models with different predictors and transformations on data
+complex_data_adjustments <- function(spongedata) {
+	#divide sponges with silica and calcite spicules so sponges that do not use silica can be accounted for in the model
+	#calcarea <- sponges[sponges$class %in% "Calcarea", ]
+	#notcalcarea <- sponges[!sponges$class %in% "Calcarea", ]
+	#calcarea$silicaspicules <- 0
+	#notcalcarea$silicaspicules <- 1
+	#adjusted_data <- rbind(notcalcarea, calcarea)
+	sponges <- spongedata
+	sponges$silicaspicules <- 1
+	for (row in sequence(nrow(sponges))) {
+		if (sponges$class[row] == "Calcarea") {
+			sponges$silicaspicules[row] <- 0
+		}
+	}
+	#divide photic and non-photic depth zones
+	#find source for photic zone being 200m
+	sponges$photic <- 0
+	for (row in sequence(nrow(sponges))) {
+		if (sponges$idw_depths[row] < 200) {
+			sponges$photic[row] <- 1
+		}
+	}
+	sponges$nonphotic <- 0
+	for (row in sequence(nrow(sponges))) {
+		if (sponges$idw_depths[row] > 200) {
+			sponges$nonphotic[row] <- 1
+		}
+	}
+
+	return(sponges)
+}
+
+complex_tree_adjustments <- function(sponges, phy) {
+	cleandat <- sponges[,c("genus", "SpiculeTypes", "ph", "temperature", "silica", "idw_depths", "silicaspicules", "photic", "nonphotic"), ]
+	phdat <- aggregate(ph ~ genus, FUN="mean", data=cleandat)
+	tempdat <- aggregate(temperature ~ genus, FUN="mean", data=cleandat)
+	sildat <- aggregate(silica ~ genus, FUN="mean", data=cleandat)
+	depthdat <- aggregate(idw_depths ~ genus, FUN="mean", data=cleandat)
+	silicaspicsdat <- aggregate(silicaspicules ~ genus, FUN="max", data=cleandat)
+	photicdat <- aggregate(photic ~ genus, FUN="max", data=cleandat)
+	nonphoticdat <- aggregate(nonphotic ~ genus, FUN="max", data=cleandat)
+	depthdat$idw_depths <- abs(depthdat$idw_depths)
+	spicdat <- aggregate(SpiculeTypes ~ genus, FUN="mean", data=cleandat)
+	finalsponges <- merge(phdat, tempdat, by="genus")
+	finalsponges <- merge(finalsponges, sildat, by="genus")
+	finalsponges <- merge(finalsponges, depthdat, by="genus")
+	finalsponges <- merge(finalsponges, silicaspicsdat, by="genus")
+	finalsponges <- merge(finalsponges, photicdat, by="genus")
+	finalsponges <- merge(finalsponges, nonphoticdat, by="genus")
+	finalsponges <- merge(finalsponges, spicdat, by="genus")
+	row.names(finalsponges) <- finalsponges$genus
+
+	phy$tip.label <- sub("_[^_]+$", "", phy$tip.label)
+
+	RemoveDuplicateNames <- function(phy) {
+		if(any(duplicated(phy$tip.label))) {
+			phy$tip.label <- make.unique(phy$tip.label, sep = ".")
+			cat("Duplicate names were found and have been renamed.\n")
+		} else {
+			cat("No duplicate names were found.\n")
+		}
+		return(phy)
+	}
+
+	prunedtree <- treedata(phy=RemoveDuplicateNames(phy), data=finalsponges)
+
+	prunedtree$data <- as.data.frame(prunedtree$data)
+	for (i in sequence(ncol(prunedtree$data))) {
+		prunedtree$data[,i] <- as.numeric(prunedtree$data[,i])
+	}
+	prunedtree$data$LogSpiculeTypes <- log(prunedtree$data$SpiculeTypes)
+
+	return(prunedtree)
+}
+
+complex_bm_model_adjustment <- function(prunedtree) {
+	phylomodelbmgenus <- phylolm(LogSpiculeTypes ~ ph + temperature + silica + log(idw_depths + 1) + photic + nonphotic * silicaspicules, data=prunedtree$data, phy=prunedtree$phy, model="BM")
+	bestmodelbmgenus <- dredge(phylomodelbmgenus)
+	return(bestmodelbmgenus)
+	#is the log depth transformation correct?
+}
+
+complex_rr_model_adjustment <- function(prunedtree) {
+	phylomodelrrgenus <- phylolm(LogSpiculeTypes ~ ph + temperature + silica + log(idw_depths + 1) + photic + nonphotic * silicaspicules, data=prunedtree$data, phy=prunedtree$phy, model="OUrandomRoot")
+	bestmodelrrgenus <- dredge(phylomodelrrgenus)
+	return(bestmodelrrgenus)
+	#is the log depth transformation correct?
+}
+
+binary_data_adjustments <- function(spongedata) {
+	#divide sponges with silica and calcite spicules so sponges that do not use silica can be accounted for in the model
+	#calcarea <- sponges[sponges$class %in% "Calcarea", ]
+	#notcalcarea <- sponges[!sponges$class %in% "Calcarea", ]
+	#calcarea$silicaspicules <- 0
+	#notcalcarea$silicaspicules <- 1
+	#adjusted_data <- rbind(notcalcarea, calcarea)
+	sponges <- spongedata
+	sponges$idw_depths <- abs(sponges$idw_depths)
+	sponges$silicaspicules <- 1
+	for (row in sequence(nrow(sponges))) {
+		if (sponges$class[row] == "Calcarea") {
+			sponges$silicaspicules[row] <- 0
+		}
+		if (sponges$spicules[row] == 0) {
+			sponges$silicaspicules[row] <- 0
+		}
+	}
+	#divide photic and non-photic depth zones
+	#find source for photic zone being 200m
+	sponges$photic <- 0
+	for (row in sequence(nrow(sponges))) {
+		if (sponges$idw_depths[row] < 200) {
+			sponges$photic[row] <- 1
+		}
+	}
+	sponges$nonphotic <- 0
+	for (row in sequence(nrow(sponges))) {
+		if (sponges$idw_depths[row] > 200) {
+			sponges$nonphotic[row] <- 1
+		}
+	}
+
+	return(sponges)
+}
+
+relevanttest <- complexityGBIF[,c("gbifID", "class", "order", "family", "genus", "species", "decimalLatitude", "decimalLongitude", "depth", "year")]
+test <- relevanttest[(complexityGBIF$species %in% "Rossella nuda"), ] #find whether a species is in GBIF data
