@@ -3,7 +3,7 @@ library(tarchetypes)
 
 
 tar_option_set(
-	packages = c("ncdf4", "tidync", "tidyverse", "magrittr", "lubridate", "gstat", "sp", "phylolm", "geiger", "phylolm", "MuMIn")
+	packages = c("ncdf4", "tidync", "tidyverse", "magrittr", "lubridate", "gstat", "sp", "phylolm", "geiger", "phylolm", "MuMIn", "sisters")
 )
 
 source("_functions.R")
@@ -72,7 +72,9 @@ list(
   tar_target(adjusted_bm_model, complex_bm_model_adjustment(complex_adjusted_tree)),
   tar_target(adjusted_randomroot_model, complex_rr_model_adjustment(complex_adjusted_tree)),
   #try presence/absence models with adjusted predictors
-  tar_target(adjusted_binary_data, binary_data_adjustments(depths_pH_silica_and_temp))
+  tar_target(adjusted_binary_data, binary_data_adjustments(depths_pH_silica_and_temp)),
+  #try sister group analysis for presence/absence data
+  tar_target(sister_group_model, sisters_analysis(depths_pH_silica_and_temp, phy))
 
 )
 #log mean depth, log max depth, log min depth, photic yes/no, nonphotic yes/no

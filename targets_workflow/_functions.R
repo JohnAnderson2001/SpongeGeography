@@ -543,5 +543,51 @@ binary_data_adjustments <- function(spongedata) {
 	return(sponges)
 }
 
-relevanttest <- complexityGBIF[,c("gbifID", "class", "order", "family", "genus", "species", "decimalLatitude", "decimalLongitude", "depth", "year")]
-test <- relevanttest[(complexityGBIF$species %in% "Rossella nuda"), ] #find whether a species is in GBIF data
+#functions for sister-group analysis for presence/absence of spicules
+sisters_analysis <- function(sponges, phy) {
+	#cleaned <- sis_clean(phy=RemoveDuplicateNames(phy), complexity_depths_ph_silica_and_temp, first_col_names = TRUE)
+	#use pruned tree instead?
+	cleandat <- sponges[,c("genus", "spicules", "ph", "temperature", "silica", "idw_depths"), ]
+	phdat <- aggregate(ph ~ genus, FUN="mean", data=cleandat)
+	tempdat <- aggregate(temperature ~ genus, FUN="mean", data=cleandat)
+	sildat <- aggregate(silica ~ genus, FUN="mean", data=cleandat)
+	depthdat <- aggregate(idw_depths ~ genus, FUN="mean", data=cleandat)
+	depthdat$idw_depths <- abs(depthdat$idw_depths)
+	spicdat <- aggregate(spicules ~ genus, FUN="mean", data=cleandat)
+	finalsponges <- merge(phdat, tempdat, by="genus")
+	finalsponges <- merge(finalsponges, sildat, by="genus")
+	finalsponges <- merge(finalsponges, depthdat, by="genus")
+	finalsponges <- merge(finalsponges, spicdat, by="genus")
+	#inalsponges$species <- sub(" ", "_", finalsponges$species)
+	row.names(finalsponges) <- finalsponges$genus
+
+	phy$tip.label <- sub("_[^_]+$", "", phy$tip.label)
+	RemoveDuplicateNames <- function(phy) {
+		if(any(duplicated(phy$tip.label))) {
+			phy$tip.label <- make.unique(phy$tip.label, sep = ".")
+			cat("Duplicate names were found and have been renamed.\n")
+		} else {
+			cat("No duplicate names were found.\n")
+		}
+		return(phy)
+	}
+
+	cleaned <- sis_clean(RemoveDuplicateNames(phy), finalsponges)
+	phy <- cleaned$phy
+	traits <- cleaned$traits
+	#trait <- sis_discretize(as.numeric(traits[,6]))
+	trait <- cleaned$traits[,6]
+	sisters <- sis_get_sisters(phy)
+	sisters_comparison <- sis_format_comparison(sisters, trait, phy)
+	pairs <- sis_format_simpified(sisters_comparison)
+	sis_test(pairs)
+	#test <- sis_get_sisters(phy)
+	#test2 <- sis_format_comparison(sisters=test, trait=pruned_tree$data, phy=phy)
+}
+
+#find sponges in GBIF
+#relevanttest <- complexityGBIF[,c("gbifID", "class", "order", "family", "genus", "species", "decimalLatitude", "decimalLongitude", "depth", "year")]
+#test <- relevanttest[(complexityGBIF$species %in% "Galaxia gaviotensis"), ] #replace string with the name of a species to see if it is in GBIF
+
+#testnotree <- glm(spicules ~ idw_depths + ph + silica + temperature, data=depths_pH_silica_and_temp, family="binomial")
+#step(testnotree)
