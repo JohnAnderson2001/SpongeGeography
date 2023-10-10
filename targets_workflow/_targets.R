@@ -74,8 +74,12 @@ list(
   #try presence/absence models with adjusted predictors
   tar_target(adjusted_binary_data, binary_data_adjustments(depths_pH_silica_and_temp)),
   #try sister group analysis for presence/absence data
-  tar_target(sister_group_model, sisters_analysis(depths_pH_silica_and_temp, phy))
-
+  #tar_target(sister_group_model, sisters_analysis(depths_pH_silica_and_temp, phy)),
+  tar_target(complex_sister_analysis, sisters_analysis(complexity_depths_ph_silica_and_temp, phy)),
+  tar_target(binomial_complexity_tree, binomial_complexity_prep(complexity_depths_ph_silica_and_temp, phy)),
+  tar_target(binomial_complexity_model_output, phyloglm(SpiculeTypes ~ log(idw_depths + 1) + ph + silica + temperature, data=binomial_complexity_tree$data, phy=binomial_complexity_tree$phy, method="logistic_IG10")),
+  tar_target(binomial_complexity_intercept_only, phyloglm(SpiculeTypes ~ 1, data=binomial_complexity_tree$data, phy=binomial_complexity_tree$phy, method="logistic_IG10"))
+  #find a way to remove all the taxa that have an intermediate value for high or low complexity (or just do it species-level)
 )
 #log mean depth, log max depth, log min depth, photic yes/no, nonphotic yes/no
 #add interaction term for Calcarea (convert to calcite spicule yes/no)

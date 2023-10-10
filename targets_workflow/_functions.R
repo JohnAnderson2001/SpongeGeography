@@ -547,13 +547,13 @@ binary_data_adjustments <- function(spongedata) {
 sisters_analysis <- function(sponges, phy) {
 	#cleaned <- sis_clean(phy=RemoveDuplicateNames(phy), complexity_depths_ph_silica_and_temp, first_col_names = TRUE)
 	#use pruned tree instead?
-	cleandat <- sponges[,c("genus", "spicules", "ph", "temperature", "silica", "idw_depths"), ]
+	cleandat <- sponges[,c("genus", "SpiculeTypes", "ph", "temperature", "silica", "idw_depths"), ]
 	phdat <- aggregate(ph ~ genus, FUN="mean", data=cleandat)
 	tempdat <- aggregate(temperature ~ genus, FUN="mean", data=cleandat)
 	sildat <- aggregate(silica ~ genus, FUN="mean", data=cleandat)
 	depthdat <- aggregate(idw_depths ~ genus, FUN="mean", data=cleandat)
 	depthdat$idw_depths <- abs(depthdat$idw_depths)
-	spicdat <- aggregate(spicules ~ genus, FUN="mean", data=cleandat)
+	spicdat <- aggregate(SpiculeTypes ~ genus, FUN="mean", data=cleandat)
 	finalsponges <- merge(phdat, tempdat, by="genus")
 	finalsponges <- merge(finalsponges, sildat, by="genus")
 	finalsponges <- merge(finalsponges, depthdat, by="genus")
@@ -573,16 +573,73 @@ sisters_analysis <- function(sponges, phy) {
 	}
 
 	cleaned <- sis_clean(RemoveDuplicateNames(phy), finalsponges)
+	#print(colnames(cleaned$traits))
 	phy <- cleaned$phy
 	traits <- cleaned$traits
-	#trait <- sis_discretize(as.numeric(traits[,6]))
-	trait <- cleaned$traits[,6]
+	print(quantile(as.numeric(traits[,"SpiculeTypes"])))
+	trait <- sis_discretize(as.numeric(traits[,"SpiculeTypes"]), cutoff=2.1, use_percentile=FALSE)
+	#print(quantile(trait))
+	#trait <- cleaned$traits[,6]
 	sisters <- sis_get_sisters(phy)
 	sisters_comparison <- sis_format_comparison(sisters, trait, phy)
-	pairs <- sis_format_simpified(sisters_comparison)
-	sis_test(pairs)
+	print(sisters_comparison)
+	return(sisters_comparison)
+	#pairs <- sis_format_simpified(sisters_comparison)
+	#return(pairs)
+	#sis_test(pairs)
 	#test <- sis_get_sisters(phy)
 	#test2 <- sis_format_comparison(sisters=test, trait=pruned_tree$data, phy=phy)
+}
+
+binomial_complexity_prep <- function(sponges, phy) {
+	for(i in sequence(nrow(sponges))) {
+		if (sponges$SpiculeTypes[i] >= 2.1) {
+			sponges$SpiculeTypes[i] <- 1
+		} else {
+			sponges$SpiculeTypes[i] <- 0
+		}
+	}
+
+	cleandat <- sponges[,c("genus", "SpiculeTypes", "ph", "temperature", "silica", "idw_depths"), ]
+	phdat <- aggregate(ph ~ genus, FUN="mean", data=cleandat)
+	tempdat <- aggregate(temperature ~ genus, FUN="mean", data=cleandat)
+	sildat <- aggregate(silica ~ genus, FUN="mean", data=cleandat)
+	depthdat <- aggregate(idw_depths ~ genus, FUN="mean", data=cleandat)
+	depthdat$idw_depths <- abs(depthdat$idw_depths)
+	spicdat <- aggregate(SpiculeTypes ~ genus, FUN="mean", data=cleandat)
+	finalsponges <- merge(phdat, tempdat, by="genus")
+	finalsponges <- merge(finalsponges, sildat, by="genus")
+	finalsponges <- merge(finalsponges, depthdat, by="genus")
+	finalsponges <- merge(finalsponges, spicdat, by="genus")
+	#inalsponges$species <- sub(" ", "_", finalsponges$species)
+	row.names(finalsponges) <- finalsponges$genus
+
+	phy$tip.label <- sub("_[^_]+$", "", phy$tip.label)
+	RemoveDuplicateNames <- function(phy) {
+		if(any(duplicated(phy$tip.label))) {
+			phy$tip.label <- make.unique(phy$tip.label, sep = ".")
+			cat("Duplicate names were found and have been renamed.\n")
+		} else {
+			cat("No duplicate names were found.\n")
+		}
+		return(phy)
+	}
+
+	prunedtree <- treedata(phy=RemoveDuplicateNames(phy), data=finalsponges)
+
+	prunedtree$data <- as.data.frame(prunedtree$data)
+	for (i in sequence(ncol(prunedtree$data))) {
+		prunedtree$data[,i] <- as.numeric(prunedtree$data[,i])
+	}
+	#prunedtree$data$LogSpiculeTypes <- log(prunedtree$data$SpiculeTypes)
+	prunedtree$data = prunedtree$data[(prunedtree$data$SpiculeTypes == 1 | prunedtree$data$SpiculeTypes == 0), ]
+	#for(i in sequence(nrow(prunedtree$data))) {
+		#if(prunedtree$data$SpiculeTypes[i] != 1 | prunedtree$data$SpiculeTypes[i] != 0) {
+			#prunedtree$data <- prunedtree$data[!prunedtree$data[i],]
+		#}
+	#}
+
+	return(prunedtree)
 }
 
 #find sponges in GBIF
