@@ -578,12 +578,33 @@ sisters_analysis <- function(sponges, phy) {
 	traits <- cleaned$traits
 	print(quantile(as.numeric(traits[,"SpiculeTypes"])))
 	trait <- sis_discretize(as.numeric(traits[,"SpiculeTypes"]), cutoff=2.1, use_percentile=FALSE)
+	names(trait) <- rownames(traits)
 	#print(quantile(trait))
 	#trait <- cleaned$traits[,6]
 	sisters <- sis_get_sisters(phy)
 	sisters_comparison <- sis_format_comparison(sisters, trait, phy)
-	print(sisters_comparison)
-	return(sisters_comparison)
+	concatenate_states <- function(x) {
+		return(paste0(sort(unique(unname(x[[1]]))), collapse=""))
+	}
+	sisters_comparison$left.trait.simplified <- NA
+	sisters_comparison$right.trait.simplified <- NA
+	for (i in sequence(nrow(sisters_comparison))) {
+		sisters_comparison$left.trait.simplified[i] <- concatenate_states(sisters_comparison$left.trait[i])
+		sisters_comparison$right.trait.simplified[i] <- concatenate_states(sisters_comparison$right.trait[i])
+	}
+
+	sisters_comparison_informative <- subset(sisters_comparison, left.trait.simplified!=right.trait.simplified & nchar(left.trait.simplified)==1 & nchar(right.trait.simplified)==1)
+	two_taxon_pairs <- data.frame()
+	for (sister_index in sequence(nrow(sisters_comparison_informative))) {
+		if(sisters_comparison_informative$ntax.total[sister_index]==2) {
+			focal_left <- phy$tip.label[unlist(sisters_comparison_informative$left[sister_index])]
+			focal_right <- phy$tip.label[unlist(sisters_comparison_informative$right[sister_index])]
+			paired_traits <-as.data.frame(traits[rownames(traits) %in% c(focal_left, focal_right),])
+			paired_traits$pair_node <- sisters_comparison_informative$node[sister_index]
+			two_taxon_pairs <- dplyr::bind_rows(two_taxon_pairs, paired_traits)
+		}
+	}
+	return(two_taxon_pairs)
 	#pairs <- sis_format_simpified(sisters_comparison)
 	#return(pairs)
 	#sis_test(pairs)
@@ -648,3 +669,4 @@ binomial_complexity_prep <- function(sponges, phy) {
 
 #testnotree <- glm(spicules ~ idw_depths + ph + silica + temperature, data=depths_pH_silica_and_temp, family="binomial")
 #step(testnotree)
+
