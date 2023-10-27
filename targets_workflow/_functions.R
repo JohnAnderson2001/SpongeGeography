@@ -595,6 +595,7 @@ sisters_analysis <- function(sponges, phy) {
 
 	sisters_comparison_informative <- subset(sisters_comparison, left.trait.simplified!=right.trait.simplified & nchar(left.trait.simplified)==1 & nchar(right.trait.simplified)==1)
 	two_taxon_pairs <- data.frame()
+	all_pairs <- data.frame()
 	for (sister_index in sequence(nrow(sisters_comparison_informative))) {
 		if(sisters_comparison_informative$ntax.total[sister_index]==2) {
 			focal_left <- phy$tip.label[unlist(sisters_comparison_informative$left[sister_index])]
@@ -602,9 +603,47 @@ sisters_analysis <- function(sponges, phy) {
 			paired_traits <-as.data.frame(traits[rownames(traits) %in% c(focal_left, focal_right),])
 			paired_traits$pair_node <- sisters_comparison_informative$node[sister_index]
 			two_taxon_pairs <- dplyr::bind_rows(two_taxon_pairs, paired_traits)
+			all_pairs <- dplyr::bind_rows(all_pairs, paired_traits)
+		} else {
+			focal_left <- phy$tip.label[unlist(sisters_comparison_informative$left[sister_index])]	
+			focal_right <- phy$tip.label[unlist(sisters_comparison_informative$right[sister_index])]
+			focal_left_traits <- as.data.frame(traits[rownames(traits) %in% c(focal_left),])
+			focal_right_traits <- as.data.frame(traits[rownames(traits) %in% c(focal_right),])
+			if(ncol(focal_left_traits)==1) {
+				focal_left_traits <- as.data.frame(t(focal_left_traits))
+				rownames(focal_left_traits) <- NULL
+			}
+			if(ncol(focal_right_traits)==1) {
+				focal_right_traits <- as.data.frame(t(focal_right_traits))
+				rownames(focal_right_traits) <- NULL
+			}
+			focal_left_concat <- data.frame(matrix(nrow=1,ncol=ncol(focal_left_traits)))
+			focal_right_concat <- data.frame(matrix(nrow=1,ncol=ncol(focal_right_traits)))
+			for(col_index in sequence(ncol(focal_left_concat))) {
+				focal_left_concat[,col_index] <- paste0(sort(unique(unname(focal_left_traits[,col_index]))), collapse=", ")	
+				focal_right_concat[,col_index] <- paste0(sort(unique(unname(focal_right_traits[,col_index]))), collapse=", ")
+			}
+			paired_traits <- dplyr::bind_rows(focal_left_concat, focal_right_concat)
+			colnames(paired_traits) <- colnames(focal_left_traits)
+			paired_traits$pair_node <- sisters_comparison_informative$node[sister_index]
+			all_pairs <- dplyr::bind_rows(all_pairs, paired_traits)
 		}
 	}
-	return(two_taxon_pairs)
+	original_width <- ncol(all_pairs)
+	for (i in 2:original_width){
+		all_pairs[,ncol(all_pairs)+1] <- rep(NA, nrow(all_pairs))
+		all_pairs[,ncol(all_pairs)+1] <- rep(NA, nrow(all_pairs))
+		for (row_index in sequence(nrow(all_pairs))) {
+			values <- as.numeric(strsplit(as.character(all_pairs[row_index,i]), ", ")[[1]])
+			all_pairs[row_index,-1+ncol(all_pairs)] <- min(values)
+			all_pairs[row_index,ncol(all_pairs)] <- max(values)
+		}
+		colnames(all_pairs)[ncol(all_pairs)-1] <- paste0(colnames(all_pairs)[i], "_min")
+		colnames(all_pairs)[ncol(all_pairs)] <- paste0(colnames(all_pairs)[i], "_max")
+	}
+	rownames(all_pairs) <- NULL
+	all_pairs <- all_pairs[order(all_pairs$pair_node, all_pairs$SpiculeTypes_min),]
+	return(all_pairs)
 	#pairs <- sis_format_simpified(sisters_comparison)
 	#return(pairs)
 	#sis_test(pairs)
