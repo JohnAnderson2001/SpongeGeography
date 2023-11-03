@@ -544,7 +544,7 @@ binary_data_adjustments <- function(spongedata) {
 }
 
 #functions for sister-group analysis for presence/absence of spicules
-sisters_analysis <- function(sponges, phy) {
+sisters_analysis <- function(sponges, phy, cutoff=2.1) {
 	#cleaned <- sis_clean(phy=RemoveDuplicateNames(phy), complexity_depths_ph_silica_and_temp, first_col_names = TRUE)
 	#use pruned tree instead?
 	cleandat <- sponges[,c("genus", "SpiculeTypes", "ph", "temperature", "silica", "idw_depths"), ]
@@ -577,7 +577,7 @@ sisters_analysis <- function(sponges, phy) {
 	phy <- cleaned$phy
 	traits <- cleaned$traits
 	print(quantile(as.numeric(traits[,"SpiculeTypes"])))
-	trait <- sis_discretize(as.numeric(traits[,"SpiculeTypes"]), cutoff=2.1, use_percentile=FALSE)
+	trait <- sis_discretize(as.numeric(traits[,"SpiculeTypes"]), cutoff=cutoff, use_percentile=FALSE)
 	names(trait) <- rownames(traits)
 	#print(quantile(trait))
 	#trait <- cleaned$traits[,6]
@@ -649,6 +649,24 @@ sisters_analysis <- function(sponges, phy) {
 	#sis_test(pairs)
 	#test <- sis_get_sisters(phy)
 	#test2 <- sis_format_comparison(sisters=test, trait=pruned_tree$data, phy=phy)
+}
+
+do_many_cutoffs <- function(sponges, phy) {
+	results <- data.frame()
+	cutoffs <- seq(from=0.1, to=14, by=0.1)
+	for (cutoff in cutoffs) {
+		try({
+		sister_results <- sisters_analysis(sponges, phy, cutoff=cutoff)
+		sister_results$cutoff <- cutoff
+		results <- dplyr::bind_rows(results, sister_results)
+		})
+	}	
+	return(results)
+}
+
+summarize_cutoffs <- function(complex_sister_analysis) {
+	results <- complex_sister_analysis |> group_by(cutoff) |> summarize(npairs =n()/2)	
+	return(results)
 }
 
 binomial_complexity_prep <- function(sponges, phy) {
