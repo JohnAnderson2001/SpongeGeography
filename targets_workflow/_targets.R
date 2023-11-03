@@ -75,7 +75,8 @@ list(
   tar_target(adjusted_binary_data, binary_data_adjustments(depths_pH_silica_and_temp)),
   #try sister group analysis for presence/absence data
   #tar_target(sister_group_model, sisters_analysis(depths_pH_silica_and_temp, phy)),
-  tar_target(complex_sister_analysis, sisters_analysis(complexity_depths_ph_silica_and_temp, phy)),
+  tar_target(complex_sister_analysis, do_many_cutoffs(complexity_depths_ph_silica_and_temp, phy)),
+  tar_target(cutoffs_summarized, summarize_cutoffs(complex_sister_analysis)),
   tar_target(binomial_complexity_tree, binomial_complexity_prep(complexity_depths_ph_silica_and_temp, phy)),
   tar_target(binomial_complexity_model_output, phyloglm(SpiculeTypes ~ log(idw_depths + 1) + ph + silica + temperature, data=binomial_complexity_tree$data, phy=binomial_complexity_tree$phy, method="logistic_IG10")),
   tar_target(binomial_complexity_intercept_only, phyloglm(SpiculeTypes ~ 1, data=binomial_complexity_tree$data, phy=binomial_complexity_tree$phy, method="logistic_IG10"))
