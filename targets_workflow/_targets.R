@@ -55,7 +55,7 @@ list(
 
   #files for spicule complexity analysis
   tar_target(complexityGBIF, read.delim("C:\\Users\\jjera\\Documents\\RStuff\\0163120-230224095556074.csv")),
-  tar_target(complexity, read.csv("C:\\Users\\jjera\\Documents\\RStuff\\Complexity.csv")),
+  tar_target(complexity, read.csv("c:\\Users\\jjera\\Documents\\GitHub\\SpiculeComplexity\\Matrix\\Complexity.csv")),
   tar_target(complexity_data, create_complexity_data(complexityGBIF, complexity)),
   #environmental data extraction
   tar_target(complexity_and_depths, complex_depth_extraction(complexity_data, tidydepth)),
