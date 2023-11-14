@@ -192,22 +192,34 @@ extract_temp <- function(sponges, tidytemp) {
 	return(sponges)
 }
 
+extract_viscosity <- function(sponges) {
+	sponges$viscosity <- NA
+	for(sponge_index in sequence(nrow(sponges))) {
+		if((is.na(sponges$temperature[sponge_index]) == FALSE) && (sponges$temperature[sponge_index] >= 0.1)) {
+			sponges$viscosity[sponge_index] <- ViscTD(Temp= sponges$temperature[sponge_index]+273.15, D= 1036)
+		}
+	}
+	return(sponges)
+}
+
 #constructing models
 
 
 datatree <- function(sponges, phy) {
 
 	#prepare occurrence and environmental data; aggregate by genus
-	cleandat <- sponges[,c("genus", "spicules", "ph", "temperature", "silica", "idw_depths"), ]
+	cleandat <- sponges[,c("genus", "spicules", "ph", "temperature", "silica", "idw_depths", "viscosity"), ]
 	phdat <- aggregate(ph ~ genus, FUN="mean", data=cleandat)
 	tempdat <- aggregate(temperature ~ genus, FUN="mean", data=cleandat)
 	sildat <- aggregate(silica ~ genus, FUN="mean", data=cleandat)
 	depthdat <- aggregate(idw_depths ~ genus, FUN="mean", data=cleandat)
 	depthdat$idw_depths <- abs(depthdat$idw_depths)
+	viscdat <- aggregate(viscosity ~ genus, FUN="mean", data=cleandat)
 	spicdat <- aggregate(spicules ~ genus, FUN="mean", data=cleandat)
 	finalsponges <- merge(phdat, tempdat, by="genus")
 	finalsponges <- merge(finalsponges, sildat, by="genus")
 	finalsponges <- merge(finalsponges, depthdat, by="genus")
+	finalsponges <- merge(finalsponges, viscdat, by="genus")
 	finalsponges <- merge(finalsponges, spicdat, by="genus")
 	row.names(finalsponges) <- finalsponges$genus
 
@@ -368,17 +380,29 @@ complex_temperature_extraction <- function(sponges, tidytemp) {
 	return(sponges)
 }
 
+complex_viscosity_extraction <- function(sponges) {
+	sponges$viscosity <- NA
+	for(sponge_index in sequence(nrow(sponges))) {
+		if((is.na(sponges$temperature[sponge_index]) == FALSE) && (sponges$temperature[sponge_index] >= 0.1)) {
+			sponges$viscosity[sponge_index] <- ViscTD(Temp= sponges$temperature[sponge_index]+273.15, D= 1036)
+		}
+	}
+	return(sponges)
+}
+
 complex_datatree <- function(sponges, phy) {
-	cleandat <- sponges[,c("genus", "SpiculeTypes", "ph", "temperature", "silica", "idw_depths"), ]
+	cleandat <- sponges[,c("genus", "SpiculeTypes", "ph", "temperature", "silica", "idw_depths", "viscosity"), ]
 	phdat <- aggregate(ph ~ genus, FUN="mean", data=cleandat)
 	tempdat <- aggregate(temperature ~ genus, FUN="mean", data=cleandat)
 	sildat <- aggregate(silica ~ genus, FUN="mean", data=cleandat)
 	depthdat <- aggregate(idw_depths ~ genus, FUN="mean", data=cleandat)
 	depthdat$idw_depths <- abs(depthdat$idw_depths)
+	viscdat <- aggregate(viscosity ~ genus, FUN="mean", data=cleandat)
 	spicdat <- aggregate(SpiculeTypes ~ genus, FUN="mean", data=cleandat)
 	finalsponges <- merge(phdat, tempdat, by="genus")
 	finalsponges <- merge(finalsponges, sildat, by="genus")
 	finalsponges <- merge(finalsponges, depthdat, by="genus")
+	finalsponges <- merge(finalsponges, viscdat, by="genus")
 	finalsponges <- merge(finalsponges, spicdat, by="genus")
 	row.names(finalsponges) <- finalsponges$genus
 
@@ -406,13 +430,13 @@ complex_datatree <- function(sponges, phy) {
 }
 
 complex_bm_model <- function(prunedtree) {
-	phylomodelbmgenus <- phylolm(LogSpiculeTypes ~ ph + temperature + silica + idw_depths, data=prunedtree$data, phy=prunedtree$phy, model="BM")
+	phylomodelbmgenus <- phylolm(LogSpiculeTypes ~ ph + temperature + silica + idw_depths + viscosity, data=prunedtree$data, phy=prunedtree$phy, model="BM")
 	bestmodelbmgenus <- dredge(phylomodelbmgenus)
 	return(bestmodelbmgenus)
 }
 
 complex_randomroot_model <- function(prunedtree) {
-	phylomodelrandomrootgenus <- phylolm(LogSpiculeTypes ~ ph + temperature + silica + idw_depths, data=prunedtree$data, phy=prunedtree$phy, model="OUrandomRoot")
+	phylomodelrandomrootgenus <- phylolm(LogSpiculeTypes ~ ph + temperature + silica + idw_depths + viscosity, data=prunedtree$data, phy=prunedtree$phy, model="OUrandomRoot")
 	bestmodelrandomrootgenus <- dredge(phylomodelrandomrootgenus)
 	return(bestmodelrandomrootgenus)
 }
@@ -451,11 +475,12 @@ complex_data_adjustments <- function(spongedata) {
 }
 
 complex_tree_adjustments <- function(sponges, phy) {
-	cleandat <- sponges[,c("genus", "SpiculeTypes", "ph", "temperature", "silica", "idw_depths", "silicaspicules", "photic", "nonphotic"), ]
+	cleandat <- sponges[,c("genus", "SpiculeTypes", "ph", "temperature", "silica", "idw_depths", "viscosity", "silicaspicules", "photic", "nonphotic"), ]
 	phdat <- aggregate(ph ~ genus, FUN="mean", data=cleandat)
 	tempdat <- aggregate(temperature ~ genus, FUN="mean", data=cleandat)
 	sildat <- aggregate(silica ~ genus, FUN="mean", data=cleandat)
 	depthdat <- aggregate(idw_depths ~ genus, FUN="mean", data=cleandat)
+	viscdat <- aggregate(viscosity ~ genus, FUN="max", data=cleandat)
 	silicaspicsdat <- aggregate(silicaspicules ~ genus, FUN="max", data=cleandat)
 	photicdat <- aggregate(photic ~ genus, FUN="max", data=cleandat)
 	nonphoticdat <- aggregate(nonphotic ~ genus, FUN="max", data=cleandat)
@@ -464,6 +489,7 @@ complex_tree_adjustments <- function(sponges, phy) {
 	finalsponges <- merge(phdat, tempdat, by="genus")
 	finalsponges <- merge(finalsponges, sildat, by="genus")
 	finalsponges <- merge(finalsponges, depthdat, by="genus")
+	finalsponges <- merge(finalsponges, viscdat, by="genus")
 	finalsponges <- merge(finalsponges, silicaspicsdat, by="genus")
 	finalsponges <- merge(finalsponges, photicdat, by="genus")
 	finalsponges <- merge(finalsponges, nonphoticdat, by="genus")
@@ -494,14 +520,14 @@ complex_tree_adjustments <- function(sponges, phy) {
 }
 
 complex_bm_model_adjustment <- function(prunedtree) {
-	phylomodelbmgenus <- phylolm(LogSpiculeTypes ~ ph + temperature + silica + log(idw_depths + 1) + photic + nonphotic * silicaspicules, data=prunedtree$data, phy=prunedtree$phy, model="BM")
+	phylomodelbmgenus <- phylolm(LogSpiculeTypes ~ ph + temperature + silica + log(idw_depths + 1) + viscosity + photic + nonphotic * silicaspicules, data=prunedtree$data, phy=prunedtree$phy, model="BM")
 	bestmodelbmgenus <- dredge(phylomodelbmgenus)
 	return(bestmodelbmgenus)
 	#is the log depth transformation correct?
 }
 
 complex_rr_model_adjustment <- function(prunedtree) {
-	phylomodelrrgenus <- phylolm(LogSpiculeTypes ~ ph + temperature + silica + log(idw_depths + 1) + photic + nonphotic * silicaspicules, data=prunedtree$data, phy=prunedtree$phy, model="OUrandomRoot")
+	phylomodelrrgenus <- phylolm(LogSpiculeTypes ~ ph + temperature + silica + log(idw_depths + 1) + viscosity + photic + nonphotic * silicaspicules, data=prunedtree$data, phy=prunedtree$phy, model="OUrandomRoot")
 	bestmodelrrgenus <- dredge(phylomodelrrgenus)
 	return(bestmodelrrgenus)
 	#is the log depth transformation correct?
@@ -547,16 +573,18 @@ binary_data_adjustments <- function(spongedata) {
 sisters_analysis <- function(sponges, phy, cutoff=2.1) {
 	#cleaned <- sis_clean(phy=RemoveDuplicateNames(phy), complexity_depths_ph_silica_and_temp, first_col_names = TRUE)
 	#use pruned tree instead?
-	cleandat <- sponges[,c("genus", "SpiculeTypes", "ph", "temperature", "silica", "idw_depths"), ]
+	cleandat <- sponges[,c("genus", "SpiculeTypes", "ph", "temperature", "silica", "idw_depths", "viscosity"), ]
 	phdat <- aggregate(ph ~ genus, FUN="mean", data=cleandat)
 	tempdat <- aggregate(temperature ~ genus, FUN="mean", data=cleandat)
 	sildat <- aggregate(silica ~ genus, FUN="mean", data=cleandat)
 	depthdat <- aggregate(idw_depths ~ genus, FUN="mean", data=cleandat)
 	depthdat$idw_depths <- abs(depthdat$idw_depths)
+	viscdat <- aggregate(viscosity ~ genus, FUN="mean", data=cleandat)
 	spicdat <- aggregate(SpiculeTypes ~ genus, FUN="mean", data=cleandat)
 	finalsponges <- merge(phdat, tempdat, by="genus")
 	finalsponges <- merge(finalsponges, sildat, by="genus")
 	finalsponges <- merge(finalsponges, depthdat, by="genus")
+	finalsponges <- merge(finalsponges, viscdat, by="genus")
 	finalsponges <- merge(finalsponges, spicdat, by="genus")
 	#inalsponges$species <- sub(" ", "_", finalsponges$species)
 	row.names(finalsponges) <- finalsponges$genus
@@ -678,16 +706,18 @@ binomial_complexity_prep <- function(sponges, phy) {
 		}
 	}
 
-	cleandat <- sponges[,c("genus", "SpiculeTypes", "ph", "temperature", "silica", "idw_depths"), ]
+	cleandat <- sponges[,c("genus", "SpiculeTypes", "ph", "temperature", "silica", "idw_depths", "viscosity"), ]
 	phdat <- aggregate(ph ~ genus, FUN="mean", data=cleandat)
 	tempdat <- aggregate(temperature ~ genus, FUN="mean", data=cleandat)
 	sildat <- aggregate(silica ~ genus, FUN="mean", data=cleandat)
 	depthdat <- aggregate(idw_depths ~ genus, FUN="mean", data=cleandat)
 	depthdat$idw_depths <- abs(depthdat$idw_depths)
+	viscdat <- aggregate(viscosity ~ genus, FUN="mean", data=cleandat)
 	spicdat <- aggregate(SpiculeTypes ~ genus, FUN="mean", data=cleandat)
 	finalsponges <- merge(phdat, tempdat, by="genus")
 	finalsponges <- merge(finalsponges, sildat, by="genus")
 	finalsponges <- merge(finalsponges, depthdat, by="genus")
+	finalsponges <- merge(finalsponges, viscdat, by="genus")
 	finalsponges <- merge(finalsponges, spicdat, by="genus")
 	#inalsponges$species <- sub(" ", "_", finalsponges$species)
 	row.names(finalsponges) <- finalsponges$genus
