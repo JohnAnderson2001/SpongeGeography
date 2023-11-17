@@ -450,24 +450,24 @@ complex_data_adjustments <- function(spongedata) {
 	#notcalcarea$silicaspicules <- 1
 	#adjusted_data <- rbind(notcalcarea, calcarea)
 	sponges <- spongedata
-	sponges$silicaspicules <- 1
+	sponges$silicaspicules <- TRUE
 	for (row in sequence(nrow(sponges))) {
 		if (sponges$class[row] == "Calcarea") {
-			sponges$silicaspicules[row] <- 0
+			sponges$silicaspicules[row] <- FALSE
 		}
 	}
 	#divide photic and non-photic depth zones
 	#find source for photic zone being 200m
-	sponges$photic <- 0
+	sponges$photic <- FALSE
 	for (row in sequence(nrow(sponges))) {
 		if (sponges$idw_depths[row] < 200) {
-			sponges$photic[row] <- 1
+			sponges$photic[row] <- TRUE
 		}
 	}
-	sponges$nonphotic <- 0
+	sponges$nonphotic <- FALSE
 	for (row in sequence(nrow(sponges))) {
 		if (sponges$idw_depths[row] > 200) {
-			sponges$nonphotic[row] <- 1
+			sponges$nonphotic[row] <- TRUE
 		}
 	}
 
@@ -482,8 +482,29 @@ complex_tree_adjustments <- function(sponges, phy) {
 	depthdat <- aggregate(idw_depths ~ genus, FUN="mean", data=cleandat)
 	viscdat <- aggregate(viscosity ~ genus, FUN="max", data=cleandat)
 	silicaspicsdat <- aggregate(silicaspicules ~ genus, FUN="max", data=cleandat)
+	for(row in sequence(length(silicaspicsdat))) {
+		if(silicaspicsdat$silicaspicules[row] == 0) {
+			silicaspicsdat$silicaspicules[row] <- FALSE
+		} else {
+			silicaspicsdat$silicaspicules[row] <- TRUE
+		}
+	}
 	photicdat <- aggregate(photic ~ genus, FUN="max", data=cleandat)
+	for(row in sequence(length(photicdat))) {
+		if(photicdat$photic[row] == 0) {
+			photicdat$photic[row] <- FALSE
+		} else {
+			photicdat$photic[row] <- TRUE
+		}
+	}
 	nonphoticdat <- aggregate(nonphotic ~ genus, FUN="max", data=cleandat)
+	for(row in sequence(length(nonphoticdat))) {
+		if(nonphoticdat$nonphotic[row] == 0) {
+			nonphoticdat$nonphotic[row] <- FALSE
+		} else {
+			nonphoticdat$nonphotic[row] <- TRUE
+		}
+	}
 	depthdat$idw_depths <- abs(depthdat$idw_depths)
 	spicdat <- aggregate(SpiculeTypes ~ genus, FUN="mean", data=cleandat)
 	finalsponges <- merge(phdat, tempdat, by="genus")
@@ -494,6 +515,7 @@ complex_tree_adjustments <- function(sponges, phy) {
 	finalsponges <- merge(finalsponges, photicdat, by="genus")
 	finalsponges <- merge(finalsponges, nonphoticdat, by="genus")
 	finalsponges <- merge(finalsponges, spicdat, by="genus")
+	finalsponges$log1p_idw_depths <- log1p(finalsponges$idw_depths)
 	row.names(finalsponges) <- finalsponges$genus
 
 	phy$tip.label <- sub("_[^_]+$", "", phy$tip.label)
@@ -520,14 +542,14 @@ complex_tree_adjustments <- function(sponges, phy) {
 }
 
 complex_bm_model_adjustment <- function(prunedtree) {
-	phylomodelbmgenus <- phylolm(LogSpiculeTypes ~ ph + temperature + silica + log(idw_depths + 1) + viscosity + photic + nonphotic * silicaspicules, data=prunedtree$data, phy=prunedtree$phy, model="BM")
+	phylomodelbmgenus <- phylolm(LogSpiculeTypes ~ ph + temperature + silica * silicaspicules + log1p_idw_depths + viscosity + photic + nonphotic, data=prunedtree$data, phy=prunedtree$phy, model="BM")
 	bestmodelbmgenus <- dredge(phylomodelbmgenus)
 	return(bestmodelbmgenus)
 	#is the log depth transformation correct?
 }
 
 complex_rr_model_adjustment <- function(prunedtree) {
-	phylomodelrrgenus <- phylolm(LogSpiculeTypes ~ ph + temperature + silica + log(idw_depths + 1) + viscosity + photic + nonphotic * silicaspicules, data=prunedtree$data, phy=prunedtree$phy, model="OUrandomRoot")
+	phylomodelrrgenus <- phylolm(LogSpiculeTypes ~ ph + temperature + silica * silicaspicules + log1p_idw_depths + viscosity + photic + nonphotic, data=prunedtree$data, phy=prunedtree$phy, model="OUrandomRoot")
 	bestmodelrrgenus <- dredge(phylomodelrrgenus)
 	return(bestmodelrrgenus)
 	#is the log depth transformation correct?
