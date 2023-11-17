@@ -772,6 +772,63 @@ binomial_complexity_prep <- function(sponges, phy) {
 	return(prunedtree)
 }
 
+
+do_all_pics <- function(sponges, phy) {
+	cleandat <- sponges[,c("genus", "SpiculeTypes", "ph", "temperature", "silica", "idw_depths", "viscosity"), ]
+	phdat <- aggregate(ph ~ genus, FUN="mean", data=cleandat)
+	tempdat <- aggregate(temperature ~ genus, FUN="mean", data=cleandat)
+	sildat <- aggregate(silica ~ genus, FUN="mean", data=cleandat)
+	depthdat <- aggregate(idw_depths ~ genus, FUN="mean", data=cleandat)
+	depthdat$idw_depths <- abs(depthdat$idw_depths)
+	spicdat <- aggregate(SpiculeTypes ~ genus, FUN="mean", data=cleandat)
+	viscositydat <- aggregate(viscosity ~ genus, FUN="mean", data=cleandat)
+	finalsponges <- merge(phdat, tempdat, by="genus")
+	finalsponges <- merge(finalsponges, sildat, by="genus")
+	finalsponges <- merge(finalsponges, depthdat, by="genus")
+	finalsponges <- merge(finalsponges, spicdat, by="genus")
+	finalsponges <- merge(finalsponges, viscositydat, by="genus")
+	#inalsponges$species <- sub(" ", "_", finalsponges$species)
+	row.names(finalsponges) <- finalsponges$genus
+
+	phy$tip.label <- sub("_[^_]+$", "", phy$tip.label)
+	RemoveDuplicateNames <- function(phy) {
+		if(any(duplicated(phy$tip.label))) {
+			phy$tip.label <- make.unique(phy$tip.label, sep = ".")
+			cat("Duplicate names were found and have been renamed.\n")
+		} else {
+			cat("No duplicate names were found.\n")
+		}
+		return(phy)
+	}
+
+	cleaned <- sis_clean(RemoveDuplicateNames(phy), finalsponges)
+	#print(colnames(cleaned$traits))
+	phy <- cleaned$phy
+	traits <- cleaned$traits
+	traits <- traits[,!grepl('genus', colnames(traits))]
+	traits <- as.data.frame(traits)
+	traits$logSpiculeTypes <- log(as.numeric(traits$SpiculeTypes))
+	results <- data.frame()
+	for (i in sequence(ncol(traits))) {
+		comparison <- t(t(ape::pic(as.numeric(traits[,i]), phy)))
+		if(i==1) {
+			results <- comparison
+		} else {
+			results <- cbind(results, comparison)
+		}
+		colnames(results)[ncol(results)] <- colnames(traits)[i]	
+	}
+	return(as.data.frame(results))
+}
+
+compute_pics_summaries <- function(pics, focal="logSpiculeTypes") {
+	options(na.action = "na.fail")
+	formula <- paste0(focal, " ~ ph + temperature + silica + idw_depths + viscosity + 0")
+	# lm regression
+	lm_results <- lm(formula, data=pics)
+	return(MuMIn::dredge(lm_results))
+}
+
 #find sponges in GBIF
 #relevanttest <- complexityGBIF[,c("gbifID", "class", "order", "family", "genus", "species", "decimalLatitude", "decimalLongitude", "depth", "year")]
 #test <- relevanttest[(complexityGBIF$species %in% "Galaxia gaviotensis"), ] #replace string with the name of a species to see if it is in GBIF
