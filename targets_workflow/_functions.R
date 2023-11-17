@@ -752,17 +752,19 @@ binomial_complexity_prep <- function(sponges, phy) {
 
 
 do_all_pics <- function(sponges, phy) {
-	cleandat <- sponges[,c("genus", "SpiculeTypes", "ph", "temperature", "silica", "idw_depths"), ]
+	cleandat <- sponges[,c("genus", "SpiculeTypes", "ph", "temperature", "silica", "idw_depths", "viscosity"), ]
 	phdat <- aggregate(ph ~ genus, FUN="mean", data=cleandat)
 	tempdat <- aggregate(temperature ~ genus, FUN="mean", data=cleandat)
 	sildat <- aggregate(silica ~ genus, FUN="mean", data=cleandat)
 	depthdat <- aggregate(idw_depths ~ genus, FUN="mean", data=cleandat)
 	depthdat$idw_depths <- abs(depthdat$idw_depths)
 	spicdat <- aggregate(SpiculeTypes ~ genus, FUN="mean", data=cleandat)
+	viscositydat <- aggregate(viscosity ~ genus, FUN="mean", data=cleandat)
 	finalsponges <- merge(phdat, tempdat, by="genus")
 	finalsponges <- merge(finalsponges, sildat, by="genus")
 	finalsponges <- merge(finalsponges, depthdat, by="genus")
 	finalsponges <- merge(finalsponges, spicdat, by="genus")
+	finalsponges <- merge(finalsponges, viscositydat, by="genus")
 	#inalsponges$species <- sub(" ", "_", finalsponges$species)
 	row.names(finalsponges) <- finalsponges$genus
 
@@ -782,6 +784,8 @@ do_all_pics <- function(sponges, phy) {
 	phy <- cleaned$phy
 	traits <- cleaned$traits
 	traits <- traits[,!grepl('genus', colnames(traits))]
+	traits <- as.data.frame(traits)
+	traits$logSpiculeTypes <- log(as.numeric(traits$SpiculeTypes))
 	results <- data.frame()
 	for (i in sequence(ncol(traits))) {
 		comparison <- t(t(ape::pic(as.numeric(traits[,i]), phy)))
@@ -792,7 +796,15 @@ do_all_pics <- function(sponges, phy) {
 		}
 		colnames(results)[ncol(results)] <- colnames(traits)[i]	
 	}
-	return(results)
+	return(as.data.frame(results))
+}
+
+compute_pics_summaries <- function(pics, focal="logSpiculeTypes") {
+	options(na.action = "na.fail")
+	formula <- paste0(focal, " ~ ph + temperature + silica + idw_depths + viscosity + 0")
+	# lm regression
+	lm_results <- lm(formula, data=pics)
+	return(MuMIn::dredge(lm_results))
 }
 
 #find sponges in GBIF

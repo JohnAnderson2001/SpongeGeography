@@ -79,6 +79,8 @@ list(
   #tar_target(sister_group_model, sisters_analysis(depths_pH_silica_and_temp, phy)),
   tar_target(complex_sister_analysis, do_many_cutoffs(all_complex_data, phy)),
   tar_target(pics, do_all_pics(all_complex_data, phy)),
+  tar_target(pics_spicule_types, compute_pics_summaries(pics, "SpiculeTypes")),
+  tar_target(pics_log_spicule_types, compute_pics_summaries(pics, "logSpiculeTypes")),
   tar_target(cutoffs_summarized, summarize_cutoffs(complex_sister_analysis)),
   tar_target(binomial_complexity_tree, binomial_complexity_prep(all_complex_data, phy)),
   tar_target(binomial_complexity_model_output, phyloglm(SpiculeTypes ~ log(idw_depths + 1) + ph + silica + temperature, data=binomial_complexity_tree$data, phy=binomial_complexity_tree$phy, method="logistic_IG10")),
