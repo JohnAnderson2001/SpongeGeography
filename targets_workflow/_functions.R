@@ -836,3 +836,5 @@ compute_pics_summaries <- function(pics, focal="logSpiculeTypes") {
 #testnotree <- glm(spicules ~ idw_depths + ph + silica + temperature, data=depths_pH_silica_and_temp, family="binomial")
 #step(testnotree)
 
+#phylomodelrrgenus <- phylolm(SpiculeTypes ~ ph + temperature + silica * silicaspicules + log1p_idw_depths + viscosity + photic + nonphotic, data=complex_adjusted_tree$data, phy=complex_adjusted_tree$phy, model="OUrandomRoot")
+#bestmodelrrgenus <- dredge(phylomodelrrgenus)

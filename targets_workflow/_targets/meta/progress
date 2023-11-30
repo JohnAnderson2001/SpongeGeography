@@ -26,10 +26,8 @@ complex_pruned_tree|stem|complex_pruned_tree|0|skipped
 complex_sister_analysis|stem|complex_sister_analysis|0|skipped
 binomial_complexity_tree|stem|binomial_complexity_tree|0|skipped
 pruned_tree|stem|pruned_tree|0|skipped
-pics_spicule_types|stem|pics_spicule_types|0|started
-pics_spicule_types|stem|pics_spicule_types|0|built
-pics_log_spicule_types|stem|pics_log_spicule_types|0|started
-pics_log_spicule_types|stem|pics_log_spicule_types|0|built
+pics_spicule_types|stem|pics_spicule_types|0|skipped
+pics_log_spicule_types|stem|pics_log_spicule_types|0|skipped
 complex_adjusted_tree|stem|complex_adjusted_tree|0|skipped
 complex_bm_model_output|stem|complex_bm_model_output|0|skipped
 complex_rr_model_output|stem|complex_rr_model_output|0|skipped
