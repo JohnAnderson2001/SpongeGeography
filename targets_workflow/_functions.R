@@ -474,6 +474,36 @@ complex_data_adjustments <- function(spongedata) {
 	return(sponges)
 }
 
+ calculate_evol_distinctiveness <- function(phylogeny, species_name) {
+
+ phylogeny_evol_dist <- evol.distinct(phylogeny)
+
+ species_branch_length <- phylogeny_evol_dist$phylogeneticDistances[species_name, ]
+
+   mean_evol_dist <- mean(phylogeny_evol_dist$phylogeneticDistances)
+
+  evol_dist_species <- sum(species_branch_length)
+
+  t_test_result <- t.test(species_branch_length, mu = mean_evol_dist)
+
+ p_value <- t_test_result$p.value
+
+ # Determine if the result is significant based on a chosen significance level (e.g., 0.05)
+ is_significant <- p_value < 0.05  # You can adjust the significance level as needed
+
+ summary_message <- ifelse(is_significant,
+                           paste(species_name, "is significantly different from the mean."),
+                           paste(species_name, "is not significantly different from the mean."))
+
+  result <- list(
+   evol_distinctiveness = evol_dist_species,
+   is_significant = is_significant,
+   p_value = p_value,
+    summary = summary_message
+ )
+return(result)
+ }
+
 complex_tree_adjustments <- function(sponges, phy) {
 	cleandat <- sponges[,c("genus", "SpiculeTypes", "ph", "temperature", "silica", "idw_depths", "viscosity", "silicaspicules", "photic", "nonphotic"), ]
 	phdat <- aggregate(ph ~ genus, FUN="mean", data=cleandat)
