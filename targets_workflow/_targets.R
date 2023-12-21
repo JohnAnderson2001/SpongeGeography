@@ -3,7 +3,7 @@ library(tarchetypes)
 
 
 tar_option_set(
-	packages = c("ncdf4", "tidync", "tidyverse", "magrittr", "lubridate", "gstat", "sp", "phylolm", "geiger", "phylolm", "MuMIn", "sisters", "IAPWS95")
+	packages = c("ncdf4", "tidync", "tidyverse", "magrittr", "lubridate", "gstat", "sp", "phylolm", "geiger", "phylolm", "MuMIn", "sisters", "IAPWS95", "taxize")
 )
 
 source("_functions.R")

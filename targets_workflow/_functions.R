@@ -838,3 +838,99 @@ compute_pics_summaries <- function(pics, focal="logSpiculeTypes") {
 
 #phylomodelrrgenus <- phylolm(SpiculeTypes ~ ph + temperature + silica * silicaspicules + log1p_idw_depths + viscosity + photic + nonphotic, data=complex_adjusted_tree$data, phy=complex_adjusted_tree$phy, model="OUrandomRoot")
 #bestmodelrrgenus <- dredge(phylomodelrrgenus)
+
+uid <- get_uid("Asbestopluma hypogea")
+ENTREZ_KEY <- "89b1520818fd22ded39305a6f3c7a8700e08"
+testclassification <- classification(id=uid, db='ncbi')
+
+reference <- read.csv("C:\\Users\\jjera\\Documents\\GitHub\\SpiculeComplexity\\Matrix\\SpeciesReference.csv")
+head(reference)
+reference['class'] <- NA
+reference['subclass'] <- NA
+reference['order'] <- NA
+reference['suborder'] <- NA
+reference['family'] <- NA
+reference['subfamily'] <- NA
+reference['genus'] <- NA
+reference['subgenus'] <- NA
+
+
+for(row in sequence(nrow(reference))) {
+	current_species <- reference$Species[row]
+	current_ID <- get_uid(current_species)
+	if(is.na(current_ID[1]) == FALSE) {
+		#ENTREZ_KEY <- "07d428dfe47acb88f106c6e81f7f3e158809"
+		current_taxonomy <- classification(id=current_ID, db='ncbi', key="89b1520818fd22ded39305a6f3c7a8700e08")
+		current_tax_dataframe <- as.data.frame(current_taxonomy[1])
+		colnames(current_tax_dataframe) <- c("name", "rank", "id")
+		
+		class <- which(current_tax_dataframe$rank == "class")
+		if(length(class) > 0) {
+			reference$class[row] <- current_tax_dataframe$name[class]
+		}
+
+		subclass <- which(current_tax_dataframe$rank == "subclass")
+		if(length(subclass) > 0) {
+			reference$subclass[row] <- current_tax_dataframe$name[subclass]
+		}
+
+		order <- which(current_tax_dataframe$rank == "order")
+		if(length(order) > 0) {
+			reference$order[row] <- current_tax_dataframe$name[order]
+		}
+
+		suborder <- which(current_tax_dataframe$rank == "suborder")
+		if(length(suborder) > 0) {
+			reference$suborder[row] <- current_tax_dataframe$name[suborder]
+		}
+
+		family <- which(current_tax_dataframe$rank == "family")
+		if(length(family) > 0) {
+			reference$family[row] <- current_tax_dataframe$name[family]
+		}
+
+		subfamily <- which(current_tax_dataframe$rank == "subfamily")
+		if(length(subfamily) > 0) {
+			reference$subfamily[row] <- current_tax_dataframe$name[subfamily]
+		}
+
+		genus <- which(current_tax_dataframe$rank == "genus")
+		if(length(genus) > 0) {
+			reference$genus[row] <- current_tax_dataframe$name[genus]
+		}
+
+		subgenus <- which(current_tax_dataframe$rank == "subgenus")
+		if(length(subgenus) > 0) {
+			reference$subgenus[row] <- current_tax_dataframe$name[subgenus]
+		}
+
+		#reference$class[row] <- current_tax_dataframe$name[which(current_tax_dataframe$rank == "class")]
+		#reference$subclass[row] <- current_tax_dataframe$name[which(current_tax_dataframe$rank == "subclass")]
+		#reference$order[row] <- current_tax_dataframe$name[which(current_tax_dataframe$rank == "order")]
+		#reference$suborder[row] <- current_tax_dataframe$name[which(current_tax_dataframe$rank == "suborder")]
+		#reference$family[row] <- current_tax_dataframe$name[which(current_tax_dataframe$rank == "family")]
+		#reference$subfamily[row] <- current_tax_dataframe$name[which(current_tax_dataframe$rank == "subfamily")]
+		#reference$genus[row] <- current_tax_dataframe$name[which(current_tax_dataframe$rank == "genus")]
+		#reference$subgenus[row] <- current_tax_dataframe$name[which(current_tax_dataframe$rank == "subgenus")]
+	}
+}
+
+#testclassification$`1336860`$name
+#t <- as.data.frame(testclassification[1])
+
+#te <- t$name[6]
+#colnames(t) <- c("name", "rank", "id")
+#which(t$rank == 'barf')
+#string <- paste('`', uid[1], "`", sep="")
+#testclassification[string]
+#testclassification[1]
+#t$X1336860.name[7]
+
+
+#tclass <- which(t$rank == "suborder")
+#tclass
+#if(length(tclass) > 0) {
+#	print('good')
+#} else {
+#	print("barf")
+#}
