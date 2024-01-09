@@ -105,57 +105,57 @@
 104,Bactronella australis,Calcarea,no,only one type of tetractine?,Fossil,document(5)(1),11.608,23.03,17.319,No,genus_only,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Bactronella,NA
 105,Tretocalia pezica,Calcarea,no,types of triactines and tetractines unkown,Fossil,document(5)(1),11.608,23.03,17.319,No,incomplete_taxonomy,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Tretocalia,NA
 106,Monoplectroninia malonei,Calcarea,no,one type of tetractine only,Fossil,document(5)(1),11.608,23.03,17.319,No,no_data,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Monoplectroninia,NA
-107,Stauractinella eocenica,Hex,no,no,Fossil,A Highly Diverse Siliceous…,41.3,47.8,44.55,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-108,Hormathospongia dictyota,Hex,no,no,Fossil,1306475,83.5,85.8,84.65,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-109,Sanshadictya microreticulata,Hex,no,no,Fossil,1993-sponges,516,520,518,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-110,Hyalosinica archaica,Hex,yes ,"oxeas may be diactins, only fragments preserved",Fossil,1993-sponges,520,535,527.5,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-111,Choia utahensis,Demo,yes ,undefined monaxons,Fossil,1-s2.0-S0031018204005796-main,520,535,527.5,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-112,Diagoniella cyathiformis,Hex,no,no,Fossil,1-s2.0-S0031018204005796-main,520,535,527.5,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-113,Protospongia gracilis,Hex,no,no,Fossil,1-s2.0-S0031018204005796-main,520,535,527.5,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-114,Triticispongia diagonata,Hex,no,no,Fossil,1-s2.0-S0031018204005796-main,520,535,527.5,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-115,Lantianospongia palifera,Hex,no,no,Fossil,1-s2.0-S0031018204005796-main,520,535,527.5,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-116,Pirania auraeum,Demo,yes ,"tylostyles assumed from related species, but are definitely some kind of monaxon",Fossil,1-s2.0-S0031018204005796-main,477.7,485.4,481.55,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-117,Microhemidiscia greinerti,Hex,no,no,Fossil,i0022-3360-88-1-171,290.1,298.9,294.5,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-118,Heliospongia excavata,Demo,no,no,Fossil,i0022-3360-078-03-0431,315.2,323.2,319.2,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-119,Asturiaspongia aqualiforma,Hex,yes ,monaxon-like spicules present but may be foreign or broken,Fossil,i0022-3360-078-03-0431,393.3,407.6,400.45,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-120,Estrellaspongia irregulara,Hex,yes ,styles present but may be cut hexactines,Fossil,i0022-3360-078-03-0431,326.4,339.4,332.9,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-121,Hadrophragmos soleniscus,Hex,no,just three size classes of hexactines,Fossil,i0022-3360-078-03-0431,315.2,323.2,319.2,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-122,Iberospongia globulara,Hex,no,no,Fossil,i0022-3360-078-03-0431,391.9,409.1,400.5,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-123,Stioderma perforata,Hex,yes ,"somewhat unclear how many sizes of hexacts, but at least two",Fossil,i0022-3360-078-03-0431,307,315.2,311.1,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-124,Xylochos palindromica,Demo,yes ,"undefined monaxons, but multiple size orders",Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-125,Pirania llanfawrensis,Demo,yes ,possibly some subtylostyles; unclear if they slowly grade into styles,Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-126,Heminectere minima,Hex,yes ,could be even more size classes,Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-127,Asthenospongia cambria,Hex,yes ,could be more spicule orders but at least five,Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-128,Acutipuerilis spinosus,Hex,yes ,could also be stauractines but unconfirmed,Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-129,Granulispongia obscura,Hex,yes ,"probably seven size orders and each has two modifications, so complexity value could potentially be 21 or higher, but somewhat unclear if spicules grade into each other",Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-130,Murania reitneri,Demo,no,no,Fossil,MittGeolGes_95_96_0037-0045,145,163.5,154.25,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-131,Plectroninia pertusa,Calcarea,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-132,Bactronella womblei,Calcarea,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-133,Bactronella incrustans,Calcarea,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-134,Stelletta (Stolleya) silvigera,Demo,yes ,protriaenes may be modified versions of dichotriaenes; are they distinct regardless?,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-135,Geodia harmatuki,Demo,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-136,Sheldonia trabecula,Hex,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-137,Hazelina bisbifurcata,Demo,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-138,Claytonia rayi,Demo,yes ,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-139,Haplistion lobatum,Demo,no,no,Fossil,1306253,410.8,419.2,415,No,genus_only,NA,NA,NA,NA,NA,NA,NA,NA,NA
-140,Twenhofelella bulbulus,Hex,no,other small spicule types but not well preserved enough to describe,Fossil,1306253,410.8,419.2,415,No,genus_only,NA,NA,NA,NA,NA,NA,NA,NA,NA
-141,Monaxoradiata lamina,Demo,no,no,Fossil,0022-3360_2006_80_1_SFTRTM_2.0.CO_2,259.9,265.1,262.5,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-142,Chiastocolumnia cylindrica,Demo,yes ,"spicules are very irregular, so difficult to distinguish separate types",Fossil,0022-3360_2006_80_1_SFTRTM_2.0.CO_2,259.9,265.1,262.5,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-143,Dactylites obconica,Demo,yes ,"spicules are very irregular, so difficult to distinguish separate types",Fossil,0022-3360_2006_80_1_SFTRTM_2.0.CO_2,259.9,265.1,262.5,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-144,Defordia digitata,Demo,no,no,Fossil,1304893,272.3,279.3,275.8,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-145,Jereina robusta,Demo,no,no,Fossil,1304893,272.3,279.3,275.8,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-146,Astylospongia tarda,Demo,no,no,Fossil,1304631,410.8,419.2,415,No,genus_only,NA,NA,NA,NA,NA,NA,NA,NA,NA
-147,Hexactinoderma trammeri,Hex,yes ,synapticular fusion,Fossil,9373-12646-2-PB,242,247.2,244.6,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-148,Silesiaspongia rimosa,Hex,yes ,contains hexactines and their derivatives; unclear exactly how many unique forms,Fossil,9373-12646-2-PB,242,247.2,244.6,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-149,Tremadictyon radicatum,Hex,no,genus may be recorded as Cribrospongia,Fossil,Muller1991_Chapter_ObservationsOnTheJurassicHexac,157.3,163.5,160.4,No,genus_only,NA,NA,NA,NA,NA,NA,NA,NA,NA
-150,Paracinachyrella fossilis,Demo,yes ,contains oxeas but may be foreign,Fossil,Łukowiak2014_Article_BathyalSpongesFromTheLateEarly,15.97,20.44,18.205,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-151,Virgaspongiella ramosa,Demo,yes ,some oxeas and styles indistinguishable,Fossil,i0022-3360-078-01-0071,254.17,259.9,257.035,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-152,Incrustatospongia superficiala,Demo,yes ,I and Y-shaped dendroclones grade into each other,Fossil,i0022-3360-078-01-0071,254.17,259.9,257.035,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-153,Porosphaera globularis,Calcarea,no,no,Fossil,1-s2.0-S0195667111001248-main,93.5,99.6,96.55,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-154,Endostoma mexicana,Calcarea,no,all monaxons assumed to be oxeas due to some being identifiable as oxeas,Fossil,1304269,100.5,113,106.75,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-155,Mammillopora encrusta,Calcarea,no,triactines not preserved in all parts of sponge,Fossil,1304269,109,112.03,110.515,No,no,NA,NA,NA,NA,NA,NA,NA,NA,NA
-156,Sontheimia parasitica,Demo,yes ,some desmas; unclear if distinct,Fossil,A Callovian Middle Jurassic Poriferan Fauna…,163.5,166.1,164.8,No,genus_only,NA,NA,NA,NA,NA,NA,NA,NA,NA
-157,Jereica tuberculosa,Demo,no,no,Fossil,A Callovian Middle Jurassic Poriferan Fauna…,163.5,166.1,164.8,No,genus_only,NA,NA,NA,NA,NA,NA,NA,NA,NA
+107,Stauractinella eocenica,Hex,no,no,Fossil,A Highly Diverse Siliceous…,41.3,47.8,44.55,No,no,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,Stauractinellidae,NA,Stauractinella,NA
+108,Hormathospongia dictyota,Hex,no,no,Fossil,1306475,83.5,85.8,84.65,No,no,Hexactinellida,Hexasterophora,Hexactinosa,Clavularia,NA,Farreidae,NA,Hormathospongia,NA
+109,Sanshadictya microreticulata,Hex,no,no,Fossil,1993-sponges,516,520,518,No,no,Hexactinellida,NA,Reticulosa,NA,Dictyospongioidea,Dictyospongiidae,NA,Sanshadictya,NA
+110,Hyalosinica archaica,Hex,yes ,"oxeas may be diactins, only fragments preserved",Fossil,1993-sponges,520,535,527.5,No,no,Hexactinellida,NA,NA,NA,NA,NA,NA,Hyalosinica,NA
+111,Choia utahensis,Demo,yes ,undefined monaxons,Fossil,1-s2.0-S0031018204005796-main,520,535,527.5,No,no,Demospongiae,NA,Monaxoniida,NA,NA,Choiidae,NA,Choia,NA
+112,Diagoniella cyathiformis,Hex,no,no,Fossil,1-s2.0-S0031018204005796-main,520,535,527.5,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Protospongioidea,Protospongiidae,NA,Diagoniella,NA
+113,Protospongia gracilis,Hex,no,no,Fossil,1-s2.0-S0031018204005796-main,520,535,527.5,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Protospongioidea,Protospongiidae,NA,Protospongia,NA
+114,Triticispongia diagonata,Hex,no,no,Fossil,1-s2.0-S0031018204005796-main,520,535,527.5,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Protospongioidea,Protospongiidae,NA,Triticispongia,NA
+115,Lantianospongia palifera,Hex,no,no,Fossil,1-s2.0-S0031018204005796-main,520,535,527.5,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Hintzespongioidea,Hintzespongiidae,NA,Lantianospongia,NA
+116,Pirania auraeum,Demo,yes ,"tylostyles assumed from related species, but are definitely some kind of monaxon",Fossil,1-s2.0-S0016699507000782-main,477.7,485.4,481.55,No,no,Demospongiae,NA,NA,NA,NA,Piraniidae,NA,Pirania,NA
+117,Microhemidiscia greinerti,Hex,no,no,Fossil,i0022-3360-88-1-171,290.1,298.9,294.5,No,no,Hexactinellida,Amphidiscophora,Hemidiscosa,NA,NA,Hemidiscellidae,NA,Microhemidiscia,NA
+118,Heliospongia excavata,Demo,no,no,Fossil,i0022-3360-078-03-0431,315.2,323.2,319.2,No,no,Demospongiae,Clavaxinellida,Epipolasida,NA,NA,Heliospongiidae,NA,Heliospongia,NA
+119,Asturiaspongia aqualiforma,Hex,yes ,monaxon-like spicules present but may be foreign or broken,Fossil,i0022-3360-078-03-0431,393.3,407.6,400.45,No,no,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pelicaspongiidae,NA,Asturiaspongia,NA
+120,Estrellaspongia irregulara,Hex,yes ,styles present but may be cut hexactines,Fossil,i0022-3360-078-03-0431,326.4,339.4,332.9,No,no,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pelicaspongiidae,NA,Estrellaspongia,NA
+121,Hadrophragmos soleniscus,Hex,no,just three size classes of hexactines,Fossil,i0022-3360-078-03-0431,315.2,323.2,319.2,No,no,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pelicaspongiidae,NA,Hadrophragmos,NA
+122,Iberospongia globulara,Hex,no,no,Fossil,i0022-3360-078-03-0431,391.9,409.1,400.5,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Protospongioidea,Protospongiidae,NA,Iberospongia,NA
+123,Stioderma perforata,Hex,yes ,"somewhat unclear how many sizes of hexacts, but at least two",Fossil,i0022-3360-078-03-0431,307,315.2,311.1,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Brachiospongioidea,Stiodermatidae,NA,Stioderma,NA
+124,Xylochos palindromica,Demo,yes ,"undefined monaxons, but multiple size orders",Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,Demospongiae,NA,NA,NA,NA,Hazeliidae,NA,Xylochos,NA
+125,Pirania llanfawrensis,Demo,yes ,possibly some subtylostyles; unclear if they slowly grade into styles,Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,Demospongiae,NA,NA,NA,NA,Piraniidae,NA,Pirania,NA
+126,Heminectere minima,Hex,yes ,could be even more size classes,Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,Hexactinellida,NA,Reticulosa,NA,Protospongioidea,Protospongiidae,NA,Heminectere,NA
+127,Asthenospongia cambria,Hex,yes ,could be more spicule orders but at least five,Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,Hexactinellida,NA,Reticulosa,NA,Protospongioidea,Asthenospongiidae,NA,Asthenospongia,NA
+128,Acutipuerilis spinosus,Hex,yes ,could also be stauractines but unconfirmed,Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,Hexactinellida,NA,Reticulosa,NA,Protospongioidea,Asthenospongiidae,NA,Acutipuerilis,NA
+129,Granulispongia obscura,Hex,yes ,"probably seven size orders and each has two modifications, so complexity value could potentially be 21 or higher, but somewhat unclear if spicules grade into each other",Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,Hexactinellida,NA,Reticulosa,NA,Protospongioidea,Asthenospongiidae,NA,Granulispongia,NA
+130,Murania reitneri,Demo,no,no,Fossil,MittGeolGes_95_96_0037-0045,145,163.5,154.25,No,no,Demospongiae,NA,Agelasida,NA,NA,Milleporellidae,NA,Murania,NA
+131,Plectroninia pertusa,Calcarea,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Plectroninia,NA
+132,Bactronella womblei,Calcarea,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Bactronella,NA
+133,Bactronella incrustans,Calcarea,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Bactronella,NA
+134,Stelletta (Stolleya) silvigera,Demo,yes ,protriaenes may be modified versions of dichotriaenes; are they distinct regardless?,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Demospongiae,NA,Choristida,NA,NA,Ancorinidae,NA,Stelletta,Stolleya
+135,Geodia harmatuki,Demo,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Demospongiae,NA,Choristida,NA,NA,Geodiidae,NA,Geodia,NA
+136,Sheldonia trabecula,Hex,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Hexactinellida,NA,Lyssacinosida,NA,NA,Euplectellidae,NA,Sheldonia,NA
+137,Hazelina bisbifurcata,Demo,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Demospongiae,NA,Tetralithistida,NA,NA,Plinthosellidae,NA,Hazelina,NA
+138,Claytonia rayi,Demo,yes ,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Demospongiae,NA,Tetralithistida,NA,NA,Plinthosellidae,NA,Claytonia,NA
+139,Haplistion lobatum,Demo,no,no,Fossil,1306253,410.8,419.2,415,No,genus_only,Demospongiae,NA,Lithistida,Rhizomorina,NA,Haplistiidae,NA,Haplistion,NA
+140,Twenhofelella bulbulus,Hex,no,other small spicule types but not well preserved enough to describe,Fossil,1306253,410.8,419.2,415,No,genus_only,Hexactinellida,Amphidiscophora,Amphidiscosa,NA,NA,Pelicaspongiidae,NA,Twenhofelella,NA
+141,Monaxoradiata lamina,Demo,no,no,Fossil,0022-3360_2006_80_1_SFTRTM_2.0.CO_2,259.9,265.1,262.5,No,no,Demospongiae,Clavaxinellida,Protomonaxonida,NA,NA,Sollasellidae,NA,Monaxoradiata,NA
+142,Chiastocolumnia cylindrica,Demo,yes ,"spicules are very irregular, so difficult to distinguish separate types",Fossil,0022-3360_2006_80_1_SFTRTM_2.0.CO_2,259.9,265.1,262.5,No,no,Demospongiae,NA,Lithistida,Orchocladina,NA,Chiastoclonellidae,NA,Chiastocolumnia,NA
+143,Dactylites obconica,Demo,yes ,"spicules are very irregular, so difficult to distinguish separate types",Fossil,0022-3360_2006_80_1_SFTRTM_2.0.CO_2,259.9,265.1,262.5,No,no,Demospongiae,NA,Lithistida,Orchocladina,NA,Anthracosyconidae,NA,Dactylites,NA
+144,Defordia digitata,Demo,no,no,Fossil,1304893,272.3,279.3,275.8,No,no,Demospongiae,NA,Lithistida,Tetracladina,NA,Chiastoclonellidae,NA,Defordia,NA
+145,Jereina robusta,Demo,no,no,Fossil,1304893,272.3,279.3,275.8,No,no,Demospongiae,NA,Lithistida,Tetracladina,NA,Jereidae,NA,Jereina,NA
+146,Astylospongia tarda,Demo,no,no,Fossil,1304631,410.8,419.2,415,No,genus_only,Demospongiae,NA,Lithistida,Eutaxicladina,NA,Astylospongiidae,NA,Astylospongia,NA
+147,Hexactinoderma trammeri,Hex,yes ,synapticular fusion,Fossil,9373-12646-2-PB,242,247.2,244.6,No,no,Hexactinellida,NA,Lyssacinosa,NA,Euplectelloidea,Pileolitidae,NA,Hexactinoderma,NA
+148,Silesiaspongia rimosa,Hex,yes ,contains hexactines and their derivatives; unclear exactly how many unique forms,Fossil,9373-12646-2-PB,242,247.2,244.6,No,no,Hexactinellida,NA,Lyssacinosa,NA,Euplectelloidea,Euplectellidae,NA,Silesiaspongia,NA
+149,Tremadictyon radicatum,Hex,no,genus may be recorded as Cribrospongia,Fossil,Muller1991_Chapter_ObservationsOnTheJurassicHexac,157.3,163.5,160.4,No,genus_only,Hexactinellida,NA,Dictyida,NA,NA,Staurodermatidae,NA,Tremadictyon,NA
+150,Paracinachyrella fossilis,Demo,yes ,contains oxeas but may be foreign,Fossil,Łukowiak2014_Article_BathyalSpongesFromTheLateEarly,15.97,20.44,18.205,No,no,Demospongiae,NA,Spirophorida,NA,NA,Tetillidae,NA,Paracinachyrella,NA
+151,Virgaspongiella ramosa,Demo,yes ,some oxeas and styles indistinguishable,Fossil,i0022-3360-078-01-0071,254.17,259.9,257.035,No,no,Demospongiae,NA,Lithistida,Orchocladina,NA,Anthaspidellidae,NA,Virgaspongiella,NA
+152,Incrustatospongia superficiala,Demo,yes ,I and Y-shaped dendroclones grade into each other,Fossil,i0022-3360-078-01-0071,254.17,259.9,257.035,No,no,Demospongiae,NA,Lithistida,Orchocladina,NA,Anthaspidellidae,NA,Incrustatospongia,NA
+153,Porosphaera globularis,Calcarea,no,no,Fossil,1-s2.0-S0195667111001248-main,93.5,99.6,96.55,No,no,Calcarea,NA,Lithonida,NA,NA,Minchinellidae,NA,Porosphaera,NA
+154,Endostoma mexicana,Calcarea,no,all monaxons assumed to be oxeas due to some being identifiable as oxeas,Fossil,1304269,100.5,113,106.75,No,no,Calcarea,Calcaronea,NA,NA,NA,Endostomatidae,NA,Endostoma,NA
+155,Mammillopora encrusta,Calcarea,no,triactines not preserved in all parts of sponge,Fossil,1304269,109,112.03,110.515,No,no,Calcarea,Calcaronea,NA,NA,NA,Stellispongiidae,NA,Mammillopora,NA
+156,Sontheimia parasitica,Demo,yes ,some desmas; unclear if distinct,Fossil,A Callovian Middle Jurassic Poriferan Fauna…,163.5,166.1,164.8,No,genus_only,Demospongiae,NA,Tetralithistida,Tetracladina,NA,Protetraclisidae,NA,Sontheimia,NA
+157,Jereica tuberculosa,Demo,no,no,Fossil,A Callovian Middle Jurassic Poriferan Fauna…,163.5,166.1,164.8,No,genus_only,Demospongiae,NA,Spirosclerophorida,Rhizomorina,Scleritodermatoidea,Jereicidae,NA,Jereica,NA
 158,Soleneiscus hamatus,Calcarea,no,no,Extant,S12526-017-0671-x,0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Soleneiscidae,NA,Soleneiscus,NA
 159,Petrobiona massiliana,Calcarea,no,no,Extant,Sponges of marine caves…,0,0,0,NA,NA,Calcarea,Calcaronea,Lithonida,NA,NA,Petrobionidae,NA,Petrobiona,NA
 160,Sycon ciliatum,Calcarea,no,no,Extant,10.12714-egejfas.37.2.05-884246,0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Sycettidae,NA,Sycon,NA
