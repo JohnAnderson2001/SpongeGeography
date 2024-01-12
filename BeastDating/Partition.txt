@@ -1,0 +1,7 @@
+#nexus
+begin sets;
+charset 18s_block1=1-2661;
+charset 18s_block2=2662-5322;
+charset 28s=5323-9454;
+charset COI=9455-11462;
+end;
