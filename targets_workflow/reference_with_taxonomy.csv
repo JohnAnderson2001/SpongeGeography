@@ -1,214 +1,214 @@
-,Species,Type,Fuzziness.,Interesting.bits,Folder,Paper,MinAgeMYA,MaxAgeMYA,PointEstimate,Point.Estimate.in.Paper,FossilNotes,class,subclass,order,suborder,superfamily,family,subfamily,genus,subgenus
-1,Tethytimea tylota,Demo,no,no,Extant,zookeys-680-105,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tethyida,NA,NA,Tethyidae,NA,Tethytimea,NA
-2,Rhabdastrella distincta,Demo,no,no,Extant,zookeys-680-105,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Astrophorina,NA,Ancorinidae,NA,Rhabdastrella,NA
-3,Amphimedon anastomosa,Demo,no,no,Extant,zookeys-680-105,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Haplosclerida,NA,NA,Niphatidae,NA,Amphimedon,NA
-4,Asbestopluma hypogea,Demo,yes ,carnivore,Extant,VaceletBoury-Esnault1996,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,NA,NA,Cladorhizidae,NA,Asbestopluma,NA
-5,Ascandra spalatensis,Calcarea,yes ,no,Extant,301-Article Text-1584-1-10-20160302,0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Dendyidae,NA,Ascandra,NA
-6,Clathrina primordialis,Calcarea,no,one spicule type but great size variation,Extant,301-Article Text-1584-1-10-20160302,0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Clathrinidae,NA,Clathrina,NA
-7,Borojevia croatica,Calcarea,yes ,no,Extant,301-Article Text-1584-1-10-20160302,0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Clathrinidae,NA,Borojevia,NA
-8,Farrea bowerbanki,Hex,no,Some vestigial rays noted,Extant,boury-esnault_et_al_2017hexactinellida,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Sceptrulophora,NA,NA,Farreidae,NA,Farrea,NA
-9,Tretodictyum reiswigi,Hex,no,no,Extant,boury-esnault_et_al_2017hexactinellida,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Hexactinosida,Sceptrulophora,NA,Tretodictyidae,NA,Tretodictyum,NA
-10,Haljalaspongia inaudita,Hex,yes ,distinct layers,Fossil,SG143_001-014,455.8,460.9,458.35,No,no_data,Hexactinellida,NA,NA,NA,NA,NA,NA,Haljalaspongia,NA
-11,Leucandra falakra,Calcarea,yes ,Giant spicules; pairing,Extant,301-Article Text-1584-1-10-20160302,0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Grantiidae,NA,Leucandra,NA
-12,Hymedesmia anatoliensis,Demo,no,no,Extant,zoo-39-4-2-1312-40,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,Myxillina,NA,Hymedesmiidae,NA,Hymedesmia,Hymedesmia
-13,Neofibularia chinensis,Demo,no,no,Extant,"Pulitzer-Finali,_1982b",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Biemnida,NA,NA,Biemnidae,NA,Neofibularia,NA
-14,Amphimedon chloros,Demo,yes ,no,Extant,9875,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Haplosclerida,NA,NA,Niphatidae,NA,Amphimedon,NA
-15,Niphates rowi,Demo,no,no,Extant,9875,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Haplosclerida,NA,NA,Niphatidae,NA,Niphates,NA
-16,Petrosia spheroida,Demo,no,spherical,Extant,"Tanita, 1967",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Haplosclerida,NA,NA,Petrosiidae,NA,Petrosia,NA
-17,Clathria collosclera,Demo,no,no,Extant,"vanSoest,2009",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,NA,NA,Microcionidae,Microcioninae,Clathria,NA
-18,Pheronema amphorae,Hex,yes ,"""mesosclere"" category",Extant,"Reiswig,1992",0,0,0,NA,NA,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pheronematidae,NA,Pheronema,NA
-19,Tretodictyum tubulosum,Hex,no,subhexactins,Extant,"mapress,+zt01721p064",0,0,0,NA,NA,Hexactinellida,Hexasterophora,Hexactinosida,Sceptrulophora,NA,Tretodictyidae,NA,Tretodictyum,NA
-20,Hexactinella carolinensis,Hex,yes ,paper may not adequately describe spicule variation,Extant,"mapress,+zt01721p064",0,0,0,NA,NA,Hexactinellida,Hexasterophora,Hexactinosida,Sceptrulophora,NA,Tretodictyidae,NA,Hexactinella,NA
-21,Pheronemoides crustiformis,Hex,no,monaxons may be diactins,Extant,[18759866 - Contributions to Zoology] Phylogeny of two new pheronematid sponges from the Caroline Seamount and South China Sea,0,0,0,NA,NA,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pheronematidae,NA,Pheronemoides,NA
-22,Semperella jiaolongae,Hex,yes ,number of pinules unclear,Extant,Gongetal2015-zt04034p192,0,0,0,NA,NA,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pheronematidae,NA,Semperella,NA
-23,Saccocalyx microhexactin,Hex,yes ,no,Extant,Gongetal2015-zt04034p192,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,Euplectelloidea,Euplectellidae,Bolosominae,Saccocalyx,NA
-24,Platylistrum subviridum,Hex,yes ,uncinates may be microscleres,Extant,"kkochar,+zt04171p574A",0,0,0,NA,NA,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pheronematidae,NA,Platylistrum,NA
-25,Poliopogon canaliculatus,Hex,no,no,Extant,"kkochar,+zt04171p574A",0,0,0,NA,NA,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pheronematidae,NA,Poliopogon,NA
-26,Conorete pourtalesi,Hex,yes ,maybe collapse tylo/subtylo scopules,Extant,zoj12138,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Sceptrulophora,NA,NA,NA,NA,Conorete,NA
-27,Verrucocoeloidea liberatorii,Hex,no,no,Extant,zoj12138,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Sceptrulophora,NA,NA,NA,NA,Verrucocoeloidea,NA
-28,Dictyoplax lecus,Hex,yes ,no,Extant,zoj12138,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Hexactinosida,Sceptrulophora,NA,Auloplacidae,NA,Dictyoplax,NA
-29,Poliopogon amadou,Hex,yes ,mesouncinates,Extant,Castello-Branco_et_al_2020_peerj,0,0,0,NA,NA,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pheronematidae,NA,Poliopogon,NA
-30,Bolosoma perezi,Hex,yes ,diactins,Extant,Castello-Branco_et_al_2020_peerj,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,Euplectelloidea,Euplectellidae,Bolosominae,Bolosoma,NA
-31,Chonelasma choanoides,Hex,yes ,3 scopules,Extant,1-s2.0-S0967064504001626-main,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Sceptrulophora,NA,NA,Euretidae,Chonelasmatinae,Chonelasma,NA
-32,Holascus pseudostellatus,Hex,yes ,pinular hexactins,Extant,1-s2.0-S0967064504001626-main,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,Euplectelloidea,Euplectellidae,Euplectellinae,Holascus,NA
-33,Bathydorus poculum,Hex,no,no,Extant,ZK_article_63307_en_1,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,Rossellidae,NA,Bathydorus,NA
-34,Nubes poculiformis,Hex,no,no,Extant,ZK_article_63307_en_1,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,Rossellidae,NA,Nubes,NA
-35,Scyphidium australiense,Hex,no,spheres as megascleres,Extant,ZK_article_63307_en_1,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,Rossellidae,NA,Scyphidium,NA
-36,Eurete atlantica,Hex,no,no,Extant,axonomy of Euretidae Porifera Hexactinellida Hexactinosida of Campos Basin southwestern Atlantic with a description of a new species,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Sceptrulophora,NA,NA,Euretidae,Euretinae,Eurete,NA
-37,Periphragella antarctica,Hex,no,no,Extant,1-s2.0-S0967064504001626-main,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Sceptrulophora,NA,NA,Euretidae,Chonelasmatinae,Periphragella,NA
-38,Corticium vaceleti,Homoscleromorph,no,no,Extant,"kkochar,+zt04466p038A",0,0,0,NA,NA,Homoscleromorpha,NA,Homosclerophorida,NA,NA,Plakinidae,NA,Corticium,NA
-39,Plakortis ruetzleri,Homoscleromorph,no,no,Extant,"kkochar,+zt04466p038A",0,0,0,NA,NA,Homoscleromorpha,NA,Homosclerophorida,NA,NA,Plakinidae,NA,Plakortis,NA
-40,Plakinastrella nicoleae,Homoscleromorph,no,no,Extant,"kkochar,+zt04466p038A",0,0,0,NA,NA,Homoscleromorpha,NA,Homosclerophorida,NA,NA,Plakinidae,NA,Plakinastrella,NA
-41,Plakinastrella pseudolopha,Homoscleromorph,yes ,no,Extant,"kkochar,+zt04466p038A",0,0,0,NA,NA,Homoscleromorpha,NA,Homosclerophorida,NA,NA,Plakinidae,NA,Plakinastrella,NA
-42,Plakinastrella osculifera,Homoscleromorph,no,no,Extant,"kkochar,+zt04466p038A",0,0,0,NA,NA,Homoscleromorpha,NA,Homosclerophorida,NA,NA,Plakinidae,NA,Plakinastrella,NA
-43,Plakina finispinata,Homoscleromorph,no,no,Extant,"kkochar,+zt04466p038A",0,0,0,NA,NA,Homoscleromorpha,NA,Homosclerophorida,NA,NA,Plakinidae,NA,Plakina,NA
-44,Plectroninia celtica,Calcarea,yes ,might be Plectronina halli,Extant,Könnecker-Freiwald2005_Article_PlectroniniaCelticaNSpCalcarea,0,0,0,NA,NA,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Plectroninia,NA
-45,Achramorpha nivalis,Calcarea,yes ,chiactines,Extant,"kkochar,+zt04615p251A",0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Achramorphidae,NA,Achramorpha,NA
-46,Megapogon raripilus,Calcarea,no,diactins might be styles,Extant,"kkochar,+zt04615p251A",0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Achramorphidae,NA,Megapogon,NA
-47,Sarsinella karasikensis,Calcarea,no,no,Extant,"kkochar,+zt04615p251A",0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Achramorphidae,NA,Sarsinella,NA
-48,Arthuria tenuipilosa,Calcarea,no,diactins might be styles,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Clathrinidae,NA,Arthuria,NA
-49,Ernstia indonesiae,Calcarea,no,diactins might be styles,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Dendyidae,NA,Ernstia,NA
-50,Burtonulla sibogae,Calcarea,no,no,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Levinellidae,NA,Burtonulla,NA
-51,Leucaltis nodusgordii,Calcarea,no,Giant spicules; pairing,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Leucaltidae,NA,Leucaltis,NA
-52,Ascaltis angusta,Calcarea,no,no,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Leucascidae,NA,Ascaltis,NA
-53,Leucascus flavus,Calcarea,no,no,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Leucascidae,NA,Leucascus,NA
-54,Ascoleucetta sagittata,Calcarea,no,no,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Leucascidae,NA,Ascoleucetta,NA
-55,Leucetta chagosensis,Calcarea,yes ,no,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Leucettidae,NA,Leucetta,NA
-56,Pericharax orientalis,Calcarea,no,no,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Leucettidae,NA,Pericharax,NA
-57,Lelapiella sphaerulifera,Calcarea,yes ,diactins and spherules may be microscleres,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Lelapiellidae,NA,Lelapiella,NA
-58,Anamixilla torresi,Calcarea,no,tetractines have very large size range,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Jenkinidae,NA,Anamixilla,NA
-59,Uteopsis argentea,Calcarea,yes ,no,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Jenkinidae,NA,Uteopsis,NA
-60,Grantessa borojevici,Calcarea,yes ,no,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Heteropiidae,NA,Grantessa,NA
-61,Heteropia minor,Calcarea,yes ,no,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Heteropiidae,NA,Heteropia,NA
-62,Vosmaeropsis grisea,Calcarea,no,giant diactines,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Heteropiidae,NA,Vosmaeropsis,NA
-63,Amphoriscus semoni,Calcarea,no,giant tetractines,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Amphoriscidae,NA,Amphoriscus,NA
-64,Leucilla australiensis,Calcarea,no,two types of giant tetractine,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Amphoriscidae,NA,Leucilla,NA
-65,Halichondria longioxea,Demo,no,no,Fossil,fia0241-3_043,0.002,0.03,0.016,No,incomplete_taxonomy,Demospongiae,Heteroscleromorpha,Suberitida,NA,NA,Halichondriidae,NA,Halichondria,NA
-66,Axociella ongulensis,Demo,no,no,Fossil,fia0241-3_043,0.002,0.03,0.016,No,no_data,Demospongiae,Heteroscleromorpha,Poecilosclerida,NA,NA,Microcionidae,Microcioninae,Axociella,NA
-67,Cymbastela cantharella,Demo,no,no,Extant,document(5),0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Axinellida,NA,NA,Axinellidae,NA,Cymbastela,NA
-68,Reniochalina condylia,Demo,yes ,may only be one spicule with shape variation,Extant,document(5),0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Axinellida,NA,NA,Axinellidae,NA,Reniochalina,NA
-69,Axinella carteri,Demo,no,no,Extant,document(5),0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Scopalinida,NA,NA,Scopalinidae,NA,Stylissa,NA
-70,Phakellia pulcherrima,Demo,no,no,Extant,document(5),0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Bubarida,NA,NA,Bubaridae,NA,Phakellia,NA
-71,Stylissa flabelliformis,Demo,no,no,Extant,document(5),0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Scopalinida,NA,NA,Scopalinidae,NA,Stylissa,NA
-72,Myrmekioderma granulata,Demo,no,no,Extant,document(5),0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Axinellida,NA,NA,Heteroxyidae,NA,Myrmekioderma,NA
-73,Higginsia anfractuosa,Demo,no,no,Extant,document(5),0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Axinellida,NA,NA,Stelligeridae,NA,Higginsia,NA
-74,Cliona californiana,Demo,no,polytylote tylostyles,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Clionaida,NA,NA,Clionaidae,NA,Cliona,NA
-75,Cliona lobata,Demo,no,spiraster microscleres,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Clionaida,NA,NA,Clionaidae,NA,Cliona,NA
-76,Pione gibraltarensis,Demo,no,spiraster microscleres,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Clionaida,NA,NA,Clionaidae,NA,Pione,NA
-77,Polymastia kurilensis,Demo,no,unnamed spicule; classified as raphides,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Polymastiida,NA,NA,Polymastiidae,NA,Polymastia,NA
-78,Polymastia pachymastia,Demo,no,no,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Polymastiida,NA,NA,Polymastiidae,NA,Polymastia,NA
-79,Radiella endeavourensis,Demo,no,no,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Polymastiida,NA,NA,Polymastiidae,NA,Radiella,NA
-80,Sphaerotylus raphidophora,Demo,no,exotyles and raphides,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Polymastiida,NA,NA,Polymastiidae,NA,Sphaerotylus,NA
-81,Tentorium semisuberites,Demo,no,sponge has long tendril,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Polymastiida,NA,NA,Polymastiidae,NA,Tentorium,NA
-82,Weberella perlucida,Demo,no,no,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Polymastiida,NA,NA,Polymastiidae,NA,Weberella,NA
-83,Aaptos simplex,Demo,no,no,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Suberitida,NA,NA,Suberitidae,NA,Aaptos,NA
-84,Homaxinella amphispicula,Demo,no,no,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Suberitida,NA,NA,Suberitidae,NA,Homaxinella,NA
-85,Prosuberites saanichensis,Demo,no,no,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Agelasida,NA,NA,Hymerhabdiidae,NA,Prosuberites,NA
-86,Suberites concinnus,Demo,no,no,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Suberitida,NA,NA,Suberitidae,NA,Suberites,NA
-87,Suberites latus,Demo,no,Specimens contained hermit crabs,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Suberitida,NA,NA,Suberitidae,NA,Suberites,NA
-88,Tethya californiana,Demo,no,lots of microsclere types,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tethyida,NA,NA,Tethyidae,NA,Tethya,NA
-89,Darwinella muelleri,Demo,no,no,Extant,1089-Article Text-4687-3-10-20200910,0,0,0,NA,NA,Demospongiae,Keratosa,Dendroceratida,NA,NA,Darwinellidae,NA,Darwinella,NA
-90,Crumillospongia frondosa,Demo,yes ,Cambrian demosponge,Fossil,BG_2011_86_3_641,505,513,509,No,no,Demospongiae,Clavaxinellida,Protomonaxonida,NA,NA,Hazeliidae,NA,Crumillospongia,NA
-91,Ptilispongia maotianshanensis,Demo,no,Cambrian demosponge,Fossil,1-s2.0-S0031018213003660-main,517.32,518.74,518.03,Yes,incomplete_taxonomy,Demospongiae,Heteroscleromorpha,NA,NA,NA,NA,NA,Ptilispongia,NA
-92,Ischnspongia dendritica,Demo,yes ,Cambrian demosponge; all spicules diactins?,Fossil,1-s2.0-S0031018213003660-main,517.32,518.74,518.03,Yes,incomplete_taxonomy,Demospongiae,Heteroscleromorpha,NA,NA,NA,NA,NA,Ischnspongia,NA
-93,Hamptonia chengjiangensis,Demo,no,spicules in radiating pattern,Fossil,1-s2.0-S0031018213003660-main,517.32,518.74,518.03,Yes,no,Demospongiae,Clavaxinellida,Protomonaxonida,NA,NA,Hamptoniidae ,NA,Hamptonia,NA
-94,Cystospongia globosa,Hex,yes ,stauractins may be triactins,Fossil,1-s2.0-S0031018213003660-main,517.32,518.74,518.03,Yes,genus_only,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,NA,NA,Cystospongia,NA
-95,Valospongia gigantis,Hex,yes ,triaxons and stauractins may be giant,Fossil,1-s2.0-S0031018213003660-main,517.32,518.74,518.03,Yes,genus_only,Hexactinellida,Amphidiscophora,Reticulosa,NA,Dierespongioidea,NA,NA,Valospongia,NA
-96,Conciliospongia anjiensis,Demo-Hex,yes ,link between demosponges and hexactinellids,Fossil,s41598-017-05604-6,444,444,444,No,no_data,Silicea,NA,NA,NA,NA,NA,NA,Conciliospongia,NA
-97,Stereodictyum orthoplectum,Hex,yes ,undefined monaxons,Fossil,Krautter2002_Chapter_FossilHexactinellidaAnOverview,326.4,339.4,332.9,No,no,Hexactinellida,Amphidiscophora,Reticulosida,NA,Protospongioidea,Stereodictyidae,NA,Stereodictyum,NA
-98,Hintzespongia bilamina,Hex,yes ,two-layered wall,Fossil,Krautter2002_Chapter_FossilHexactinellidaAnOverview,505,513,509,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Hintzespongioidea,Hintzespongiidae,NA,Hintzespongia,NA
-99,Brachiospongia digitata,Hex,yes ,no,Fossil,Krautter2002_Chapter_FossilHexactinellidaAnOverview,449.5,460.9,455.2,No,no,Hexactinellida,Amphidiscophora,Lyssacinosida,NA,Brachiospongioidea,Brachiospongiidae,NA,Brachiospongia,NA
-100,Stioderma coscinum,Hex,yes ,anchors?,Fossil,Krautter2002_Chapter_FossilHexactinellidaAnOverview,272.3,279.3,275.8,No,no,Hexactinellida,Amphidiscophora,Lyssacinosida,NA,Brachiospongioidea,Stiodermatidae,NA,Stioderma,NA
-101,Stromatidium typicale,Hex,no,spicules fuse into rigid layers; architecture unique in hexes,Fossil,Krautter2002_Chapter_FossilHexactinellidaAnOverview,268.8,272.3,270.55,No,incomplete_taxonomy,Hexactinellida,NA,NA,NA,NA,Stromatidiidae,NA,Stromatidium,NA
-102,Becksia soekelandi,Hex,yes ,anchors?,Fossil,Krautter2002_Chapter_FossilHexactinellidaAnOverview,72.1,83.6,77.85,No,no,Hexactinellida,Hexasterophora,Lychniscosida,NA,NA,Callodictyonidae,Becksinae,Becksia,NA
-103,Plectroninia halli,Calcarea,yes ,unknown regular/sagittalness of tetracts and tripods,Fossil,document(5)(1),11.608,23.03,17.319,No,genus_only,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Plectroninia,NA
-104,Bactronella australis,Calcarea,no,only one type of tetractine?,Fossil,document(5)(1),11.608,23.03,17.319,No,genus_only,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Bactronella,NA
-105,Tretocalia pezica,Calcarea,no,types of triactines and tetractines unkown,Fossil,document(5)(1),11.608,23.03,17.319,No,incomplete_taxonomy,Calcarea,Calcaronea,Stellispongiida,NA,NA,Stellispongiidae,Holcospongiinae,Tretocalia,NA
-106,Monoplectroninia malonei,Calcarea,no,one type of tetractine only,Fossil,document(5)(1),11.608,23.03,17.319,No,no_data,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Monoplectroninia,NA
-107,Stauractinella eocenica,Hex,no,no,Fossil,A Highly Diverse Siliceous…,41.3,47.8,44.55,No,could be demosponge,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,Stauractinellidae,NA,Stauractinella,NA
-108,Hormathospongia dictyota,Hex,no,no,Fossil,1306475,83.5,85.8,84.65,No,no,Hexactinellida,Hexasterophora,Sceptrulophora,NA,NA,Farreidae,NA,Hormathospongia,NA
-109,Sanshadictya microreticulata,Hex,no,no,Fossil,1993-sponges,516,520,518,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Dictyospongioidea,Dictyospongiidae,Dictyospongiinae,Sanshadictya,NA
-110,Hyalosinica archaica,Hex,yes ,"oxeas may be diactins, only fragments preserved",Fossil,1993-sponges,520,535,527.5,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Dictyospongioidea,Dictyospongiidae,Dictyospongiinae,Hyalosinica,NA
-111,Choia utahensis,Demo,yes ,undefined monaxons,Fossil,1-s2.0-S0031018204005796-main,520,535,527.5,No,no,Demospongiae,Clavaxinellida,Protomonaxonida,NA,NA,Choiidae,NA,Choia,NA
-112,Diagoniella cyathiformis,Hex,no,no,Fossil,1-s2.0-S0031018204005796-main,520,535,527.5,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Protospongioidea,Protospongiidae,NA,Diagoniella,NA
-113,Protospongia gracilis,Hex,no,no,Fossil,1-s2.0-S0031018204005796-main,520,535,527.5,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Protospongioidea,Protospongiidae,NA,Protospongia,NA
-114,Triticispongia diagonata,Hex,no,no,Fossil,1-s2.0-S0031018204005796-main,520,535,527.5,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Protospongioidea,Protospongiidae,NA,Triticispongia,NA
-115,Lantianospongia palifera,Hex,no,no,Fossil,1-s2.0-S0031018204005796-main,520,535,527.5,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Hintzespongioidea,Hintzespongiidae,NA,Lantianospongia,NA
-116,Pirania auraeum,Demo,yes ,"tylostyles assumed from related species, but are definitely some kind of monaxon",Fossil,1-s2.0-S0016699507000782-main,477.7,485.4,481.55,No,no,Demospongiae,Clavaxinellida,Protomonaxonida,NA,NA,Piraniidae,NA,Pirania,NA
-117,Microhemidiscia greinerti,Hex,no,no,Fossil,i0022-3360-88-1-171,290.1,298.9,294.5,No,no,Hexactinellida,Amphidiscophora,Hemidiscosa,NA,NA,Hemidiscellidae,NA,Microhemidiscia,NA
-118,Heliospongia excavata,Demo,no,no,Fossil,i0022-3360-078-03-0431,315.2,323.2,319.2,No,no,Demospongiae,Clavaxinellida,Protomonaxonida,NA,NA,Heliospongiidae,NA,Heliospongia,NA
-119,Asturiaspongia aqualiforma,Hex,yes ,monaxon-like spicules present but may be foreign or broken,Fossil,i0022-3360-078-03-0431,393.3,407.6,400.45,No,no,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pelicaspongiidae,NA,Asturiaspongia,NA
-120,Estrellaspongia irregulara,Hex,yes ,styles present but may be cut hexactines,Fossil,i0022-3360-078-03-0431,326.4,339.4,332.9,No,no,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pelicaspongiidae,NA,Estrellaspongia,NA
-121,Hadrophragmos soleniscus,Hex,no,just three size classes of hexactines,Fossil,i0022-3360-078-03-0431,315.2,323.2,319.2,No,no,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pelicaspongiidae,NA,Hadrophragmos,NA
-122,Iberospongia globulara,Hex,no,no,Fossil,i0022-3360-078-03-0431,391.9,409.1,400.5,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Protospongioidea,Protospongiidae,NA,Iberospongia,NA
-123,Stioderma perforata,Hex,yes ,"somewhat unclear how many sizes of hexacts, but at least two",Fossil,i0022-3360-078-03-0431,307,315.2,311.1,No,no,Hexactinellida,Amphidiscophora,Lyssacinosida,NA,Brachiospongioidea,Stiodermatidae,NA,Stioderma,NA
-124,Xylochos palindromica,Demo,yes ,"undefined monaxons, but multiple size orders",Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,Demospongiae,Clavaxinellida,Protomonaxonida,NA,NA,Hazeliidae,NA,Xylochos,NA
-125,Pirania llanfawrensis,Demo,yes ,possibly some subtylostyles; unclear if they slowly grade into styles,Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,Demospongiae,Clavaxinellida,Protomonaxonida,NA,NA,Piraniidae,NA,Pirania,NA
-126,Heminectere minima,Hex,yes ,could be even more size classes,Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Protospongioidea,Protospongiidae,NA,Heminectere,NA
-127,Asthenospongia cambria,Hex,yes ,could be more spicule orders but at least five,Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Protospongioidea,Asthenospongiidae,NA,Asthenospongia,NA
-128,Acutipuerilis spinosus,Hex,yes ,could also be stauractines but unconfirmed,Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Protospongioidea,Asthenospongiidae,NA,Acutipuerilis,NA
-129,Granulispongia obscura,Hex,yes ,"probably seven size orders and each has two modifications, so complexity value could potentially be 21 or higher, but somewhat unclear if spicules grade into each other",Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Protospongioidea,Asthenospongiidae,NA,Granulispongia,NA
-130,Murania reitneri,Demo,no,no,Fossil,MittGeolGes_95_96_0037-0045,145,163.5,154.25,No,no,Demospongiae,Heteroscleromorpha,Agelasida,NA,NA,Milleporellidae,NA,Murania,NA
-131,Plectroninia pertusa,Calcarea,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Plectroninia,NA
-132,Bactronella womblei,Calcarea,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Bactronella,NA
-133,Bactronella incrustans,Calcarea,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Bactronella,NA
-134,Stelletta (Stolleya) silvigera,Demo,yes ,protriaenes may be modified versions of dichotriaenes; are they distinct regardless?,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Demospongiae,Heteroscleromorpha,Tetractinellida,Astrophorina,NA,Ancorinidae,Stellettinae,Stelletta,Stolleya
-135,Geodia harmatuki,Demo,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Demospongiae,Heteroscleromorpha,Tetractinellida,Astrophorina,NA,Geodiidae,Geodiinae,Geodia,NA
-136,Sheldonia trabecula,Hex,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Hexactinellida,Hexasterophora,Lyssacinosida,NA,Euplectelloidea,Euplectellidae,NA,Sheldonia,NA
-137,Hazelina bisbifurcata,Demo,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Demospongiae,Heteroscleromorpha,Tetralithistida,Tetracladina,NA,Plinthosellidae,NA,Hazelina,NA
-138,Claytonia rayi,Demo,yes ,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Demospongiae,Heteroscleromorpha,Tetralithistida,Tetracladina,NA,Plinthosellidae,NA,Claytonia,NA
-139,Haplistion lobatum,Demo,no,no,Fossil,1306253,410.8,419.2,415,No,genus_only,Demospongiae,Heteroscleromorpha,Spirosclerophorida,Rhizomorina,NA,Haplistiidae,NA,Haplistion,NA
-140,Twenhofelella bulbulus,Hex,no,other small spicule types but not well preserved enough to describe,Fossil,1306253,410.8,419.2,415,No,genus_only,Hexactinellida,Amphidiscophora,Amphidiscosa,NA,NA,Pelicaspongiidae,NA,Twenhofelella,NA
-141,Monaxoradiata lamina,Demo,no,no,Fossil,0022-3360_2006_80_1_SFTRTM_2.0.CO_2,259.9,265.1,262.5,No,no,Demospongiae,Clavaxinellida,Protomonaxonida,NA,NA,Sollasellidae,NA,Monaxoradiata,NA
-142,Chiastocolumnia cylindrica,Demo,yes ,"spicules are very irregular, so difficult to distinguish separate types",Fossil,0022-3360_2006_80_1_SFTRTM_2.0.CO_2,259.9,265.1,262.5,No,no,Demospongiae,Heteroscleromorpha,NA,Orchocladina,NA,Chiastoclonellidae,NA,Chiastocolumnia,NA
-143,Dactylites obconica,Demo,yes ,"spicules are very irregular, so difficult to distinguish separate types",Fossil,0022-3360_2006_80_1_SFTRTM_2.0.CO_2,259.9,265.1,262.5,No,no,Demospongiae,Heteroscleromorpha,NA,Orchocladina,NA,Anthracosyconidae,NA,Dactylites,NA
-144,Defordia digitata,Demo,no,no,Fossil,1304893,272.3,279.3,275.8,No,no,Demospongiae,Heteroscleromorpha,NA,Orchocladina,NA,Chiastoclonellidae,NA,Defordia,NA
-145,Jereina robusta,Demo,no,no,Fossil,1304893,272.3,279.3,275.8,No,no,Demospongiae,Heteroscleromorpha,NA,Orchocladina,NA,Anthaspidellidae,NA,Jereina,NA
-146,Astylospongia tarda,Demo,no,no,Fossil,1304631,410.8,419.2,415,No,genus_only,Demospongiae,Heteroscleromorpha,NA,Orchocladina,NA,Astylospongiidae,NA,Astylospongia,NA
-147,Hexactinoderma trammeri,Hex,yes ,synapticular fusion,Fossil,9373-12646-2-PB,242,247.2,244.6,No,no,Hexactinellida,Hexasterophora,Hexactinosa,NA,Pileolitoidea,Pileolitidae,NA,Hexactinoderma,NA
-148,Silesiaspongia rimosa,Hex,yes ,contains hexactines and their derivatives; unclear exactly how many unique forms,Fossil,9373-12646-2-PB,242,247.2,244.6,No,no,Hexactinellida,Hexasterophora,Lyssacinosida,NA,Euplectelloidea,Euplectellidae,NA,Silesiaspongia,NA
-149,Tremadictyon radicatum,Hex,no,genus may be recorded as Cribrospongia,Fossil,Muller1991_Chapter_ObservationsOnTheJurassicHexac,157.3,163.5,160.4,No,genus_only,Hexactinellida,Hexasterophora,Hexactinosa,NA,NA,Cribrospongiidae,NA,Tremadictyon,NA
-150,Paracinachyrella fossilis,Demo,yes ,contains oxeas but may be foreign,Fossil,Łukowiak2014_Article_BathyalSpongesFromTheLateEarly,15.97,20.44,18.205,No,no,Demospongiae,Heteroscleromorpha,Tetractinellida,Spirophorina,NA,Tetillidae,NA,Paracinachyrella,NA
-151,Virgaspongiella ramosa,Demo,yes ,some oxeas and styles indistinguishable,Fossil,i0022-3360-078-01-0071,254.17,259.9,257.035,No,no,Demospongiae,Heteroscleromorpha,NA,Orchocladina,NA,Anthaspidellidae,NA,Virgaspongiella,NA
-152,Incrustatospongia superficiala,Demo,yes ,I and Y-shaped dendroclones grade into each other,Fossil,i0022-3360-078-01-0071,254.17,259.9,257.035,No,no,Demospongiae,Heteroscleromorpha,NA,Orchocladina,NA,Anthaspidellidae,NA,Incrustatospongia,NA
-153,Porosphaera globularis,Calcarea,no,no,Fossil,1-s2.0-S0195667111001248-main,93.5,99.6,96.55,No,no,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Porosphaera,NA
-154,Endostoma mexicana,Calcarea,no,all monaxons assumed to be oxeas due to some being identifiable as oxeas,Fossil,1304269,100.5,113,106.75,No,no,Calcarea,Calcaronea,Stellispongiida,NA,NA,Endostomatidae,NA,Endostoma,NA
-155,Mammillopora encrusta,Calcarea,no,triactines not preserved in all parts of sponge,Fossil,1304269,109,112.03,110.515,No,no,Calcarea,Calcaronea,Stellispongiida,NA,NA,Stellispongiidae,Holcospongiinae,Mammillopora,NA
-156,Sontheimia parasitica,Demo,yes ,some desmas; unclear if distinct,Fossil,A Callovian Middle Jurassic Poriferan Fauna…,163.5,166.1,164.8,No,genus_only,Demospongiae,Heteroscleromorpha,Tetralithistida,Tetracladina,NA,Protetraclisidae,NA,Sontheimia,NA
-157,Jereica tuberculosa,Demo,no,no,Fossil,A Callovian Middle Jurassic Poriferan Fauna…,163.5,166.1,164.8,No,genus_only,Demospongiae,Heteroscleromorpha,Spirosclerophorida,Rhizomorina,Scleritodermatoidea,Jereicidae,NA,Jereica,NA
-158,Soleneiscus hamatus,Calcarea,no,no,Extant,S12526-017-0671-x,0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Dendyidae,NA,Soleneiscus,NA
-159,Petrobiona massiliana,Calcarea,no,no,Extant,Sponges of marine caves…,0,0,0,NA,NA,Calcarea,Calcaronea,Baeriida,NA,NA,Petrobionidae,NA,Petrobiona,NA
-160,Sycon ciliatum,Calcarea,no,no,Extant,10.12714-egejfas.37.2.05-884246,0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Syconidae,NA,Sycon,NA
-161,Paraleucilla magna,Calcarea,no,no,Extant,10.12714-egejfas.37.2.05-884246,0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Amphoriscidae,NA,Paraleucilla,NA
-162,Aphrocallistes beatrix,Hex,no,no,Extant,document-Hexsponges92623,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Hexactinosida,Sceptrulophora,NA,Aphrocallistidae,NA,Aphrocallistes,NA
-163,Euplectella gibbsa,Hex,no,no,Extant,document-Hexsponges92623,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,Euplectelloidea,Euplectellidae,Euplectellinae,Euplectella,NA
-164,Lophocalyx reiswigi,Hex,no,no,Extant,document-Hexsponges92623,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,Rossellidae,NA,Lophocalyx,NA
-165,Sympagella cooki,Hex,no,no,Extant,document-Hexsponges92623,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,Rossellidae,NA,Sympagella,NA
-166,Nodastrella nodastrella,Hex,no,no,Extant,11940-Article Text-27795-39309-10-20150504-1,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,Rossellidae,NA,Nodastrella,NA
-167,Neopetrosia proxima,Demo,no,no,Extant,peerj-6371,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Haplosclerida,NA,NA,Petrosiidae,NA,Neopetrosia,NA
-168,Callyspongia armigera,Demo,no,no,Extant,Ecology and Evolution-2015-DeBiasse,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Haplosclerida,NA,NA,Callyspongiidae,NA,Callyspongia,NA
-169,Haliclona cinerea,Demo,no,no,Extant,ATS_journal-web,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Haplosclerida,NA,NA,Chalinidae,NA,Haliclona,NA
-170,Scopalina nausicae,Demo,no,no,Extant,2020.08.11.246710.full,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Scopalinida,NA,NA,Scopalinidae,NA,Scopalina,NA
-171,Galaxia gaviotensis,Demo,no,no,Extant,2020.08.11.246710.full,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tethyida,NA,NA,Hemiasterellidae,NA,Galaxia,NA
-172,Quasillina brevis,Demo,no,no,Extant,Polymastiidae_porifera_demospongiae_of_the_nordic_and_siberian_seas,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Polymastiida,NA,NA,Polymastiidae,NA,Quasillina,NA
-173,Spinularia spinularia,Demo,no,no,Extant,Polymastiidae_porifera_demospongiae_of_the_nordic_and_siberian_seas,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Polymastiida,NA,NA,Polymastiidae,NA,Spinularia,NA
-174,Ciocalypta penicillus,Demo,no,no,Extant,Two new species of the halichondriidae…,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Suberitida,NA,NA,Halichondriidae,NA,Ciocalypta,NA
-175,Hymeniacidon perlevis,Demo,no,no,Extant,2020.02.13.948000.full,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Suberitida,NA,NA,Halichondriidae,NA,Hymeniacidon,NA
-176,Amorphinopsis fenestrata,Demo,yes ,Styles transitional to subtylostyles,Extant,2010AlvarezetalHalichondriidae…,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Suberitida,NA,NA,Halichondriidae,NA,Amorphinopsis,NA
-177,Leuclathrina translucida,Calcarea,yes ,some triactines thickened near tips,Extant,36882-Article Text-112462-124334-10-20180220,0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Dendyidae,NA,Leuclathrina,NA
-178,Grantia compressa,Calcarea,no,no,Extant,zookeys-546-001,0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Grantiidae,NA,Grantia,NA
-179,Sycettusa hirsutissima,Calcarea,no,no,Extant,document-1,0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Heteropiidae,NA,Sycettusa,NA
-180,Ute insulagemmae,Calcarea,no,no,Extant,document-1,0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Grantiidae,NA,Ute,NA
-181,Kebira tetractinifera,Calcarea,yes ,nail-shaped triactines; were classed here as chiactines,Extant,document-1,0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Lelapiidae,NA,Kebira,NA
-182,Aspidoscopulia australia,Hex,yes ,aspidoscopule apomorphy,Extant,J.1096-3642.2011.00753.x,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Sceptrulophora,NA,NA,Farreidae,NA,Aspidoscopulia,NA
-183,Euryplegma auriculare,Hex,no,no,Extant,298431,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,Aulocalycidae,Aulocalycinae,Euryplegma,NA
-184,Rossella antarctica,Hex,yes ,some very large microscleres,Extant,REVISION_Goodwin_et_al_Hexact_ms,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,Rossellidae,NA,Rossella,NA
-185,Chalinula zeae,Demo,no,no,Extant,BEAU20000050001001,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Haplosclerida,NA,NA,Chalinidae,NA,Chalinula,NA
-186,Lissodendoryx flabellata,Demo,no,no,Extant,blsf-02-00038,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,NA,NA,Coelosphaeridae,NA,Lissodendoryx,NA
-187,Kirkpatrickia coulmani,Demo,no,no,Extant,blsf-02-00038,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,Myxillina,NA,Hymedesmiidae,NA,Kirkpatrickia,NA
-188,Phorbas glaberrimus,Demo,no,no,Extant,blsf-02-00038,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,Myxillina,NA,Hymedesmiidae,NA,Phorbas,NA
-189,Janulum spinispiculum,Demo,no,no,Extant,kelly_et_al_2015_Janulum_imago,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Haplosclerida,NA,NA,Phloeodictyidae,NA,Janulum,NA
-190,Svenzea zeai,Demo,no,no,Extant,ctoz-article-p171-7,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Scopalinida,NA,NA,Scopalinidae,NA,Svenzea,NA
-191,Plenaster craigi,Demo,no,no,Extant,A-new-genus-and-species-of-abyssal-sponge…,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Axinellida,NA,NA,Stelligeridae,NA,Plenaster,NA
-192,Heteroxya beauforti,Demo,no,no,Extant,peerj-11879,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Axinellida,NA,NA,Heteroxyidae,NA,Heteroxya,NA
-193,Dragmacidon australe,Demo,no,no,Extant,2020_Newrecordofsponge,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Axinellida,NA,NA,Axinellidae,NA,Dragmacidon,NA
-194,Didiscus oxeatus,Demo,no,didiscorhabds,Extant,s12526-021-01168-x,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Axinellida,NA,NA,Raspailiidae,NA,Didiscus,NA
-195,Sigmaxinella hipposiderus,Demo,no,no,Extant,46207-Article Text-142948-155065-10-20190214,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Biemnida,NA,NA,Biemnidae,NA,Sigmaxinella,NA
-196,Aciculites orientalis,Demo,no,no,Extant,Deep_sea_lithistid_assemblages_from_the,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Spirophorina,NA,Scleritodermidae,NA,Aciculites,NA
-197,Scleritoderma flabelliforme,Demo,no,no,Extant,Deep_sea_lithistid_assemblages_from_the,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Spirophorina,NA,Scleritodermidae,NA,Scleritoderma,NA
-198,Herengeria auriculata,Demo,no,no,Extant,Deep_sea_lithistid_assemblages_from_the,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Astrophorina,NA,Corallistidae,NA,Herengeria,NA
-199,Neoschrammeniella norfolkii,Demo,no,no,Extant,Deep_sea_lithistid_assemblages_from_the,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Astrophorina,NA,Corallistidae,NA,Neoschrammeniella,NA
-200,Anaderma rancureli,Demo,no,no,Extant,Deep_sea_lithistid_assemblages_from_the,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Astrophorina,NA,Pleromidae,NA,Anaderma,NA
-201,Reidispongia coerulea,Demo,no,no,Extant,Deep_sea_lithistid_assemblages_from_the,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Astrophorina,NA,Phymatellidae,NA,Reidispongia,NA
-202,Acanthotetilla celebensis,Demo,no,no,Extant,27310-Article Text-157366-169361-10-20190617,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Spirophorina,NA,Tetillidae,NA,Acanthotetilla,NA
-203,Stelletta tuberosa,Demo,no,no,Extant,demosponges-from-the-northern-mid-atlantic-ridge-shed-more-light-on-the-diversity-and-biogeography-of-north-atlantic-deep-sea-sponges,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Astrophorina,NA,Ancorinidae,Stellettinae,Stelletta,NA
-204,Poecillastra compressa,Demo,no,no,Extant,demosponges-from-the-northern-mid-atlantic-ridge-shed-more-light-on-the-diversity-and-biogeography-of-north-atlantic-deep-sea-sponges,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Astrophorina,NA,Vulcanellidae,NA,Poecillastra,NA
-205,Thenea levis,Demo,no,no,Extant,demosponges-from-the-northern-mid-atlantic-ridge-shed-more-light-on-the-diversity-and-biogeography-of-north-atlantic-deep-sea-sponges,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Astrophorina,NA,Theneidae,NA,Thenea,NA
-206,Stylocordyla borealis,Demo,no,no,Extant,demosponges-from-the-northern-mid-atlantic-ridge-shed-more-light-on-the-diversity-and-biogeography-of-north-atlantic-deep-sea-sponges,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Suberitida,NA,NA,Stylocordylidae,NA,Stylocordyla,NA
-207,Isodictya filiformis,Demo,no,no,Extant,s00300-020-02654-x,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,NA,NA,Isodictyidae,NA,Isodictya,NA
-208,Cyclacanthia bellae,Demo,no,no,Extant,z00725p-Cyclacanthia,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,NA,NA,Latrunculiidae,NA,Cyclacanthia,NA
-209,Tsitsikamma favus,Demo,no,no,Extant,zookeys-874-101,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,NA,NA,Latrunculiidae,NA,Tsitsikamma,NA
-210,Iophon koltuni,Demo,no,no,Extant,BouchardMarmenetal._2019_Technicalreport_Spongesfromthe2010-2014PaamiutMultispeciesTrawlSurveysEasternArcticandSubarctic,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,NA,NA,Acarnidae,NA,Iophon,NA
-211,Cinachyra barbata,Demo,no,no,Extant,GoodwinBrewinandBricklel2012_Sponge_biodiversity_South_Georgia,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Spirophorina,NA,Tetillidae,NA,Cinachyra,NA
-212,Iotrochota birotulata,Demo,no,no,Extant,iz_Ruetzler_et_al_2007b,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,NA,NA,Iotrochotidae,NA,Iotrochota,NA
-213,Protosuberites mereui,Demo,no,no,Extant,Melisetal2016NewProtosuberitesWMediterranean,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Suberitida,NA,NA,Suberitidae,NA,Protosuberites,NA
+,Species,Type,Fuzziness.,Interesting.bits,Folder,Paper,MinAgeMYA,MaxAgeMYA,PointEstimate,Point.Estimate.in.Paper,FossilNotes,class,subclass,order,suborder,superfamily,family,subfamily,genus,subgenus,OpentreeConflict
+1,Tethytimea tylota,Demo,no,no,Extant,zookeys-680-105,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tethyida,NA,NA,Tethyidae,NA,Tethytimea,NA,
+2,Rhabdastrella distincta,Demo,no,no,Extant,zookeys-680-105,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Astrophorina,NA,Ancorinidae,NA,Rhabdastrella,NA,
+3,Amphimedon anastomosa,Demo,no,no,Extant,zookeys-680-105,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Haplosclerida,NA,NA,Niphatidae,NA,Amphimedon,NA,
+4,Asbestopluma hypogea,Demo,yes ,carnivore,Extant,VaceletBoury-Esnault1996,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,NA,NA,Cladorhizidae,NA,Asbestopluma,NA,
+5,Ascandra spalatensis,Calcarea,yes ,no,Extant,301-Article Text-1584-1-10-20160302,0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Dendyidae,NA,Ascandra,NA,Yes
+6,Clathrina primordialis,Calcarea,no,one spicule type but great size variation,Extant,301-Article Text-1584-1-10-20160302,0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Clathrinidae,NA,Clathrina,NA,
+7,Borojevia croatica,Calcarea,yes ,no,Extant,301-Article Text-1584-1-10-20160302,0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Clathrinidae,NA,Borojevia,NA,
+8,Farrea bowerbanki,Hex,no,Some vestigial rays noted,Extant,boury-esnault_et_al_2017hexactinellida,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Sceptrulophora,NA,NA,Farreidae,NA,Farrea,NA,
+9,Tretodictyum reiswigi,Hex,no,no,Extant,boury-esnault_et_al_2017hexactinellida,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Hexactinosida,Sceptrulophora,NA,Tretodictyidae,NA,Tretodictyum,NA,
+10,Haljalaspongia inaudita,Hex,yes ,distinct layers,Fossil,SG143_001-014,455.8,460.9,458.35,No,no_data,Hexactinellida,NA,NA,NA,NA,NA,NA,Haljalaspongia,NA,
+11,Leucandra falakra,Calcarea,yes ,Giant spicules; pairing,Extant,301-Article Text-1584-1-10-20160302,0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Grantiidae,NA,Leucandra,NA,
+12,Hymedesmia anatoliensis,Demo,no,no,Extant,zoo-39-4-2-1312-40,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,Myxillina,NA,Hymedesmiidae,NA,Hymedesmia,Hymedesmia,
+13,Neofibularia chinensis,Demo,no,no,Extant,"Pulitzer-Finali,_1982b",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Biemnida,NA,NA,Biemnidae,NA,Neofibularia,NA,
+14,Amphimedon chloros,Demo,yes ,no,Extant,9875,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Haplosclerida,NA,NA,Niphatidae,NA,Amphimedon,NA,
+15,Niphates rowi,Demo,no,no,Extant,9875,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Haplosclerida,NA,NA,Niphatidae,NA,Niphates,NA,
+16,Petrosia spheroida,Demo,no,spherical,Extant,"Tanita, 1967",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Haplosclerida,NA,NA,Petrosiidae,NA,Petrosia,NA,
+17,Clathria collosclera,Demo,no,no,Extant,"vanSoest,2009",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,NA,NA,Microcionidae,Microcioninae,Clathria,NA,
+18,Pheronema amphorae,Hex,yes ,"""mesosclere"" category",Extant,"Reiswig,1992",0,0,0,NA,NA,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pheronematidae,NA,Pheronema,NA,
+19,Tretodictyum tubulosum,Hex,no,subhexactins,Extant,"mapress,+zt01721p064",0,0,0,NA,NA,Hexactinellida,Hexasterophora,Hexactinosida,Sceptrulophora,NA,Tretodictyidae,NA,Tretodictyum,NA,
+20,Hexactinella carolinensis,Hex,yes ,paper may not adequately describe spicule variation,Extant,"mapress,+zt01721p064",0,0,0,NA,NA,Hexactinellida,Hexasterophora,Hexactinosida,Sceptrulophora,NA,Tretodictyidae,NA,Hexactinella,NA,
+21,Pheronemoides crustiformis,Hex,no,monaxons may be diactins,Extant,[18759866 - Contributions to Zoology] Phylogeny of two new pheronematid sponges from the Caroline Seamount and South China Sea,0,0,0,NA,NA,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pheronematidae,NA,Pheronemoides,NA,
+22,Semperella jiaolongae,Hex,yes ,number of pinules unclear,Extant,Gongetal2015-zt04034p192,0,0,0,NA,NA,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pheronematidae,NA,Semperella,NA,
+23,Saccocalyx microhexactin,Hex,yes ,no,Extant,Gongetal2015-zt04034p192,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,Euplectelloidea,Euplectellidae,Bolosominae,Saccocalyx,NA,
+24,Platylistrum subviridum,Hex,yes ,uncinates may be microscleres,Extant,"kkochar,+zt04171p574A",0,0,0,NA,NA,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pheronematidae,NA,Platylistrum,NA,
+25,Poliopogon canaliculatus,Hex,no,no,Extant,"kkochar,+zt04171p574A",0,0,0,NA,NA,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pheronematidae,NA,Poliopogon,NA,
+26,Conorete pourtalesi,Hex,yes ,maybe collapse tylo/subtylo scopules,Extant,zoj12138,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Sceptrulophora,NA,NA,Euretidae,NA,Conorete,NA,
+27,Verrucocoeloidea liberatorii,Hex,no,no,Extant,zoj12138,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Sceptrulophora,NA,NA,Euretidae,NA,Verrucocoeloidea,NA,
+28,Dictyoplax lecus,Hex,yes ,no,Extant,zoj12138,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Hexactinosida,Sceptrulophora,NA,Auloplacidae,NA,Dictyoplax,NA,
+29,Poliopogon amadou,Hex,yes ,mesouncinates,Extant,Castello-Branco_et_al_2020_peerj,0,0,0,NA,NA,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pheronematidae,NA,Poliopogon,NA,
+30,Bolosoma perezi,Hex,yes ,diactins,Extant,Castello-Branco_et_al_2020_peerj,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,Euplectelloidea,Euplectellidae,Bolosominae,Bolosoma,NA,
+31,Chonelasma choanoides,Hex,yes ,3 scopules,Extant,1-s2.0-S0967064504001626-main,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Sceptrulophora,NA,NA,Euretidae,Chonelasmatinae,Chonelasma,NA,
+32,Holascus pseudostellatus,Hex,yes ,pinular hexactins,Extant,1-s2.0-S0967064504001626-main,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,Euplectelloidea,Euplectellidae,Euplectellinae,Holascus,NA,
+33,Bathydorus poculum,Hex,no,no,Extant,ZK_article_63307_en_1,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,Rossellidae,NA,Bathydorus,NA,
+34,Nubes poculiformis,Hex,no,no,Extant,ZK_article_63307_en_1,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,Rossellidae,NA,Nubes,NA,
+35,Scyphidium australiense,Hex,no,spheres as megascleres,Extant,ZK_article_63307_en_1,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,Rossellidae,NA,Scyphidium,NA,
+36,Eurete atlantica,Hex,no,no,Extant,axonomy of Euretidae Porifera Hexactinellida Hexactinosida of Campos Basin southwestern Atlantic with a description of a new species,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Sceptrulophora,NA,NA,Euretidae,Euretinae,Eurete,NA,
+37,Periphragella antarctica,Hex,no,no,Extant,1-s2.0-S0967064504001626-main,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Sceptrulophora,NA,NA,Euretidae,Chonelasmatinae,Periphragella,NA,
+38,Corticium vaceleti,Homoscleromorph,no,no,Extant,"kkochar,+zt04466p038A",0,0,0,NA,NA,Homoscleromorpha,NA,Homosclerophorida,NA,NA,Plakinidae,NA,Corticium,NA,
+39,Plakortis ruetzleri,Homoscleromorph,no,no,Extant,"kkochar,+zt04466p038A",0,0,0,NA,NA,Homoscleromorpha,NA,Homosclerophorida,NA,NA,Plakinidae,NA,Plakortis,NA,
+40,Plakinastrella nicoleae,Homoscleromorph,no,no,Extant,"kkochar,+zt04466p038A",0,0,0,NA,NA,Homoscleromorpha,NA,Homosclerophorida,NA,NA,Plakinidae,NA,Plakinastrella,NA,
+41,Plakinastrella pseudolopha,Homoscleromorph,yes ,no,Extant,"kkochar,+zt04466p038A",0,0,0,NA,NA,Homoscleromorpha,NA,Homosclerophorida,NA,NA,Plakinidae,NA,Plakinastrella,NA,
+42,Plakinastrella osculifera,Homoscleromorph,no,no,Extant,"kkochar,+zt04466p038A",0,0,0,NA,NA,Homoscleromorpha,NA,Homosclerophorida,NA,NA,Plakinidae,NA,Plakinastrella,NA,
+43,Plakina finispinata,Homoscleromorph,no,no,Extant,"kkochar,+zt04466p038A",0,0,0,NA,NA,Homoscleromorpha,NA,Homosclerophorida,NA,NA,Plakinidae,NA,Plakina,NA,
+44,Plectroninia celtica,Calcarea,yes ,might be Plectronina halli,Extant,Könnecker-Freiwald2005_Article_PlectroniniaCelticaNSpCalcarea,0,0,0,NA,NA,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Plectroninia,NA,
+45,Achramorpha nivalis,Calcarea,yes ,chiactines,Extant,"kkochar,+zt04615p251A",0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Achramorphidae,NA,Achramorpha,NA,
+46,Megapogon raripilus,Calcarea,no,diactins might be styles,Extant,"kkochar,+zt04615p251A",0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Achramorphidae,NA,Megapogon,NA,
+47,Sarsinella karasikensis,Calcarea,no,no,Extant,"kkochar,+zt04615p251A",0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Achramorphidae,NA,Sarsinella,NA,
+48,Arthuria tenuipilosa,Calcarea,no,diactins might be styles,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Clathrinidae,NA,Arthuria,NA,yes
+49,Ernstia indonesiae,Calcarea,no,diactins might be styles,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Dendyidae,NA,Ernstia,NA,yes
+50,Burtonulla sibogae,Calcarea,no,no,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Levinellidae,NA,Burtonulla,NA,
+51,Leucaltis nodusgordii,Calcarea,no,Giant spicules; pairing,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Leucaltidae,NA,Leucaltis,NA,
+52,Ascaltis angusta,Calcarea,no,no,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Leucascidae,NA,Ascaltis,NA,
+53,Leucascus flavus,Calcarea,no,no,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Leucascidae,NA,Leucascus,NA,
+54,Ascoleucetta sagittata,Calcarea,no,no,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Leucascidae,NA,Ascoleucetta,NA,
+55,Leucetta chagosensis,Calcarea,yes ,no,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Leucettidae,NA,Leucetta,NA,
+56,Pericharax orientalis,Calcarea,no,no,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Leucettidae,NA,Pericharax,NA,
+57,Lelapiella sphaerulifera,Calcarea,yes ,diactins and spherules may be microscleres,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Lelapiellidae,NA,Lelapiella,NA,yes
+58,Anamixilla torresi,Calcarea,no,tetractines have very large size range,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Jenkinidae,NA,Anamixilla,NA,
+59,Uteopsis argentea,Calcarea,yes ,no,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Jenkinidae,NA,Uteopsis,NA,
+60,Grantessa borojevici,Calcarea,yes ,no,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Heteropiidae,NA,Grantessa,NA,
+61,Heteropia minor,Calcarea,yes ,no,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Heteropiidae,NA,Heteropia,NA,
+62,Vosmaeropsis grisea,Calcarea,no,giant diactines,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Heteropiidae,NA,Vosmaeropsis,NA,
+63,Amphoriscus semoni,Calcarea,no,giant tetractines,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Amphoriscidae,NA,Amphoriscus,NA,
+64,Leucilla australiensis,Calcarea,no,two types of giant tetractine,Extant,"kkochar,+zt03951p105A",0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Amphoriscidae,NA,Leucilla,NA,
+65,Halichondria longioxea,Demo,no,no,Fossil,fia0241-3_043,0.002,0.03,0.016,No,incomplete_taxonomy,Demospongiae,Heteroscleromorpha,Suberitida,NA,NA,Halichondriidae,NA,Halichondria,NA,
+66,Axociella ongulensis,Demo,no,no,Fossil,fia0241-3_043,0.002,0.03,0.016,No,no_data,Demospongiae,Heteroscleromorpha,Poecilosclerida,NA,NA,Microcionidae,Microcioninae,Clathria,Thalysias,
+67,Cymbastela cantharella,Demo,no,no,Extant,document(5),0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Axinellida,NA,NA,Axinellidae,NA,Cymbastela,NA,
+68,Reniochalina condylia,Demo,yes ,may only be one spicule with shape variation,Extant,document(5),0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Axinellida,NA,NA,Axinellidae,NA,Reniochalina,NA,yes
+69,Axinella carteri,Demo,no,no,Extant,document(5),0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Scopalinida,NA,NA,Scopalinidae,NA,Stylissa,NA,yes
+70,Phakellia pulcherrima,Demo,no,no,Extant,document(5),0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Bubarida,NA,NA,Dictyonellidae,NA,Acanthella,NA,yes
+71,Stylissa flabelliformis,Demo,no,no,Extant,document(5),0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Scopalinida,NA,NA,Scopalinidae,NA,Stylissa,NA,yes
+72,Myrmekioderma granulata,Demo,no,no,Extant,document(5),0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Axinellida,NA,NA,Heteroxyidae,NA,Myrmekioderma,NA,
+73,Higginsia anfractuosa,Demo,no,no,Extant,document(5),0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Axinellida,NA,NA,Stelligeridae,NA,Higginsia,NA,
+74,Cliona californiana,Demo,no,polytylote tylostyles,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Clionaida,NA,NA,Clionaidae,NA,Cliona,NA,
+75,Cliona lobata,Demo,no,spiraster microscleres,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Clionaida,NA,NA,Clionaidae,NA,Cliona,NA,
+76,Pione gibraltarensis,Demo,no,spiraster microscleres,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Clionaida,NA,NA,Clionaidae,NA,Pione,NA,
+77,Polymastia kurilensis,Demo,no,unnamed spicule; classified as raphides,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Polymastiida,NA,NA,Polymastiidae,NA,Polymastia,NA,
+78,Polymastia pachymastia,Demo,no,no,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Polymastiida,NA,NA,Polymastiidae,NA,Polymastia,NA,
+79,Radiella endeavourensis,Demo,no,no,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Polymastiida,NA,NA,Polymastiidae,NA,Radiella,NA,
+80,Sphaerotylus raphidophora,Demo,no,exotyles and raphides,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Polymastiida,NA,NA,Polymastiidae,NA,Sphaerotylus,NA,
+81,Tentorium semisuberites,Demo,no,sponge has long tendril,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Polymastiida,NA,NA,Polymastiidae,NA,Tentorium,NA,
+82,Weberella perlucida,Demo,no,no,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Polymastiida,NA,NA,Polymastiidae,NA,Weberella,NA,
+83,Aaptos simplex,Demo,no,no,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Suberitida,NA,NA,Suberitidae,NA,Aaptos,NA,
+84,Homaxinella amphispicula,Demo,no,no,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Suberitida,NA,NA,Suberitidae,NA,Homaxinella,NA,
+85,Prosuberites saanichensis,Demo,no,no,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Agelasida,NA,NA,Hymerhabdiidae,NA,Prosuberites,NA,yes
+86,Suberites concinnus,Demo,no,no,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Suberitida,NA,NA,Suberitidae,NA,Suberites,NA,
+87,Suberites latus,Demo,no,Specimens contained hermit crabs,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Suberitida,NA,NA,Suberitidae,NA,Suberites,NA,
+88,Tethya californiana,Demo,no,lots of microsclere types,Extant,"kkochar,+zt03823p084A",0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tethyida,NA,NA,Tethyidae,NA,Tethya,NA,
+89,Darwinella muelleri,Demo,no,no,Extant,1089-Article Text-4687-3-10-20200910,0,0,0,NA,NA,Demospongiae,Keratosa,Dendroceratida,NA,NA,Darwinellidae,NA,Darwinella,NA,
+90,Crumillospongia frondosa,Demo,yes ,Cambrian demosponge,Fossil,BG_2011_86_3_641,505,513,509,No,no,Demospongiae,Clavaxinellida,Protomonaxonida,NA,NA,Hazeliidae,NA,Crumillospongia,NA,yes
+91,Ptilispongia maotianshanensis,Demo,no,Cambrian demosponge,Fossil,1-s2.0-S0031018213003660-main,517.32,518.74,518.03,Yes,incomplete_taxonomy,Demospongiae,Heteroscleromorpha,NA,NA,NA,NA,NA,Ptilispongia,NA,
+92,Ischnspongia dendritica,Demo,yes ,Cambrian demosponge; all spicules diactins?,Fossil,1-s2.0-S0031018213003660-main,517.32,518.74,518.03,Yes,incomplete_taxonomy,Demospongiae,Heteroscleromorpha,NA,NA,NA,NA,NA,Ischnspongia,NA,
+93,Hamptonia chengjiangensis,Demo,no,spicules in radiating pattern,Fossil,1-s2.0-S0031018213003660-main,517.32,518.74,518.03,Yes,no,Demospongiae,Clavaxinellida,Protomonaxonida,NA,NA,Hamptoniidae ,NA,Hamptonia,NA,yes
+94,Cystospongia globosa,Hex,yes ,stauractins may be triactins,Fossil,1-s2.0-S0031018213003660-main,517.32,518.74,518.03,Yes,genus_only,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,NA,NA,Cystospongia,NA,
+95,Valospongia gigantis,Hex,yes ,triaxons and stauractins may be giant,Fossil,1-s2.0-S0031018213003660-main,517.32,518.74,518.03,Yes,genus_only,Hexactinellida,Amphidiscophora,Reticulosa,NA,Dierespongioidea,NA,NA,Valospongia,NA,
+96,Conciliospongia anjiensis,Demo-Hex,yes ,link between demosponges and hexactinellids,Fossil,s41598-017-05604-6,444,444,444,No,no_data,Silicea,NA,NA,NA,NA,NA,NA,Conciliospongia,NA,
+97,Stereodictyum orthoplectum,Hex,yes ,undefined monaxons,Fossil,Krautter2002_Chapter_FossilHexactinellidaAnOverview,326.4,339.4,332.9,No,no,Hexactinellida,Amphidiscophora,Reticulosida,NA,Protospongioidea,Stereodictyidae,NA,Stereodictyum,NA,
+98,Hintzespongia bilamina,Hex,yes ,two-layered wall,Fossil,Krautter2002_Chapter_FossilHexactinellidaAnOverview,505,513,509,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Hintzespongioidea,Hintzespongiidae,NA,Hintzespongia,NA,
+99,Brachiospongia digitata,Hex,yes ,no,Fossil,Krautter2002_Chapter_FossilHexactinellidaAnOverview,449.5,460.9,455.2,No,no,Hexactinellida,Amphidiscophora,Lyssacinosida,NA,Brachiospongioidea,Brachiospongiidae,NA,Brachiospongia,NA,
+100,Stioderma coscinum,Hex,yes ,anchors?,Fossil,Krautter2002_Chapter_FossilHexactinellidaAnOverview,272.3,279.3,275.8,No,no,Hexactinellida,Amphidiscophora,Lyssacinosida,NA,Brachiospongioidea,Stiodermatidae,NA,Stioderma,NA,
+101,Stromatidium typicale,Hex,no,spicules fuse into rigid layers; architecture unique in hexes,Fossil,Krautter2002_Chapter_FossilHexactinellidaAnOverview,268.8,272.3,270.55,No,incomplete_taxonomy,Hexactinellida,NA,NA,NA,NA,Stromatidiidae,NA,Stromatidium,NA,
+102,Becksia soekelandi,Hex,yes ,anchors?,Fossil,Krautter2002_Chapter_FossilHexactinellidaAnOverview,72.1,83.6,77.85,No,no,Hexactinellida,Hexasterophora,Lychniscosida,NA,NA,Callodictyonidae,Becksinae,Becksia,NA,Yes
+103,Plectroninia halli,Calcarea,yes ,unknown regular/sagittalness of tetracts and tripods,Fossil,document(5)(1),11.608,23.03,17.319,No,genus_only,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Plectroninia,NA,
+104,Bactronella australis,Calcarea,no,only one type of tetractine?,Fossil,document(5)(1),11.608,23.03,17.319,No,genus_only,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Bactronella,NA,
+105,Tretocalia pezica,Calcarea,no,types of triactines and tetractines unkown,Fossil,document(5)(1),11.608,23.03,17.319,No,incomplete_taxonomy,Calcarea,Calcaronea,Stellispongiida,NA,NA,Stellispongiidae,Holcospongiinae,Tretocalia,NA,
+106,Monoplectroninia malonei,Calcarea,no,one type of tetractine only,Fossil,document(5)(1),11.608,23.03,17.319,No,no_data,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Monoplectroninia,NA,
+107,Stauractinella eocenica,Hex,no,no,Fossil,A Highly Diverse Siliceous…,41.3,47.8,44.55,No,could be demosponge,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,Stauractinellidae,NA,Stauractinella,NA,
+108,Hormathospongia dictyota,Hex,no,no,Fossil,1306475,83.5,85.8,84.65,No,no,Hexactinellida,Hexasterophora,Sceptrulophora,NA,NA,Farreidae,NA,Hormathospongia,NA,
+109,Sanshadictya microreticulata,Hex,no,no,Fossil,1993-sponges,516,520,518,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Dictyospongioidea,Dictyospongiidae,Dictyospongiinae,Sanshadictya,NA,
+110,Hyalosinica archaica,Hex,yes ,"oxeas may be diactins, only fragments preserved",Fossil,1993-sponges,520,535,527.5,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Dictyospongioidea,Dictyospongiidae,Dictyospongiinae,Hyalosinica,NA,
+111,Choia utahensis,Demo,yes ,undefined monaxons,Fossil,1-s2.0-S0031018204005796-main,520,535,527.5,No,no,Demospongiae,Clavaxinellida,Protomonaxonida,NA,NA,Choiidae,NA,Choia,NA,yes
+112,Diagoniella cyathiformis,Hex,no,no,Fossil,1-s2.0-S0031018204005796-main,520,535,527.5,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Protospongioidea,Protospongiidae,NA,Diagoniella,NA,
+113,Protospongia gracilis,Hex,no,no,Fossil,1-s2.0-S0031018204005796-main,520,535,527.5,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Protospongioidea,Protospongiidae,NA,Protospongia,NA,
+114,Triticispongia diagonata,Hex,no,no,Fossil,1-s2.0-S0031018204005796-main,520,535,527.5,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Protospongioidea,Protospongiidae,NA,Triticispongia,NA,
+115,Lantianospongia palifera,Hex,no,no,Fossil,1-s2.0-S0031018204005796-main,520,535,527.5,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Hintzespongioidea,Hintzespongiidae,NA,Lantianospongia,NA,
+116,Pirania auraeum,Demo,yes ,"tylostyles assumed from related species, but are definitely some kind of monaxon",Fossil,1-s2.0-S0016699507000782-main,477.7,485.4,481.55,No,no,Demospongiae,Clavaxinellida,Protomonaxonida,NA,NA,Piraniidae,NA,Pirania,NA,yes
+117,Microhemidiscia greinerti,Hex,no,no,Fossil,i0022-3360-88-1-171,290.1,298.9,294.5,No,no,Hexactinellida,Amphidiscophora,Hemidiscosa,NA,NA,Hemidiscellidae,NA,Microhemidiscia,NA,
+118,Heliospongia excavata,Demo,no,no,Fossil,i0022-3360-078-03-0431,315.2,323.2,319.2,No,no,Demospongiae,Clavaxinellida,Protomonaxonida,NA,NA,Heliospongiidae,NA,Heliospongia,NA,yes
+119,Asturiaspongia aqualiforma,Hex,yes ,monaxon-like spicules present but may be foreign or broken,Fossil,i0022-3360-078-03-0431,393.3,407.6,400.45,No,no,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pelicaspongiidae,NA,Asturiaspongia,NA,
+120,Estrellaspongia irregulara,Hex,yes ,styles present but may be cut hexactines,Fossil,i0022-3360-078-03-0431,326.4,339.4,332.9,No,no,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pelicaspongiidae,NA,Estrellaspongia,NA,
+121,Hadrophragmos soleniscus,Hex,no,just three size classes of hexactines,Fossil,i0022-3360-078-03-0431,315.2,323.2,319.2,No,no,Hexactinellida,Amphidiscophora,Amphidiscosida,NA,NA,Pelicaspongiidae,NA,Hadrophragmos,NA,
+122,Iberospongia globulara,Hex,no,no,Fossil,i0022-3360-078-03-0431,391.9,409.1,400.5,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Protospongioidea,Protospongiidae,NA,Iberospongia,NA,
+123,Stioderma perforata,Hex,yes ,"somewhat unclear how many sizes of hexacts, but at least two",Fossil,i0022-3360-078-03-0431,307,315.2,311.1,No,no,Hexactinellida,Amphidiscophora,Lyssacinosida,NA,Brachiospongioidea,Stiodermatidae,NA,Stioderma,NA,
+124,Xylochos palindromica,Demo,yes ,"undefined monaxons, but multiple size orders",Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,Demospongiae,Clavaxinellida,Protomonaxonida,NA,NA,Hazeliidae,NA,Xylochos,NA,yes
+125,Pirania llanfawrensis,Demo,yes ,possibly some subtylostyles; unclear if they slowly grade into styles,Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,Demospongiae,Clavaxinellida,Protomonaxonida,NA,NA,Piraniidae,NA,Pirania,NA,
+126,Heminectere minima,Hex,yes ,could be even more size classes,Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Protospongioidea,Protospongiidae,NA,Heminectere,NA,
+127,Asthenospongia cambria,Hex,yes ,could be more spicule orders but at least five,Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Protospongioidea,Asthenospongiidae,NA,Asthenospongia,NA,Yes
+128,Acutipuerilis spinosus,Hex,yes ,could also be stauractines but unconfirmed,Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Protospongioidea,Asthenospongiidae,NA,Acutipuerilis,NA,
+129,Granulispongia obscura,Hex,yes ,"probably seven size orders and each has two modifications, so complexity value could potentially be 21 or higher, but somewhat unclear if spicules grade into each other",Fossil,An exceptional caradoc sponge…,453,458.4,455.7,No,no,Hexactinellida,Amphidiscophora,Reticulosa,NA,Protospongioidea,Asthenospongiidae,NA,Granulispongia,NA,
+130,Murania reitneri,Demo,no,no,Fossil,MittGeolGes_95_96_0037-0045,145,163.5,154.25,No,no,Demospongiae,Heteroscleromorpha,Agelasida,NA,NA,Milleporellidae,NA,Murania,NA,yes
+131,Plectroninia pertusa,Calcarea,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Plectroninia,NA,
+132,Bactronella womblei,Calcarea,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Bactronella,NA,
+133,Bactronella incrustans,Calcarea,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Bactronella,NA,
+134,Stelletta (Stolleya) silvigera,Demo,yes ,protriaenes may be modified versions of dichotriaenes; are they distinct regardless?,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Demospongiae,Heteroscleromorpha,Tetractinellida,Astrophorina,NA,Ancorinidae,Stellettinae,Stelletta,Stolleya,
+135,Geodia harmatuki,Demo,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Demospongiae,Heteroscleromorpha,Tetractinellida,Astrophorina,NA,Geodiidae,Geodiinae,Geodia,NA,
+136,Sheldonia trabecula,Hex,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Hexactinellida,Hexasterophora,Lyssacinosida,NA,Euplectelloidea,Euplectellidae,NA,Sheldonia,NA,
+137,Hazelina bisbifurcata,Demo,no,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Demospongiae,Heteroscleromorpha,Tetralithistida,Tetracladina,NA,Plinthosellidae,NA,Hazelina,NA,
+138,Claytonia rayi,Demo,yes ,no,Fossil,2167-5880-127_2_39,38,41.3,39.65,No,no,Demospongiae,Heteroscleromorpha,Tetralithistida,Tetracladina,NA,Plinthosellidae,NA,Claytonia,NA,
+139,Haplistion lobatum,Demo,no,no,Fossil,1306253,410.8,419.2,415,No,genus_only,Demospongiae,Heteroscleromorpha,Spirosclerophorida,Rhizomorina,NA,Haplistiidae,NA,Haplistion,NA,yes
+140,Twenhofelella bulbulus,Hex,no,other small spicule types but not well preserved enough to describe,Fossil,1306253,410.8,419.2,415,No,genus_only,Hexactinellida,Amphidiscophora,Amphidiscosa,NA,NA,Pelicaspongiidae,NA,Twenhofelella,NA,
+141,Monaxoradiata lamina,Demo,no,no,Fossil,0022-3360_2006_80_1_SFTRTM_2.0.CO_2,259.9,265.1,262.5,No,no,Demospongiae,Clavaxinellida,Protomonaxonida,NA,NA,Sollasellidae,NA,Monaxoradiata,NA,yes
+142,Chiastocolumnia cylindrica,Demo,yes ,"spicules are very irregular, so difficult to distinguish separate types",Fossil,0022-3360_2006_80_1_SFTRTM_2.0.CO_2,259.9,265.1,262.5,No,no,Demospongiae,Heteroscleromorpha,NA,Orchocladina,NA,Chiastoclonellidae,NA,Chiastocolumnia,NA,
+143,Dactylites obconica,Demo,yes ,"spicules are very irregular, so difficult to distinguish separate types",Fossil,0022-3360_2006_80_1_SFTRTM_2.0.CO_2,259.9,265.1,262.5,No,no,Demospongiae,Heteroscleromorpha,NA,Orchocladina,NA,Anthracosyconidae,NA,Dactylites,NA,
+144,Defordia digitata,Demo,no,no,Fossil,1304893,272.3,279.3,275.8,No,no,Demospongiae,Heteroscleromorpha,NA,Orchocladina,NA,Chiastoclonellidae,NA,Defordia,NA,
+145,Jereina robusta,Demo,no,no,Fossil,1304893,272.3,279.3,275.8,No,no,Demospongiae,Heteroscleromorpha,NA,Orchocladina,NA,Anthaspidellidae,NA,Jereina,NA,
+146,Astylospongia tarda,Demo,no,no,Fossil,1304631,410.8,419.2,415,No,genus_only,Demospongiae,Heteroscleromorpha,NA,Orchocladina,NA,Astylospongiidae,NA,Astylospongia,NA,
+147,Hexactinoderma trammeri,Hex,yes ,synapticular fusion,Fossil,9373-12646-2-PB,242,247.2,244.6,No,no,Hexactinellida,Hexasterophora,Hexactinosa,NA,Pileolitoidea,Pileolitidae,NA,Hexactinoderma,NA,
+148,Silesiaspongia rimosa,Hex,yes ,contains hexactines and their derivatives; unclear exactly how many unique forms,Fossil,9373-12646-2-PB,242,247.2,244.6,No,no,Hexactinellida,Hexasterophora,Lyssacinosida,NA,Euplectelloidea,Euplectellidae,NA,Silesiaspongia,NA,
+149,Tremadictyon radicatum,Hex,no,genus may be recorded as Cribrospongia,Fossil,Muller1991_Chapter_ObservationsOnTheJurassicHexac,157.3,163.5,160.4,No,genus_only,Hexactinellida,Hexasterophora,Hexactinosa,NA,NA,Cribrospongiidae,NA,Tremadictyon,NA,
+150,Paracinachyrella fossilis,Demo,yes ,contains oxeas but may be foreign,Fossil,Łukowiak2014_Article_BathyalSpongesFromTheLateEarly,15.97,20.44,18.205,No,no,Demospongiae,Heteroscleromorpha,Tetractinellida,Spirophorina,NA,Tetillidae,NA,Paracinachyrella,NA,
+151,Virgaspongiella ramosa,Demo,yes ,some oxeas and styles indistinguishable,Fossil,i0022-3360-078-01-0071,254.17,259.9,257.035,No,no,Demospongiae,Heteroscleromorpha,NA,Orchocladina,NA,Anthaspidellidae,NA,Virgaspongiella,NA,
+152,Incrustatospongia superficiala,Demo,yes ,I and Y-shaped dendroclones grade into each other,Fossil,i0022-3360-078-01-0071,254.17,259.9,257.035,No,no,Demospongiae,Heteroscleromorpha,NA,Orchocladina,NA,Anthaspidellidae,NA,Incrustatospongia,NA,
+153,Porosphaera globularis,Calcarea,no,no,Fossil,1-s2.0-S0195667111001248-main,93.5,99.6,96.55,No,no,Calcarea,Calcaronea,Lithonida,NA,NA,Minchinellidae,NA,Porosphaera,NA,yes
+154,Endostoma mexicana,Calcarea,no,all monaxons assumed to be oxeas due to some being identifiable as oxeas,Fossil,1304269,100.5,113,106.75,No,no,Calcarea,Calcaronea,Stellispongiida,NA,NA,Endostomatidae,NA,Endostoma,NA,
+155,Mammillopora encrusta,Calcarea,no,triactines not preserved in all parts of sponge,Fossil,1304269,109,112.03,110.515,No,no,Calcarea,Calcaronea,Stellispongiida,NA,NA,Stellispongiidae,Holcospongiinae,Mammillopora,NA,
+156,Sontheimia parasitica,Demo,yes ,some desmas; unclear if distinct,Fossil,A Callovian Middle Jurassic Poriferan Fauna…,163.5,166.1,164.8,No,genus_only,Demospongiae,Heteroscleromorpha,Tetralithistida,Tetracladina,NA,Protetraclisidae,NA,Sontheimia,NA,
+157,Jereica tuberculosa,Demo,no,no,Fossil,A Callovian Middle Jurassic Poriferan Fauna…,163.5,166.1,164.8,No,genus_only,Demospongiae,Heteroscleromorpha,Spirosclerophorida,Rhizomorina,Scleritodermatoidea,Jereicidae,NA,Jereica,NA,
+158,Soleneiscus hamatus,Calcarea,no,no,Extant,S12526-017-0671-x,0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Dendyidae,NA,Soleneiscus,NA,yes
+159,Petrobiona massiliana,Calcarea,no,no,Extant,Sponges of marine caves…,0,0,0,NA,NA,Calcarea,Calcaronea,Baeriida,NA,NA,Petrobionidae,NA,Petrobiona,NA,yes
+160,Sycon ciliatum,Calcarea,no,no,Extant,10.12714-egejfas.37.2.05-884246,0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Syconidae,NA,Sycon,NA,yes
+161,Paraleucilla magna,Calcarea,no,no,Extant,10.12714-egejfas.37.2.05-884246,0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Amphoriscidae,NA,Paraleucilla,NA,
+162,Aphrocallistes beatrix,Hex,no,no,Extant,document-Hexsponges92623,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Hexactinosida,Sceptrulophora,NA,Aphrocallistidae,NA,Aphrocallistes,NA,
+163,Euplectella gibbsa,Hex,no,no,Extant,document-Hexsponges92623,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,Euplectelloidea,Euplectellidae,Euplectellinae,Euplectella,NA,
+164,Lophocalyx reiswigi,Hex,no,no,Extant,document-Hexsponges92623,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,Rossellidae,NA,Lophocalyx,NA,
+165,Sympagella cooki,Hex,no,no,Extant,document-Hexsponges92623,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,Rossellidae,NA,Sympagella,NA,
+166,Nodastrella nodastrella,Hex,no,no,Extant,11940-Article Text-27795-39309-10-20150504-1,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,Rossellidae,NA,Nodastrella,NA,
+167,Neopetrosia proxima,Demo,no,no,Extant,peerj-6371,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Haplosclerida,NA,NA,Petrosiidae,NA,Neopetrosia,NA,
+168,Callyspongia armigera,Demo,no,no,Extant,Ecology and Evolution-2015-DeBiasse,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Haplosclerida,NA,NA,Callyspongiidae,NA,Callyspongia,NA,
+169,Haliclona cinerea,Demo,no,no,Extant,ATS_journal-web,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Haplosclerida,NA,NA,Chalinidae,NA,Haliclona,NA,yes
+170,Scopalina nausicae,Demo,no,no,Extant,2020.08.11.246710.full,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Scopalinida,NA,NA,Scopalinidae,NA,Scopalina,NA,
+171,Galaxia gaviotensis,Demo,no,no,Extant,2020.08.11.246710.full,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tethyida,NA,NA,Hemiasterellidae,NA,Galaxia,NA,
+172,Quasillina brevis,Demo,no,no,Extant,Polymastiidae_porifera_demospongiae_of_the_nordic_and_siberian_seas,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Polymastiida,NA,NA,Polymastiidae,NA,Quasillina,NA,
+173,Spinularia spinularia,Demo,no,no,Extant,Polymastiidae_porifera_demospongiae_of_the_nordic_and_siberian_seas,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Polymastiida,NA,NA,Polymastiidae,NA,Spinularia,NA,
+174,Ciocalypta penicillus,Demo,no,no,Extant,Two new species of the halichondriidae…,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Suberitida,NA,NA,Halichondriidae,NA,Ciocalypta,NA,
+175,Hymeniacidon perlevis,Demo,no,no,Extant,2020.02.13.948000.full,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Suberitida,NA,NA,Halichondriidae,NA,Hymeniacidon,NA,
+176,Amorphinopsis fenestrata,Demo,yes ,Styles transitional to subtylostyles,Extant,2010AlvarezetalHalichondriidae…,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Suberitida,NA,NA,Halichondriidae,NA,Amorphinopsis,NA,
+177,Leuclathrina translucida,Calcarea,yes ,some triactines thickened near tips,Extant,36882-Article Text-112462-124334-10-20180220,0,0,0,NA,NA,Calcarea,Calcinea,Clathrinida,NA,NA,Dendyidae,NA,Leuclathrina,NA,yes
+178,Grantia compressa,Calcarea,no,no,Extant,zookeys-546-001,0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Grantiidae,NA,Grantia,NA,
+179,Sycettusa hirsutissima,Calcarea,no,no,Extant,document-1,0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Heteropiidae,NA,Sycettusa,NA,
+180,Ute insulagemmae,Calcarea,no,no,Extant,document-1,0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Grantiidae,NA,Ute,NA,
+181,Kebira tetractinifera,Calcarea,yes ,nail-shaped triactines; were classed here as chiactines,Extant,document-1,0,0,0,NA,NA,Calcarea,Calcaronea,Leucosolenida,NA,NA,Lelapiidae,NA,Kebira,NA,
+182,Aspidoscopulia australia,Hex,yes ,aspidoscopule apomorphy,Extant,J.1096-3642.2011.00753.x,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Sceptrulophora,NA,NA,Farreidae,NA,Aspidoscopulia,NA,
+183,Euryplegma auriculare,Hex,no,no,Extant,298431,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,Aulocalycidae,Aulocalycinae,Euryplegma,NA,yes
+184,Rossella antarctica,Hex,yes ,some very large microscleres,Extant,REVISION_Goodwin_et_al_Hexact_ms,0,0,0,NA,NA,Hexactinellida,Hexasterophora,Lyssacinosida,NA,NA,Rossellidae,NA,Rossella,NA,
+185,Chalinula zeae,Demo,no,no,Extant,BEAU20000050001001,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Haplosclerida,NA,NA,Chalinidae,NA,Chalinula,NA,
+186,Lissodendoryx flabellata,Demo,no,no,Extant,blsf-02-00038,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,NA,NA,Coelosphaeridae,NA,Lissodendoryx,NA,
+187,Kirkpatrickia coulmani,Demo,no,no,Extant,blsf-02-00038,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,Myxillina,NA,Hymedesmiidae,NA,Kirkpatrickia,NA,
+188,Phorbas glaberrimus,Demo,no,no,Extant,blsf-02-00038,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,Myxillina,NA,Hymedesmiidae,NA,Phorbas,NA,
+189,Janulum spinispiculum,Demo,no,no,Extant,kelly_et_al_2015_Janulum_imago,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Haplosclerida,NA,NA,Phloeodictyidae,NA,Janulum,NA,yes
+190,Svenzea zeai,Demo,no,no,Extant,ctoz-article-p171-7,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Scopalinida,NA,NA,Scopalinidae,NA,Svenzea,NA,yes
+191,Plenaster craigi,Demo,no,no,Extant,A-new-genus-and-species-of-abyssal-sponge…,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Axinellida,NA,NA,Stelligeridae,NA,Plenaster,NA,
+192,Heteroxya beauforti,Demo,no,no,Extant,peerj-11879,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Axinellida,NA,NA,Heteroxyidae,NA,Heteroxya,NA,
+193,Dragmacidon australe,Demo,no,no,Extant,2020_Newrecordofsponge,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Axinellida,NA,NA,Axinellidae,NA,Dragmacidon,NA,
+194,Didiscus oxeatus,Demo,no,didiscorhabds,Extant,s12526-021-01168-x,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Axinellida,NA,NA,Raspailiidae,NA,Didiscus,NA,yes
+195,Sigmaxinella hipposiderus,Demo,no,no,Extant,46207-Article Text-142948-155065-10-20190214,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Biemnida,NA,NA,Biemnidae,NA,Sigmaxinella,NA,
+196,Aciculites orientalis,Demo,no,no,Extant,Deep_sea_lithistid_assemblages_from_the,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Spirophorina,NA,Scleritodermidae,NA,Aciculites,NA,
+197,Scleritoderma flabelliforme,Demo,no,no,Extant,Deep_sea_lithistid_assemblages_from_the,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Spirophorina,NA,Scleritodermidae,NA,Scleritoderma,NA,
+198,Herengeria auriculata,Demo,no,no,Extant,Deep_sea_lithistid_assemblages_from_the,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Astrophorina,NA,Corallistidae,NA,Herengeria,NA,
+199,Neoschrammeniella norfolkii,Demo,no,no,Extant,Deep_sea_lithistid_assemblages_from_the,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Astrophorina,NA,Corallistidae,NA,Neoschrammeniella,NA,
+200,Anaderma rancureli,Demo,no,no,Extant,Deep_sea_lithistid_assemblages_from_the,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Astrophorina,NA,Pleromidae,NA,Anaderma,NA,
+201,Reidispongia coerulea,Demo,no,no,Extant,Deep_sea_lithistid_assemblages_from_the,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Astrophorina,NA,Phymatellidae,NA,Reidispongia,NA,
+202,Acanthotetilla celebensis,Demo,no,no,Extant,27310-Article Text-157366-169361-10-20190617,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Spirophorina,NA,Tetillidae,NA,Acanthotetilla,NA,
+203,Stelletta tuberosa,Demo,no,no,Extant,demosponges-from-the-northern-mid-atlantic-ridge-shed-more-light-on-the-diversity-and-biogeography-of-north-atlantic-deep-sea-sponges,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Astrophorina,NA,Ancorinidae,Stellettinae,Stelletta,NA,
+204,Poecillastra compressa,Demo,no,no,Extant,demosponges-from-the-northern-mid-atlantic-ridge-shed-more-light-on-the-diversity-and-biogeography-of-north-atlantic-deep-sea-sponges,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Astrophorina,NA,Vulcanellidae,NA,Poecillastra,NA,
+205,Thenea levis,Demo,no,no,Extant,demosponges-from-the-northern-mid-atlantic-ridge-shed-more-light-on-the-diversity-and-biogeography-of-north-atlantic-deep-sea-sponges,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Astrophorina,NA,Theneidae,NA,Thenea,NA,
+206,Stylocordyla borealis,Demo,no,no,Extant,demosponges-from-the-northern-mid-atlantic-ridge-shed-more-light-on-the-diversity-and-biogeography-of-north-atlantic-deep-sea-sponges,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Suberitida,NA,NA,Stylocordylidae,NA,Stylocordyla,NA,
+207,Isodictya filiformis,Demo,no,no,Extant,s00300-020-02654-x,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,NA,NA,Isodictyidae,NA,Isodictya,NA,
+208,Cyclacanthia bellae,Demo,no,no,Extant,z00725p-Cyclacanthia,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,NA,NA,Latrunculiidae,NA,Cyclacanthia,NA,
+209,Tsitsikamma favus,Demo,no,no,Extant,zookeys-874-101,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,NA,NA,Latrunculiidae,NA,Tsitsikamma,NA,
+210,Iophon koltuni,Demo,no,no,Extant,BouchardMarmenetal._2019_Technicalreport_Spongesfromthe2010-2014PaamiutMultispeciesTrawlSurveysEasternArcticandSubarctic,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,NA,NA,Acarnidae,NA,Iophon,NA,
+211,Cinachyra barbata,Demo,no,no,Extant,GoodwinBrewinandBricklel2012_Sponge_biodiversity_South_Georgia,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Tetractinellida,Spirophorina,NA,Tetillidae,NA,Cinachyra,NA,
+212,Iotrochota birotulata,Demo,no,no,Extant,iz_Ruetzler_et_al_2007b,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Poecilosclerida,NA,NA,Iotrochotidae,NA,Iotrochota,NA,
+213,Protosuberites mereui,Demo,no,no,Extant,Melisetal2016NewProtosuberitesWMediterranean,0,0,0,NA,NA,Demospongiae,Heteroscleromorpha,Suberitida,NA,NA,Suberitidae,NA,Protosuberites,NA,
