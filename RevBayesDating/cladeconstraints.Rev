@@ -1,0 +1,52 @@
+
+clade_order_Tethyida = clade("Tethytimea_tylota", "Tethya_californiana", "Galaxia_gaviotensis")
+
+clade_order_Tetractinellida = clade("Rhabdastrella_distincta", "Stelletta_(Stolleya)_silvigera", "Geodia_harmatuki", "Paracinachyrella_fossilis", "Aciculites_orientalis", "Scleritoderma_flabelliforme", "Herengeria_auriculata", "Neoschrammeniella_norfolkii", "Anaderma_rancureli", "Reidispongia_coerulea", "Acanthotetilla_celebensis", "Stelletta_tuberosa", "Poecillastra_compressa", "Thenea_levis", "Cinachyra_barbata")
+
+clade_order_Haplosclerida = clade("Amphimedon_anastomosa", "Amphimedon_chloros", "Niphates_rowi", "Petrosia_spheroida", "Neopetrosia_proxima", "Callyspongia_armigera", "Haliclona_cinerea", "Chalinula_zeae", "Janulum_spinispiculum")
+
+clade_order_Poecilosclerida = clade("Asbestopluma_hypogea", "Hymedesmia_anatoliensis", "Clathria_collosclera", "Axociella_ongulensis", "Lissodendoryx_flabellata", "Kirkpatrickia_coulmani", "Phorbas_glaberrimus", "Isodictya_filiformis", "Cyclacanthia_bellae", "Tsitsikamma_favus", "Iophon_koltuni", "Iotrochota_birotulata")
+
+clade_order_Clathrinida = clade("Ascandra_spalatensis", "Clathrina_primordialis", "Borojevia_croatica", "Arthuria_tenuipilosa", "Ernstia_indonesiae", "Burtonulla_sibogae", "Leucaltis_nodusgordii", "Ascaltis_angusta", "Leucascus_flavus", "Ascoleucetta_sagittata", "Leucetta_chagosensis", "Pericharax_orientalis", "Lelapiella_sphaerulifera", "Soleneiscus_hamatus", "Leuclathrina_translucida")
+
+clade_order_Sceptrulophora = clade("Farrea_bowerbanki", "Conorete_pourtalesi", "Verrucocoeloidea_liberatorii", "Chonelasma_choanoides", "Eurete_atlantica", "Periphragella_antarctica", "Hormathospongia_dictyota", "Aspidoscopulia_australia")
+
+clade_order_Hexactinosida = clade("Tretodictyum_reiswigi", "Tretodictyum_tubulosum", "Hexactinella_carolinensis", "Dictyoplax_lecus", "Aphrocallistes_beatrix")
+
+clade_order_Leucosolenida = clade("Leucandra_falakra", "Achramorpha_nivalis", "Megapogon_raripilus", "Sarsinella_karasikensis", "Anamixilla_torresi", "Uteopsis_argentea", "Grantessa_borojevici", "Heteropia_minor", "Vosmaeropsis_grisea", "Amphoriscus_semoni", "Leucilla_australiensis", "Sycon_ciliatum", "Paraleucilla_magna", "Grantia_compressa", "Sycettusa_hirsutissima", "Ute_insulagemmae", "Kebira_tetractinifera")
+
+clade_order_Biemnida = clade("Neofibularia_chinensis", "Sigmaxinella_hipposiderus")
+
+clade_order_Amphidiscosida = clade("Pheronema_amphorae", "Pheronemoides_crustiformis", "Semperella_jiaolongae", "Platylistrum_subviridum", "Poliopogon_canaliculatus", "Poliopogon_amadou", "Asturiaspongia_aqualiforma", "Estrellaspongia_irregulara", "Hadrophragmos_soleniscus")
+
+clade_order_Lyssacinosida = clade("Saccocalyx_microhexactin", "Bolosoma_perezi", "Holascus_pseudostellatus", "Bathydorus_poculum", "Nubes_poculiformis", "Scyphidium_australiense", "Cystospongia_globosa", "Brachiospongia_digitata", "Stioderma_coscinum", "Stauractinella_eocenica", "Stioderma_perforata", "Sheldonia_trabecula", "Silesiaspongia_rimosa", "Euplectella_gibbsa", "Lophocalyx_reiswigi", "Sympagella_cooki", "Nodastrella_nodastrella", "Euryplegma_auriculare", "Rossella_antarctica")
+
+clade_order_Homosclerophorida = clade("Corticium_vaceleti", "Plakortis_ruetzleri", "Plakinastrella_nicoleae", "Plakinastrella_pseudolopha", "Plakinastrella_osculifera", "Plakina_finispinata")
+
+clade_order_Lithonida = clade("Plectroninia_celtica", "Plectroninia_halli", "Bactronella_australis", "Monoplectroninia_malonei", "Plectroninia_pertusa", "Bactronella_womblei", "Bactronella_incrustans", "Porosphaera_globularis")
+
+clade_order_Suberitida = clade("Halichondria_longioxea", "Aaptos_simplex", "Homaxinella_amphispicula", "Suberites_concinnus", "Suberites_latus", "Ciocalypta_penicillus", "Hymeniacidon_perlevis", "Amorphinopsis_fenestrata", "Stylocordyla_borealis", "Protosuberites_mereui")
+
+clade_order_Axinellida = clade("Cymbastela_cantharella", "Reniochalina_condylia", "Myrmekioderma_granulata", "Higginsia_anfractuosa", "Plenaster_craigi", "Heteroxya_beauforti", "Dragmacidon_australe", "Didiscus_oxeatus")
+
+clade_order_Scopalinida = clade("Axinella_carteri", "Stylissa_flabelliformis", "Scopalina_nausicae", "Svenzea_zeai")
+
+clade_order_Clionaida = clade("Cliona_californiana", "Cliona_lobata", "Pione_gibraltarensis")
+
+clade_order_Polymastiida = clade("Polymastia_kurilensis", "Polymastia_pachymastia", "Radiella_endeavourensis", "Sphaerotylus_raphidophora", "Tentorium_semisuberites", "Weberella_perlucida", "Quasillina_brevis", "Spinularia_spinularia")
+
+clade_order_Agelasida = clade("Prosuberites_saanichensis", "Murania_reitneri")
+
+clade_order_Protomonaxonida = clade("Crumillospongia_frondosa", "Hamptonia_chengjiangensis", "Choia_utahensis", "Pirania_auraeum", "Heliospongia_excavata", "Xylochos_palindromica", "Pirania_llanfawrensis", "Monaxoradiata_lamina")
+
+clade_order_Reticulosa = clade("Valospongia_gigantis", "Hintzespongia_bilamina", "Sanshadictya_microreticulata", "Hyalosinica_archaica", "Diagoniella_cyathiformis", "Protospongia_gracilis", "Triticispongia_diagonata", "Lantianospongia_palifera", "Iberospongia_globulara", "Heminectere_minima", "Asthenospongia_cambria", "Acutipuerilis_spinosus", "Granulispongia_obscura")
+
+clade_order_Stellispongiida = clade("Tretocalia_pezica", "Endostoma_mexicana", "Mammillopora_encrusta")
+
+clade_order_Tetralithistida = clade("Hazelina_bisbifurcata", "Claytonia_rayi", "Sontheimia_parasitica")
+
+clade_order_Spirosclerophorida = clade("Haplistion_lobatum", "Jereica_tuberculosa")
+
+clade_order_Hexactinosa = clade("Hexactinoderma_trammeri", "Tremadictyon_radicatum")
+
+constraints = v(clade_order_Tethyida, clade_order_Tetractinellida, clade_order_Haplosclerida, clade_order_Poecilosclerida, clade_order_Clathrinida, clade_order_Sceptrulophora, clade_order_Hexactinosida, clade_order_Leucosolenida, clade_order_Biemnida, clade_order_Amphidiscosida, clade_order_Lyssacinosida, clade_order_Homosclerophorida, clade_order_Lithonida, clade_order_Suberitida, clade_order_Axinellida, clade_order_Scopalinida, clade_order_Clionaida, clade_order_Polymastiida, clade_order_Agelasida, clade_order_Protomonaxonida, clade_order_Reticulosa, clade_order_Stellispongiida, clade_order_Tetralithistida, clade_order_Spirosclerophorida, clade_order_Hexactinosa)

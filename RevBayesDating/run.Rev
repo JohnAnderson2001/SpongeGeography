@@ -1,0 +1,85 @@
+taxa <- readTaxonData("ages.tsv")
+
+dna <- readDiscreteCharacterData("CombinedWithTaxonomySimplified.nex")
+
+dna.addMissingTaxa( taxa )
+
+n_taxa <- taxa.size()
+
+moves = VectorMoves()
+
+source("cladeconstraints.Rev") # FBD tree prior
+
+
+speciation_rate ~ dnExponential(10)
+extinction_rate ~ dnExponential(10)
+
+
+moves.append( mvScale(speciation_rate, lambda=0.01, weight=1) )
+moves.append( mvScale(speciation_rate, lambda=0.1,  weight=1) )
+moves.append( mvScale(speciation_rate, lambda=1.0,  weight=1) )
+
+
+moves.append( mvScale(extinction_rate, lambda=0.01, weight=1) )
+moves.append( mvScale(extinction_rate, lambda=0.1,  weight=1) )
+moves.append( mvScale(extinction_rate, lambda=1,    weight=1) )
+
+rho <- 0.001
+
+psi ~ dnExponential(10) 
+
+# Specify a scale move on the psi parameter #
+# This move will be applied with 3 different tuning values (lambda) to help improve mixing # 
+moves.append( mvScale(psi, lambda=0.01, weight=1) )
+moves.append( mvScale(psi, lambda=0.1,  weight=1) )
+moves.append( mvScale(psi, lambda=1,    weight=1) )
+
+# The FBD is conditioned on a starting time for the process, which is the origin time #
+# Specify a uniform prior on the origin #
+origin_time ~ dnUnif(530.0, 600.0)
+
+moves.append( mvSlide(origin_time, delta=0.01, weight=5.0) )
+moves.append( mvSlide(origin_time, delta=0.1,  weight=5.0) )
+moves.append( mvSlide(origin_time, delta=1,    weight=5.0) )
+
+fbd_dist = dnBDSTP(r=1, origin=origin_time, lambda=speciation_rate, mu=extinction_rate, psi=psi, rho=rho, taxa=taxa)
+
+# The will be a random variable of a constrained topology distribution that is governed by the FBD #
+# this distribution will generate FBD trees that match the monophyly constraints defined above #
+# Created with computetaxonomy.R #
+
+
+
+
+fbd_tree ~ dnConstrainedTopology(fbd_dist, constraints=constraints)
+
+# Specify moves on the tree and node times #
+# These moves update the tree topology 
+moves.append( mvFNPR(fbd_tree, weight=15.0) )
+moves.append( mvCollapseExpandFossilBranch(fbd_tree, origin_time, weight=6.0) )
+
+# These moves update the node ages #
+# Because we are conditioning on the origin time, we must also sample the root node age #
+moves.append( mvNodeTimeSlideUniform(fbd_tree, weight=40.0) )
+moves.append( mvRootTimeSlideUniform(fbd_tree, origin_time, weight=5.0) )
+
+
+### Use stratigraphic range data to explicitly sample the fossil occurence times ###
+# Use a for loop to create a uniform distribution on the occurence time for each fossil #
+# The boundaries of the uniform distribution are specified in the tsv file #
+fossils = fbd_tree.getFossils()
+for(i in 1:fossils.size())
+{
+    t[i] := tmrca(fbd_tree, clade(fossils[i]))
+
+    a_i = fossils[i].getMinAge()
+    b_i = fossils[i].getMaxAge()
+
+    F[i] ~ dnUniform(t[i] - b_i, t[i] - a_i)
+    F[i].clamp( 0 )
+}
+
+# Add a move to sample the fossil times #
+moves.append( mvFossilTimeSlideUniform(fbd_tree, origin_time, weight=5.0) )
+
+
