@@ -869,6 +869,7 @@ compute_pics_summaries <- function(pics, focal="logSpiculeTypes") {
 #phylomodelrrgenus <- phylolm(SpiculeTypes ~ ph + temperature + silica * silicaspicules + log1p_idw_depths + viscosity + photic + nonphotic, data=complex_adjusted_tree$data, phy=complex_adjusted_tree$phy, model="OUrandomRoot")
 #bestmodelrrgenus <- dredge(phylomodelrrgenus)
 
+taxonomy <- function() {
 uid <- get_uid("Asbestopluma hypogea")
 ENTREZ_KEY <- "89b1520818fd22ded39305a6f3c7a8700e08"
 testclassification <- classification(id=uid, db='ncbi')
@@ -944,7 +945,7 @@ for(row in sequence(nrow(reference))) {
 		#reference$subgenus[row] <- current_tax_dataframe$name[which(current_tax_dataframe$rank == "subgenus")]
 	}
 }
-
+}
 #testclassification$`1336860`$name
 #t <- as.data.frame(testclassification[1])
 
